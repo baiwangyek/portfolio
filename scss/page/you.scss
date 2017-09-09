@@ -1,0 +1,135 @@
+.you__body-container {
+  background: linear-gradient(#8770FF, #FF6CAC, #FFD26C, #70EAFC, #77E8F5, #8970FD);
+}
+
+.you__hero {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.you__hero-wrapper {
+  height: 580px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.you__hero-heading {
+  color: #fff;
+  font-size: 60px;
+  width: 800px;
+  position: relative;
+  text-align: center;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.you__introduction-heading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 80px;
+  line-height: 150px;
+  color: #fff;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.you__introduction-text {
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.you__question-container {
+  display: flex;
+  width: 80%;
+  margin: 100px auto 0;
+}
+
+.you__question-label {
+  color: #fff;
+  font-size: 40px;
+  position: relative;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.you__question-menu {
+  border-bottom: 2px solid white;
+  /* background: white; */
+  width: 70%;
+  margin-left: 15%;
+  /* height: 100px; */
+  padding-top: 10px;
+}
+
+.you__contact-heading {
+  margin: 150px auto 100px;
+  text-align: center;
+  font-size: 80px;
+  line-height: 90px;
+  color: #fff;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.you__contact-container > label {
+  font-size: 40px;
+  line-height: 30px;
+  color: #fff;
+  font-family: 'Hammersmith One', sans-serif;
+  display: block;
+  flex: 0 0 200px;
+  position: relative;
+}
+
+.you__contact-container > label:after {
+  content: ":";
+  position: absolute;
+  right: 0;
+}
+
+.you__contact-container {
+  display: flex;
+  width: 100%;
+  padding-top: 20px;
+  padding-bottom: 20px;
+}
+
+.you__contact-input {
+  border: none;
+  background: none;
+  border-bottom: 2px solid white;
+  /* background: white; */
+  width: 80%;
+  margin-left: 15%;
+  /* height: 100px; */
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 20px;
+  font-family: 'Quicksand', sans-serif;
+  outline: none;
+  color: #fff;
+}
+
+.you__contact-input:focus {
+  border-bottom: 2px solid #F8E71C;
+}
+
+.you__contact-submit {
+  background: white;
+  padding: 15px 60px;
+  color: #2d2d2d;
+  font-family: 'Hammersmith One', sans-serif;
+  font-size: 25px;
+  text-decoration: none;
+  margin: 60px auto 0;
+  text-align: center;
+  display: inline-block;
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  mix-blend-mode: screen;
+}

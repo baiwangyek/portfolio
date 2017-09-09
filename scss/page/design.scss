@@ -1,0 +1,158 @@
+.design__body-container {
+  width: calc(100% - 40px);
+  background: #343D60;
+  margin-left: 20px;
+  margin-bottom: 20px;
+}
+
+.design__hero {
+  background: #343D60;
+}
+
+.design__text-container {
+  top: 50%;
+  width: 734px;
+  z-index: 1;
+}
+
+.design__text-container > h2{
+  font-size: 20px;
+  line-height: 30px;
+  display: block;
+  letter-spacing: 10px;
+  width: 800px;
+  position: relative;
+  font-family: 'Hammersmith One', sans-serif;
+  position: relative;
+  left: -20px;
+}
+
+// var yellow = 'rgb(255,251,133)';
+// var orange = 'rgb(255,212,100)';
+// var red = 'rgb(250,91,117)';
+// var blue = 'rgb(91,247,250)';
+// var green = 'rgb(91,259,202)';
+// var purple = 'rgb(176,91,250)';
+
+.design__text-container > h1{
+  font-size: 160px;
+  display: inline-block;
+  text-shadow : 6px 6px 0px rgb(255,251,133),
+                12px 12px 0px rgb(255,212,100),
+                18px 18px 0px rgb(250,91,117),
+                24px 24px 0px rgb(91,247,250),
+                30px 30px 0px rgb(91,259,202),
+                36px 36px 0px rgb(176,91,250);
+  line-height: 190px;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.design__svg-container {
+
+}
+
+.design__svg-container > svg {
+  position: absolute;
+  transform: scale(0.7);
+}
+
+.svg--bpt {
+  top: -300px;
+  left: -480px;
+}
+
+.svg--mrc {
+  top: -160px;
+  left: -110px;
+}
+
+.svg--mys {
+  top: -140px;
+  left: 110px;
+}
+
+.svg--mbc {
+  top: -260px;
+  left: 390px;
+}
+
+.svg--mrr {
+  top: 20px;
+  left: 530px;
+}
+
+.svg--lot {
+  top: 150px;
+  left: 200px;
+}
+
+.svg--mps {
+  top: 200px;
+  left: -100px;
+}
+
+.svg--lgc {
+  top: 210px;
+  left: -440px;
+}
+
+.svg--lor {
+  top: -70px;
+  left: -550px;
+}
+
+// .design__svg-group > polygon,
+// .design__svg-group > circle,
+// .design__svg-group > rect {
+//   position: absolute;
+//   top: 0;
+//   left: 0;
+// }
+
+.design__introduction-heading {
+  margin: 0 auto;
+  text-align: center;
+  font-size: 80px;
+  line-height: 150px;
+  color: #fff;
+  font-family: 'Hammersmith One', sans-serif;
+  text-shadow:  -5px 0px 0px rgb(176,91,250),
+                5px 0px 0px rgb(91,259,202);
+
+}
+
+.design__introduction-text {
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  width: 70%;
+}
+
+.design__work-section {
+  margin-top: 120px;
+}
+
+.design__work-title {
+  text-align: center;
+  font-size: 80px;
+  line-height: 150px;
+  color: #fff;
+  font-family: 'Hammersmith One', sans-serif;
+  text-shadow:  -5px 0px 0px rgb(250,91,117),
+                5px 0px 0px rgb(255,212,100);
+}
+
+.image-placeholder--design {
+  width: 100%;
+  // margin-left: 10%;
+  height: 400px;
+  background:#D8D8D8;
+}
+
+.design__work-text {
+  color: #fff;
+  text-align: center;
+  margin: 0 auto;
+  width: 90%;
+  margin-top: 50px;
+}

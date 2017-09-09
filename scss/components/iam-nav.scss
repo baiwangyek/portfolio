@@ -1,0 +1,55 @@
+.iam-nav {
+  height: 50px;
+  width: 50px;
+  position: fixed;
+  bottom: 30px;
+  font-family: 'Hammersmith One', sans-serif;
+  color: #fff;
+  text-decoration: none;
+  font-size: 23px;
+}
+
+.iam-nav--right {
+  right: 30px;
+}
+
+.iam-nav--left {
+  left: 30px;
+}
+
+.iam-nav--baiwang {
+  background: #E33244;
+  letter-spacing: 8px;
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-right: 3px;
+}
+
+.iam-nav--fed {
+  background: #2600FF;
+  font-family: 'Droid Sans Mono', monospace;
+  letter-spacing: 8px;
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-right: 3px;
+}
+
+.iam-nav--design {
+  background: #343D60;
+  letter-spacing: 8px;
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-right: 3px;
+}
+
+.iam-nav--you {
+  background: linear-gradient(#8970FE, #E16EC1);
+  letter-spacing: 8px;
+  padding-left: 14px;
+  padding-top: 10px;
+  padding-bottom: 8px;
+  padding-right: 3px;
+}

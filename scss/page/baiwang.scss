@@ -1,0 +1,111 @@
+/* HERO */
+.baiwang__hero {
+  background: #E33244;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.baiwang__text-container {
+  top: 50%;
+  width: 734px;
+}
+
+.baiwang__text-container > h2{
+  font-size: 60px;
+  display: inline-block;
+  width: 800px;
+  position: relative;
+  top: -10px;
+  text-shadow: 0px 3px 0px #DBDADA;
+}
+
+.baiwang__text-container > h1{
+  font-size: 160px;
+  display: inline-block;
+  text-shadow: 0px 5px 0px #DBDADA;
+}
+
+.baiwang__svg-container {
+
+}
+
+.baiwang__svg-container > svg {
+  position: absolute;
+  transform: scale(0.6);
+}
+
+.svg--light-bulb {
+  top: calc(-50vh + 67px);
+  left: calc(-50vw + 100px);
+}
+
+.svg--heart {
+  top: calc(-50vh + 100px);
+  left: calc(-25vw + 140px);
+}
+
+.svg--tablet {
+  top: calc(-50vh + 100px);
+  left: calc(25vw - 140px);
+}
+
+.svg--color {
+  top: calc(-50vh + 100px);
+  left: calc(50vw - 200px);
+}
+
+.svg--coffee-plunger {
+  top: 0;
+  left: calc(50vw - 100px);
+}
+
+.svg--mac {
+  top: calc(50vh - 170px);
+  left: calc(30vw - 100px);
+}
+
+.svg--coffee {
+  top: calc(50vh - 150px);
+  left: 0;
+}
+
+.svg--shapes {
+  top: calc(50vh - 170px);
+  left: calc(-30vw - 50px);
+}
+
+.svg--phone {
+  top: 0;
+  left: calc(-50vw + 100px);
+}
+
+/* FIRST SECTION */
+.baiwang__section--new {
+  margin-top: 150px;
+}
+
+.p--baiwang--right {
+  padding-left: calc(100vw - 200px - 700px);
+}
+
+.baiwang--image-placholder-one {
+  //height: 550px;
+  width: 300px;
+  background: #D8D8D8;
+  position: absolute;
+  top: 20px;
+  right: 0;
+  z-index: -1;
+  // background: url('images/baiwang/baiwang_1.jpg') center no-repeat;
+}
+
+.baiwang--image-placholder-two {
+  height: 550px;
+  width: 400px;
+  background: #D8D8D8;
+  position: absolute;
+  top: 0;
+  left: -20px;
+  z-index: -1;
+  background: url('images/baiwang/baiwang_2.jpg') center no-repeat;
+  background-size: 150%;
+}

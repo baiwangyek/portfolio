@@ -1,0 +1,50 @@
+.h1 {
+  font-size: 90px;
+  line-height: 90px;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.text--right {
+  text-align: right;
+}
+
+.h2 {
+  font-size: 50px;
+  line-height: 60px;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.p {
+  font-size: 23px;
+  //font-family: 'Karla', sans-serif;
+  //letter-spacing: -1.3px;
+  //font-family: 'Hammersmith One', sans-serif;
+
+  //font-family: 'Josefin Sans', sans-serif;
+
+  font-weight: 400;
+  margin-top: 60px;
+  line-height: 35px;
+  font-family: 'Quicksand', sans-serif;
+  letter-spacing: 0px;
+  color: #2d2d2d;
+}
+
+.p--baiwang {
+  max-width: 700px;
+}
+
+.p--center {
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  font-size: 27px;
+  line-height: 40px;
+  // font-size: 30px;
+  // line-height: 45px;
+}
+
+.color--baiwang {
+  color: #E33244;
+}
