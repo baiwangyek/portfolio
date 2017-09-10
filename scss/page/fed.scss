@@ -1,3 +1,10 @@
+.fed__body-container {
+  background: #2600FF;
+  margin-left: 20px;
+  margin-bottom: 20px;
+  width: calc(100% - 40px);
+}
+
 .fed__hero {
   background: #2600FF;
   font-family: 'Playfair Display', serif;
@@ -85,15 +92,27 @@
 }
 
 .fed__content {
-  width: 60%;
+  width: 70%;
   margin-left: 20%;
   padding-top: 100px;
   padding-bottom: 100px;
   position: relative;
 }
 
+.fed__introduction-heading {
+  color: #fff;
+  font-family: 'Droid Sans Mono', monospace;
+  font-size: 60px;
+}
+
 .fed__introduction-text {
-  padding-bottom: 140px;
+  padding-bottom: 70px;
+  margin-top: 40px;
+  color: #fff;
+}
+
+.fed-content {
+  padding: 70px 0;
 }
 
 .fed-content__image {
@@ -103,7 +122,7 @@
   position: absolute;
   top: 20px;
   left: -200px;
-  z-index: -1;
+  z-index: 0;
 }
 
 .fed-content__image--right {
@@ -112,23 +131,28 @@
   right: -200px;
 }
 
-.fed__introduction-heading {
-  color: #2600FF;
-  font-family: 'Droid Sans Mono', monospace;
-  font-size: 60px;
-}
-
 .fed-content__subheading {
-  color: #2600FF;
-  font-size: 30px;
-  line-height: 20px;
+  color: #fff;
+  font-size: 20px;
+  line-height: 30px;
   font-style: italic;
+  position: relative;
+  z-index: 2;
 }
 
 .fed-content__heading {
-  color: #2600FF;
-  font-size: 100px;
+  color: #fff;
+  font-size: 80px;
   line-height: 110px;
+  position: relative;
+  z-index: 2;
+
+
+  flex: 0 0 320px;
+  height: 120px;
+  border-bottom: 3px solid white;
+  /* border-bottom: 1px solid white; */
+
 }
 
 .fed__content--right {
@@ -138,12 +162,40 @@
 .hr--fed-blue {
   border: 0;
   height: 2px;
-  background: #2600FF;
+  background: #fff;
   width: 100%;
+  position: relative;
+  z-index: 2;
   // margin-top: 30px;
   // margin-bottom: 10px;
 }
 
 .p--fed {
   margin-top: 0;
+  position: relative;
+  z-index: 2;
+  color: #fff;
+
+margin-left: 60px;
+
+}
+
+.fed-content__text-container {
+  padding-top: 30px;
+  display: flex;
+  padding-bottom: 70px;
+}
+
+.fed-content__img {
+  width: 100%;
+}
+
+.fed-content__link {
+  padding-top: 70px;
+  font-size: 30px;
+  display: block;
+  text-align: right;
+  color: #fff;
+  text-decoration: none;
+  font-family: 'droid sans mono';
 }
