@@ -113,7 +113,7 @@
   margin: 0 auto;
   text-align: center;
   font-size: 80px;
-  line-height: 150px;
+  line-height: 90px;
   color: #fff;
   font-family: 'Hammersmith One', sans-serif;
   text-shadow:  -5px 0px 0px rgb(176,91,250),
@@ -135,18 +135,26 @@
 .design__work-title {
   text-align: center;
   font-size: 80px;
-  line-height: 150px;
+  line-height: 90px;
   color: #fff;
   font-family: 'Hammersmith One', sans-serif;
   text-shadow:  -5px 0px 0px rgb(250,91,117),
                 5px 0px 0px rgb(255,212,100);
 }
 
-.image-placeholder--design {
+.design__work-img-container {
   width: 100%;
   // margin-left: 10%;
-  height: 400px;
-  background:#D8D8D8;
+  //height: 400px;
+  background: #fff;
+  margin-top: 50px;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+}
+
+.design__work-img-container  > img {
+  padding: 30px;
 }
 
 .design__work-text {
