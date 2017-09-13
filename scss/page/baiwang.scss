@@ -1,9 +1,6 @@
 /* HERO */
 .baiwang__body-container {
-  width: calc(100% - 40px);
   background: #E33244;
-  margin-left: 20px;
-  margin-bottom: 20px;
 }
 
 .baiwang__hero {
@@ -13,17 +10,28 @@
 
 .baiwang__hero-text-container {
   //top: 50%;
-  width: 734px;
+  //width: 734px;
+  color: #fff;
+}
+
+.baiwang__svg-container--top,
+.baiwang__svg-container--bottom {
+
+  @media (max-width: 600px) {
+    height: 30vw;
+  }
 }
 
 .baiwang__hero-text-container > h2{
   font-family: 'Hammersmith One', sans-serif;
   font-size: 60px;
-  display: inline-block;
-  width: 800px;
   position: relative;
   top: -10px;
   text-shadow: 0px 3px 0px #DBDADA;
+
+  @media (max-width: 800px) {
+    font-size: 7vw;
+  }
 }
 
 .baiwang__hero-text-container > h1{
@@ -31,6 +39,10 @@
   font-size: 160px;
   display: inline-block;
   text-shadow: 0px 5px 0px #DBDADA;
+
+  @media (max-width: 800px) {
+    font-size: 17vw;
+  }
 }
 
 .baiwang__svg-container {
@@ -44,11 +56,31 @@
   transform: scale(0.6);
 }
 
+.baiwang__svg-container--middle {
+  justify-content: space-around;
+
+  @media (max-width: 1050px) {
+    justify-content: center;
+  }
+}
+
+.svg--coffee-plunger,
+.svg--phone  {
+  @media (max-width: 1050px) {
+    display: none;
+  }
+}
+
 /* CONTENT */
 .baiwang__heading {
   position: relative;
   z-index: 1;
   color: #fff;
+
+  @media (max-width: 800px) {
+    font-size: 14vw;
+    line-height: 16vw;
+  }
 }
 
 .baiwang__text-container {
@@ -59,10 +91,26 @@
   margin-top: 60px;
 }
 
+.baiwang__text-container--dc {
+  flex-direction: row-reverse;
+
+  @media (max-width: 800px) {
+    display: block;
+  }
+}
+
 .baiwang__text {
   position: relative;
   z-index: 1;
-  width: 60%
+  width: 60%;
+
+  @media (max-width: 800px) {
+    width: 100%;
+  }
+}
+
+.baiwang__text--dc {
+  margin-right: 40px;
 }
 
 .baiwang__image-container {
@@ -73,19 +121,57 @@
 
 .baiwang__image-left {
   width: 300px;
-  margin-left: 40px;
+  //margin-left: 40px;
   position: absolute;
   top: -120px;
   z-index: 0;
   left: 0;
+
+  @media (max-width: 800px) {
+    position: static;
+    margin-bottom: 60px;
+  }
+}
+
+.baiwang__text-container--name {
+
+  @media (max-width: 800px) {
+    display: block;
+  }
 }
 
 .baiwang__image-right {
-  width: 300px;
+  width: 430px;
   position: absolute;
-  //top: -120px;
+  top: -120px;
   z-index: 0;
   left: 0;
+
+  @media (max-width: 900px) {
+    width: 330px;
+  }
+
+  @media (max-width: 800px) {
+    position: static;
+    margin-bottom: 60px;
+    margin-left: calc(100% - 330px);
+  }
+
+  @media(max-width: 480px) {
+    margin-left: 0;
+  }
+}
+
+.baiwang__image-container-name {
+  flex: 0 0 430px;
+  margin-right: 40px;
+  position: relative;
+
+  @media (max-width: 900px) {
+    // position: static;
+    // margin-bottom: 60px;
+    flex: 0 0 330px;
+  }
 }
 
 .baiwang__testimonial {
@@ -95,6 +181,18 @@
   position: relative;
   margin: 160px auto;
   border-radius: 5px;
+
+  @media (max-width: 750px) {
+    width: auto;
+  }
+
+  @media (max-width: 550px) {
+    padding: 30px;
+  }
+
+  @media (max-width: 400px) {
+    padding: 15px;
+  }
 }
 
 .baiwang__testimonial:before {
@@ -107,6 +205,11 @@
   position: absolute;
   border: 5px solid #2d2d2d;
   border-radius: 5px;
+
+  @media (max-width: 550px) {
+    left: -7px;
+    top: -10px;
+  }
 }
 
 .baiwang__testimonial-quote {
@@ -116,6 +219,16 @@
   //padding-bottom: 120px;
   font-size: 27px;
   line-height: 40px;
+
+  @media (max-width: 800px) {
+    font-size: 23px;
+    line-height: 35px;
+  }
+
+  @media (max-width: 550px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .baiwang__testimonial-author-container {
@@ -123,6 +236,10 @@
   display: flex;
   justify-content: center;
   align-items: center;
+
+  @media (max-width: 550px) {
+    margin-top: 20px;
+  }
 }
 
 .baiwang__testimonial-author-image-container {
@@ -156,4 +273,21 @@
   text-align: right;
   width: 720px;
   margin-left: calc(100% - 720px);
+
+  @media(max-width: 700px) {
+    width: auto;
+    margin-left: 0;
+  }
+}
+
+.baiwang__text-name {
+  position: relative;
+  z-index: 1;
+  width: 60%;
+  margin-left: 40px;
+
+  @media (max-width: 800px) {
+    width: 100%;
+    margin-left: 0;
+  }
 }

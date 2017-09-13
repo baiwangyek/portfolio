@@ -9,12 +9,19 @@
   //background: #2600FF;
   background: #2502ef;
   font-family: 'Playfair Display', serif;
+  padding-bottom: 150px;
 }
 
 .fed__text-container {
-  top: 47%;
-  width: 850px;
-  z-index: 3;
+  //top: 47%;
+  //width: 850px;
+  //z-index: 3;
+  width: 90%;
+  padding-top: 150px;
+  position: relative;
+  z-index: 1;
+  margin: 0 auto;
+  max-width: 926px;
 }
 
 .fed__text-container > h2{
@@ -24,6 +31,10 @@
   width: 800px;
   position: relative;
   font-family: 'Droid Sans Mono', monospace;
+
+  @media (max-width: 830px) {
+    font-size: 3vw;
+  }
 }
 
 .fed__text-container > h1{
@@ -32,6 +43,11 @@
   display: block;
   font-family: 'Playfair Display', serif;
   text-align: right;
+
+  @media (max-width: 830px) {
+    font-size: 11vw;
+    line-height: 14.5vw;
+  }
 }
 
 .fed__hr {
@@ -57,7 +73,8 @@
   width: 100px;
   position: absolute;
   left: 50%;
-  top: 50%;
+  top: 380px;
+  //top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -65,31 +82,77 @@
   position: absolute;
   z-index: 0;
   top: -230px;
-  left: -440px;
-  height: 250px;
-  width: 250px;
+  //left: -440px;
+  max-height: 250px;
+  max-width: 250px;
   border-radius: 50%;
   background: #1F00CD;
+  left: -32vw;
+  width: 30vw;
+  height: 30vw;
+
+  @media (max-width: 450px) {
+    left: -22vw;
+  }
 }
 
 .fed__vertical-block {
   position: absolute;
   background: #1F089D;
   z-index: 0;
-  top: -240px;
-  left: 170px;
+  top: -290px;
+  //left: 170px;
   height: 530px;
-  width: 390px;
+  //width: 390px;
+  left: 12vw;
+  width: 38vw;
+  //height: 60vw;
+  max-width: 265px;
+  left: 220px;
+
+  @media(max-width: 980px) {
+    left: 17vw;
+  }
+
+  @media(max-width: 800px) {
+    left: 12vw;
+  }
+
+  @media(max-width: 680px) {
+    left: 12vw;
+    height: 440px;
+  }
+
+  @media(max-width: 400px) {
+    height: 300px;
+    top: -230px;
+  }
 }
 
 .fed__horizontal-block {
   position: absolute;
   background: #11035F;
   z-index: 0;
-  top: 120px;
-  left: -500px;
+  top: 70px;
+  //left: -500px;
   height: 210px;
-  width: 900px;
+  //width: 900px;
+  left: -36vw;
+  width: 83vw;
+  max-width: 1060px;
+
+  @media (max-width: 800px) {
+    height: 20vw;
+  }
+
+  @media (max-width: 600px) {
+    left: -30vw;
+  }
+
+  @media (max-width: 400px) {
+    left: -23vw;
+    width: 75vw;
+  }
 }
 
 .fed__content {
@@ -104,6 +167,11 @@
   color: #fff;
   font-family: 'Droid Sans Mono', monospace;
   font-size: 60px;
+  word-wrap: break-word;
+
+  @media(max-width: 500px) {
+    font-size: 10vw;
+  }
 }
 
 .fed__introduction-text {
@@ -143,17 +211,35 @@
 
 .fed-content__heading {
   color: #fff;
-  font-size: 80px;
+  font-size: 70px;
   line-height: 110px;
   position: relative;
   z-index: 2;
 
 
-  flex: 0 0 320px;
-  height: 120px;
+  //flex: 0 0 330px;
+  //height: 120px;
   border-bottom: 3px solid white;
   /* border-bottom: 1px solid white; */
+  position: relative;
 
+  @media(max-width: 530px) {
+    font-size: 13vw;
+    line-height: 25vw;
+  }
+}
+
+.test-container {
+  position: relative;
+}
+
+.test-container:after {
+  content: '';
+  position: absolute;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #fff;
 }
 
 .fed__content--right {
@@ -187,12 +273,58 @@ margin-left: 60px;
   padding-bottom: 70px;
 }
 
+.fed-content__text-container--scrappie,
+.fed-content__text-container--to-do,
+.fed-content__text-container--rpg {
+  @media(max-width: 800px) {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.fed-content__text-container--scrappie > p,
+.fed-content__text-container--to-do > p,
+.fed-content__text-container--rpg > p {
+  @media(max-width: 800px) {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+.fed-content__text-container--tic-tac-toe {
+  @media(max-width: 850px) {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.fed-content__text-container--tic-tac-toe > p{
+  @media(max-width: 850px) {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
+.fed-content__text-container--monet {
+  @media(max-width: 1000px) {
+    display: block;
+    padding-top: 0;
+  }
+}
+
+.fed-content__text-container--monet > p{
+  @media(max-width: 1000px) {
+    margin-left: 0;
+    margin-top: 30px;
+  }
+}
+
 .fed-content__img {
   width: 100%;
 }
 
 .fed-content__link {
-  padding-top: 70px;
+  padding-top: 40px;
   font-size: 30px;
   display: block;
   text-align: right;

@@ -28,6 +28,11 @@
   //font-family: 'Quicksand', sans-serif;
   //letter-spacing: 0px;
   color: #2d2d2d;
+
+  @media (max-width: 800px) {
+    font-size: 20px;
+    line-height: 30px;
+  }
 }
 
 .p--baiwang {
