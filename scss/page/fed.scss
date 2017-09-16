@@ -1,12 +1,8 @@
 .fed__body-container {
   background: #2502ef;
-  //margin-left: 20px;
-  //margin-bottom: 20px;
-  //width: calc(100% - 40px);
 }
 
 .fed__hero {
-  //background: #2600FF;
   background: #2502ef;
   font-family: 'Playfair Display', serif;
   padding-bottom: 150px;
@@ -25,10 +21,6 @@
 }
 
 .fed__text-container {
-  //top: 47%;
-  //width: 850px;
-  //z-index: 3;
-  //width: 90%;
   padding-top: 150px;
   position: relative;
   z-index: 1;
@@ -40,11 +32,10 @@
   }
 }
 
-.fed__text-container > h2{
+.fed__hero-subheading {
   font-size: 20px;
   display: block;
   letter-spacing: 10px;
-  // width: 800px;
   position: relative;
   font-family: 'Droid Sans Mono', monospace;
 
@@ -53,7 +44,7 @@
   }
 }
 
-.fed__text-container > h1{
+.fed__hero-heading{
   font-size: 90px;
   line-height: 120px;
   display: block;
@@ -70,9 +61,13 @@
   border: 0;
   height: 2px;
   background: #fff;
-  width: 70%;
+  width: 0%;
   margin-top: 30px;
   margin-bottom: 10px;
+
+  @media(max-width: 500px) {
+    margin-top: 20px;
+  }
 }
 
 .fed__hr--left {
@@ -84,13 +79,11 @@
 }
 
 .fed__blocks-container {
-  //background: pink;
   height: 100px;
   width: 100px;
   position: absolute;
   left: 50%;
   top: 380px;
-  //top: 50%;
   transform: translate(-50%, -50%);
 }
 
@@ -98,7 +91,6 @@
   position: absolute;
   z-index: 0;
   top: -230px;
-  //left: -440px;
   max-height: 250px;
   max-width: 250px;
   border-radius: 50%;
@@ -117,12 +109,9 @@
   background: #1F089D;
   z-index: 0;
   top: -290px;
-  //left: 170px;
   height: 530px;
-  //width: 390px;
   left: 12vw;
-  width: 38vw;
-  //height: 60vw;
+  //width: 38vw;
   max-width: 265px;
   left: 220px;
 
@@ -149,7 +138,6 @@
 
   @media(max-width: 400px) {
     height: 220px;
-    //top: -230px;
   }
 }
 
@@ -158,11 +146,9 @@
   background: #11035F;
   z-index: 0;
   top: 70px;
-  //left: -500px;
   height: 210px;
-  //width: 900px;
   left: -36vw;
-  width: 83vw;
+  //width: 83vw;
   max-width: 1060px;
 
   @media (max-width: 800px) {
@@ -185,7 +171,7 @@
 
   @media (max-width: 400px) {
     left: -23vw;
-    width: 75vw;
+    //width: 75vw;
     top: -27vw;
   }
 
@@ -255,12 +241,7 @@
   line-height: 110px;
   position: relative;
   z-index: 2;
-
-
-  //flex: 0 0 330px;
-  //height: 120px;
   border-bottom: 3px solid white;
-  /* border-bottom: 1px solid white; */
   position: relative;
 
   @media(max-width: 530px) {
@@ -293,8 +274,6 @@
   width: 100%;
   position: relative;
   z-index: 2;
-  // margin-top: 30px;
-  // margin-bottom: 10px;
 }
 
 .p--fed {
@@ -302,9 +281,7 @@
   position: relative;
   z-index: 2;
   color: #fff;
-
-margin-left: 60px;
-
+  margin-left: 60px;
 }
 
 .fed-content__text-container {

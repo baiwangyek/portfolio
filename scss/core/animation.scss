@@ -1,0 +1,151 @@
+/* FED */
+
+// .fed__text-container > h2{
+//   font-size: 20px;
+//   display: block;
+//   letter-spacing: 10px;
+//   position: relative;
+//   font-family: 'Droid Sans Mono', monospace;
+//
+//   @media (max-width: 830px) {
+//     font-size: 3vw;
+//   }
+// }
+
+// .fed__text-container > h2:before{
+//   content: '';
+//   background: white;
+//   height: 100%;
+//   width: 130px;
+//   opacity: .5;
+//   display: inline-block;
+//   position: absolute;
+// }
+//
+// .fed__text-container > h1{
+//   font-size: 90px;
+//   line-height: 120px;
+//   display: block;
+//   font-family: 'Playfair Display', serif;
+//   text-align: right;
+//
+//   @media (max-width: 830px) {
+//     font-size: 11vw;
+//     line-height: 14.5vw;
+//   }
+// }
+
+.fed__hero-subheading-container {
+  width: 140px;
+  overflow: hidden;
+  position: relative;
+}
+
+.fed__hero-subheading-container:before {
+  content : "";
+  position: absolute;
+  display: inline-block;
+  background: white;
+  display: inline-block;
+  //width: 140px;
+  height: 20px;
+  animation: fed__hero-subheading-container-reveal 0.8s forwards 1.2s;
+}
+
+@keyframes fed__hero-subheading-container-reveal {
+  0%{width: 0%;}
+  50%{width: 140px; transform: translateX(0px);}
+  100%{width: 0%; transform: translateX(140px);}
+}
+
+.fed__hero-subheading {
+  width: 140px;
+  visibility: hidden;
+  animation: fed__hero-subheading-reveal steps(1) 0.4s forwards 1.2s;
+}
+
+@keyframes fed__hero-subheading-reveal {
+  0% {visibility: hidden;}
+  100%{visibility: visible;}
+}
+
+.fed__hero-heading-container {
+  overflow: hidden;
+  position: relative;
+}
+
+.fed__hero-heading-container:before {
+  content : "";
+  position: absolute;
+  display: inline-block;
+  background: white;
+  display: inline-block;
+  //width: 140px;
+  height: 230px;
+  animation: fed__hero-heading-container-reveal 0.8s forwards 1.4s;
+}
+
+@keyframes fed__hero-heading-container-reveal {
+  0%{width: 0%;}
+  50%{width: 100%; left: 0%;}
+  100%{width: 0%; left: 100%;}
+}
+
+.fed__hero-heading {
+  //width: 140px;
+  visibility: hidden;
+  animation: fed__hero-heading-reveal steps(1) 0.4s forwards 1.4s;
+}
+
+@keyframes fed__hero-heading-reveal {
+  0% {visibility: hidden;}
+  100%{visibility: visible;}
+}
+
+.fed__hr {
+  width: 70%;
+  animation: fed__hr-reveal 0.4s forwards 2s;
+}
+
+@keyframes fed__hr-reveal {
+  0%{width: 0%;}
+  100%{width: 70%;}
+}
+
+
+
+.fed__circle {
+  animation: fed__circle-grow .8s forwards;
+}
+
+@keyframes fed__circle-grow {
+  0%{transform: scale(0);}
+  100%{transform: scale(1);}
+}
+
+.fed__vertical-block {
+  animation: fed__vertical-block-grow-right .8s .4s forwards;
+}
+
+@keyframes fed__vertical-block-grow-right {
+  0%{width: 0vw;}
+  100%{width: 38vw;}
+}
+
+.fed__horizontal-block {
+  animation: fed__horizontal-block-grow-right .8s .8s forwards;
+
+  @media (max-width: 400px) {
+    animation: fed__horizontal-block-grow-right-400px .8s .8s forwards;
+  }
+}
+
+@keyframes fed__horizontal-block-grow-right {
+  0%{width: 0vw;}
+  100%{width: 83vw;}
+}
+
+@keyframes fed__horizontal-block-grow-right-400px {
+  0%{width: 0vw;}
+  100%{width: 75vw;}
+}
