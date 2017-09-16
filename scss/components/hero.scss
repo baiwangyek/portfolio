@@ -2,7 +2,12 @@
   color: #fff;
   width: calc(100% - 40px);
   //height: calc(100vh - 40px);
-  margin: 20px;
+  margin: 0 20px;
+
+  @media (min-width: 1300px) {
+    width: calc(100% - 200px);
+    margin: 0 100px;
+  }
 }
 
 .iam__text-container {

@@ -12,6 +12,9 @@
   //top: 50%;
   //width: 734px;
   color: #fff;
+  //visibility: hidden;
+  transition: .8s;
+  opacity: 0;
 }
 
 .baiwang__svg-container--top,
@@ -54,6 +57,7 @@
 .baiwang__svg-container > svg {
   //position: absolute;
   transform: scale(0.6);
+  visibility: hidden;
 }
 
 .baiwang__svg-container--middle {
@@ -69,6 +73,11 @@
   @media (max-width: 1050px) {
     display: none;
   }
+}
+
+.svg-fill {
+  fill-opacity: 0;
+  transition: 0.8s;
 }
 
 /* CONTENT */
