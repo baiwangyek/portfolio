@@ -6,7 +6,9 @@
 @import "core/mixin.scss";
 @import "core/section.scss";
 @import "core/type.scss";
-@import "core/animation.scss";
+
+@import "animations/animation-fed.scss";
+@import "animations/animation-design.scss";
 
 
 @import "components/iam-nav.scss";
