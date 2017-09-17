@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
-
+  console.log('in');
   // function getLongestLength(svgGroup) {
   //   var svgLine = svgGroup.children[0].children[1];
   //   var longestLength = 0;
@@ -71,5 +71,69 @@ window.addEventListener('load', function(){
   if(document.querySelector('.baiwang__body-container')){
     baiwangInit();
   }
+
+
+  if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
+
+  var camera, scene, renderer;
+  var geometry, material, mesh;
+
+  function setup() {
+    console.log('in');
+
+    var W = window.innerWidth;
+    // var H = window.innerHeight;
+    var H = 500;
+    renderer = new THREE.WebGLRenderer();
+    renderer.setSize( W, H );
+    //document.body.appendChild( renderer.domElement );
+    document.getElementById('emojiContainer').appendChild( renderer.domElement );
+
+    camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
+    camera.position.z = 500;
+
+    scene = new THREE.Scene();
+
+
+    // paste your code from the geometryGUI here
+    map = THREE.ImageUtils.loadTexture('images/heart-5.jpg');
+    geometry = new THREE.SphereGeometry(100, 100, 100);
+    material = new THREE.MeshLambertMaterial({shading: THREE.SmoothShading, color: 0xdcdcdc, map: map});
+    mesh = new THREE.Mesh(geometry, material);
+    map.wrapS = map.wrapT = THREE.RepeatWrapping;
+    map.repeat.set( 1, 1 );
+    mesh.rotation.y = 11;
+    mesh.rotation.z = 6.5;
+    scene.add(mesh);
+
+    hemisphereLight = new THREE.HemisphereLight(0xffffff, 0x666666, 1.76);
+    scene.add( hemisphereLight );
+
+  }
+
+  function draw() {
+
+    requestAnimationFrame( draw );
+
+    // experiment with code from the snippets menu here
+    //mesh.rotation.x = Date.now() * 0.0005;
+    mesh.rotation.x = mouseY * 0.002;
+		mesh.rotation.y = mouseX * 0.002;
+		//mesh.rotation.z = Date.now() * 0.001;
+
+    renderer.render( scene, camera );
+
+  }
+
+  setup();
+  draw();
+
+  var mouseX = 0, mouseY = 0;
+
+  document.body.addEventListener('mousemove', function(){
+    //console.log(event.clientX-368);
+    mouseX = event.clientX-window.innerWidth;
+    mouseY = event.clientY-(window.innerHeight/2);
+  });
 
 });
