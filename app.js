@@ -87,7 +87,9 @@ window.addEventListener('load', function(){
     renderer = new THREE.WebGLRenderer();
     renderer.setSize( W, H );
     //document.body.appendChild( renderer.domElement );
-    document.getElementById('emojiContainer').appendChild( renderer.domElement );
+    if(!document.querySelector('canvas')){
+      document.getElementById('emojiContainer').appendChild( renderer.domElement );
+    }
 
     camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
     camera.position.z = 500;
@@ -97,7 +99,7 @@ window.addEventListener('load', function(){
 
     // paste your code from the geometryGUI here
     map = THREE.ImageUtils.loadTexture('images/heart-5.jpg');
-    geometry = new THREE.SphereGeometry(100, 100, 100);
+    geometry = new THREE.SphereGeometry(150, 100, 100);
     material = new THREE.MeshLambertMaterial({shading: THREE.SmoothShading, color: 0xdcdcdc, map: map});
     mesh = new THREE.Mesh(geometry, material);
     map.wrapS = map.wrapT = THREE.RepeatWrapping;
@@ -128,7 +130,7 @@ window.addEventListener('load', function(){
   setup();
   draw();
 
-  var mouseX = 0, mouseY = 0;
+  var mouseX = 11/0.002, mouseY = 0;
 
   document.body.addEventListener('mousemove', function(){
     //console.log(event.clientX-368);
