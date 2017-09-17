@@ -309,6 +309,34 @@ section {
     text-shadow: 0.6vw 0.6vw 0vw #ffd464, 1.2vw 1.2vw 0vw #fa5b75, 1.8vw 1.8vw 0vw #5bf7fa, 2.4vw 2.4vw 0vw #5bffca, 3vw 3vw 0vw #b05bfa, 3.6vw 3.6vw 0vw #fffb85; }
   100% {
     text-shadow: 0.6vw 0.6vw 0vw #fffb85, 1.2vw 1.2vw 0vw #ffd464, 1.8vw 1.8vw 0vw #fa5b75, 2.4vw 2.4vw 0vw #5bf7fa, 3vw 3vw 0vw #5bffca, 3.6vw 3.6vw 0vw #b05bfa; } }
+.iam-nav--right.iam-nav--fed:hover {
+  transition: .4s;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse; }
+
+.iam-nav--right.iam-nav--fed:hover .chevron--right {
+  width: 18px;
+  transition: .4s; }
+
+.iam-nav--right.iam-nav--fed:hover .iam-nav-indicator {
+  display: none; }
+
+.iam-nav--fed:hover .iam-nav__expanded-text-container {
+  display: block; }
+
+.iam-nav--fed:hover .iam-nav__expanded-subheading--fed {
+  animation: appear .4s .4s forwards; }
+
+.iam-nav--fed:hover .iam-nav__expanded-heading--fed {
+  animation: appear .4s .4s forwards; }
+
+@keyframes appear {
+  0% {
+    opacity: 0; }
+  100% {
+    opacity: 1; } }
 .iam-nav {
   height: 50px;
   width: 50px;
@@ -354,6 +382,23 @@ section {
   line-height: 20px;
   color: white;
   font-size: 20px; }
+
+.iam-nav__expanded-text-container {
+  display: none; }
+
+.iam-nav__expanded-subheading {
+  font-size: 14px; }
+
+.iam-nav__expanded-subheading--fed {
+  font-family: 'droid sans mono';
+  opacity: 0; }
+
+.iam-nav__expanded-heading {
+  margin-top: 5px; }
+
+.iam-nav__expanded-heading--fed {
+  font-family: 'Playfair Display';
+  opacity: 0; }
 
 .iam__hero {
   color: #fff;

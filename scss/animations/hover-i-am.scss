@@ -1,0 +1,34 @@
+.iam-nav--right.iam-nav--fed:hover {
+  transition: .4s;
+  width: 400px;
+  justify-content: space-between;
+  align-items: center;
+  flex-direction: row-reverse;
+
+}
+
+.iam-nav--right.iam-nav--fed:hover .chevron--right{
+  width: 18px;
+  transition: .4s;
+}
+
+.iam-nav--right.iam-nav--fed:hover .iam-nav-indicator{
+  display: none;
+}
+
+.iam-nav--fed:hover .iam-nav__expanded-text-container{
+  display: block;
+}
+
+.iam-nav--fed:hover .iam-nav__expanded-subheading--fed {
+  animation: appear .4s .4s forwards;
+}
+
+.iam-nav--fed:hover .iam-nav__expanded-heading--fed {
+  animation: appear .4s .4s forwards;
+}
+
+@keyframes appear {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}

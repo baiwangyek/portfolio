@@ -35,6 +35,7 @@
 
 .iam-nav--fed {
   background: #2600FF;
+  //transition: .8s;
   //font-family: 'Droid Sans Mono', monospace;
   // letter-spacing: 8px;
   // padding-left: 14px;
@@ -64,6 +65,7 @@
 
 .chevron--right {
   width: 13px;
+  //transition: .8s;
 }
 
 .chevron--left {
@@ -76,4 +78,26 @@
   line-height: 20px;
   color: white;
   font-size: 20px;
+}
+
+.iam-nav__expanded-text-container {
+  display: none;
+}
+
+.iam-nav__expanded-subheading {
+  font-size: 14px;
+}
+
+.iam-nav__expanded-subheading--fed {
+  font-family: 'droid sans mono';
+  opacity: 0;
+}
+
+.iam-nav__expanded-heading {
+  margin-top: 5px;
+}
+
+.iam-nav__expanded-heading--fed {
+  font-family: 'Playfair Display';
+  opacity: 0;
 }
