@@ -293,7 +293,7 @@ section {
   85% {
     text-shadow: 0.6vw 0.6vw 0vw #fffb85, 1.2vw 1.2vw 0vw #ffd464, 1.8vw 1.8vw 0vw #fa5b75, 2.4vw 2.4vw 0vw #5bf7fa, 3vw 3vw 0vw #5bffca, 3.6vw 3.6vw 0vw #b05bfa; }
   100% {
-    text-shadow: 0.6vw 0.6vw 0vw #fffb85, 1.2vw 1.2vw 0vw #ffd464, 1.8vw 1.8vw 0vw #fa5b75, 2.4vw 2.4vw 0vw #5bf7fa, 3vw 3vw 0vw #5bffca, 36vw 3.6vw 0vw #b05bfa; } }
+    text-shadow: 0.6vw 0.6vw 0vw #fffb85, 1.2vw 1.2vw 0vw #ffd464, 1.8vw 1.8vw 0vw #fa5b75, 2.4vw 2.4vw 0vw #5bf7fa, 3vw 3vw 0vw #5bffca, 3.6vw 3.6vw 0vw #b05bfa; } }
 @keyframes design-hero-text-rainbow-animate-mobile {
   0% {
     text-shadow: 0.6vw 0.6vw 0vw #fffb85, 1.2vw 1.2vw 0vw #ffd464, 1.8vw 1.8vw 0vw #fa5b75, 2.4vw 2.4vw 0vw #5bf7fa, 3vw 3vw 0vw #5bffca, 3.6vw 3.6vw 0vw #b05bfa; }
