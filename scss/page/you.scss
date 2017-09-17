@@ -200,3 +200,12 @@
   transform: translateX(-50%);
   mix-blend-mode: screen;
 }
+
+
+
+.lock-screen {
+    //height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
+}

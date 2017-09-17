@@ -1317,4 +1317,9 @@ section {
   transform: translateX(-50%);
   mix-blend-mode: screen; }
 
+.lock-screen {
+  overflow: hidden;
+  width: 100%;
+  position: fixed; }
+
 /*# sourceMappingURL=main.css.map */

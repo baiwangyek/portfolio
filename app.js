@@ -83,7 +83,13 @@ window.addEventListener('load', function(){
 
     var W = window.innerWidth;
     // var H = window.innerHeight;
-    var H = 500;
+    //var H = 500;
+    if(window.innerWidth <= 650){
+      var H = 300;
+    }
+    else{
+      var H = 500;
+    }
     renderer = new THREE.WebGLRenderer();
     renderer.setSize( W, H );
     //document.body.appendChild( renderer.domElement );
@@ -100,10 +106,22 @@ window.addEventListener('load', function(){
     // paste your code from the geometryGUI here
     map = THREE.ImageUtils.loadTexture('images/heart-5.jpg');
     geometry = new THREE.SphereGeometry(150, 100, 100);
+
+    // if(window.innerWidth <= 650){
+    //   geometry = new THREE.SphereGeometry(150, 100, 100);
+    // }
+    // else{
+    //   geometry = new THREE.SphereGeometry(150, 100, 100);
+    // }
+
+
     material = new THREE.MeshLambertMaterial({shading: THREE.SmoothShading, color: 0xdcdcdc, map: map});
     mesh = new THREE.Mesh(geometry, material);
     map.wrapS = map.wrapT = THREE.RepeatWrapping;
     map.repeat.set( 1, 1 );
+    //11 is the center
+    //10 is facing left
+    //12 is facing right
     mesh.rotation.y = 11;
     mesh.rotation.z = 6.5;
     scene.add(mesh);
@@ -118,10 +136,30 @@ window.addEventListener('load', function(){
     requestAnimationFrame( draw );
 
     // experiment with code from the snippets menu here
-    //mesh.rotation.x = Date.now() * 0.0005;
-    mesh.rotation.x = mouseY * 0.002;
-		mesh.rotation.y = mouseX * 0.002;
-		//mesh.rotation.z = Date.now() * 0.001;
+    //formula = ((total distance/2) - pos)/(total distance/2)
+    if(!mobile){
+      mesh.rotation.x = 6.5 - ((window.innerHeight/2) - mouseY)/(window.innerHeight/2);
+      mesh.rotation.y = 11 - ((window.innerWidth/2) - mouseX)/(window.innerWidth/2);
+    }
+    else{
+      //window.setTimeout(function(){
+        mesh.rotation.x = 6.5;
+        mesh.rotation.y = 11 - (Date.now() * 0.002);
+      //}, 1000);
+
+			//mesh.rotation.z = Date.now() * 0.001;
+    }
+
+    // if(touchMove === true){
+    //
+    //   //mesh.rotation.x = mesh.rotation.x - (diffY * 0.002);
+    //   //mesh.rotation.y = mesh.rotation.y - (diffX * 0.002);
+    //
+    //   mesh.rotation.x = finalMeshX - ((window.innerHeight/2) - (diffY))/(window.innerHeight/2);
+    //   mesh.rotation.y = finalMeshY - ((window.innerWidth/2) - diffX)/(window.innerWidth/2);
+    //   //touchDown = false;
+    //   //alert('in');
+    // }
 
     renderer.render( scene, camera );
 
@@ -130,12 +168,61 @@ window.addEventListener('load', function(){
   setup();
   draw();
 
-  var mouseX = 11/0.002, mouseY = 0;
-
+  //alert(window.innerWidth/2);
+  var mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
+  var mobile = true;
   document.body.addEventListener('mousemove', function(){
-    //console.log(event.clientX-368);
-    mouseX = event.clientX-window.innerWidth;
-    mouseY = event.clientY-(window.innerHeight/2);
+    mouseX = event.clientX;
+    mouseY = event.clientY;
   });
+
+
+  // var touchDown = false;
+  // var touchMove = false;
+  // var position = 0;
+  // var initPos = 0;
+  // var touchMovePos = 0;
+  // var finalMeshY = 11;
+  // var diffX = 0, diffY = 0;
+  //
+  // document.querySelector('canvas').addEventListener('touchstart', function(){
+  //   document.body.classList.add('lock-screen');
+  //   //event.preventDefaut();
+  //   touchDown = true;
+  //   //initPos = event.touches[0].clientX;
+  //   //diffX = event.touches[0].clientX;
+  //
+  //   //alert(initPos);
+  // });
+  //
+  // document.querySelector('canvas').addEventListener('touchend', function(){
+  //   document.body.classList.remove('lock-screen');
+  //   //event.preventDefaut();
+  //   //finalPos = event.touches[0].clientX;
+  //   //alert('in');
+  //   if(touchMove){
+  //     touchDown = false;
+  //     touchMove = false;
+  //     finalMeshY = mesh.rotation.y;
+  //     finalMeshX = mesh.rotation.x;
+  //     diffX = 0;
+  //   }
+  //   //alert(touchDown);
+  // });
+  //
+  // document.querySelector('canvas').addEventListener('touchmove', function(){
+  //   //event.preventDefaut();
+  //   //touchDown = true;
+  //   // touchMovePos = event.touches[0].clientX;
+  //   diffX = event.touches[0].clientX;
+  //   diffY = event.touches[0].clientY;
+  //   touchMove = true;
+  //   // diffY = event.touches[0].clientY;
+  //
+  //   //alert('in');
+  //   //alert(touchMovePos);
+  // });
+
+
 
 });
