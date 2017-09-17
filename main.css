@@ -314,10 +314,15 @@ section {
   width: 50px;
   position: fixed;
   bottom: 30px;
-  font-family: 'Hammersmith One', sans-serif;
   color: #fff;
   text-decoration: none;
-  font-size: 23px; }
+  font-size: 23px;
+  align-items: center;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  z-index: 50; }
 
 .iam-nav--right {
   right: 30px; }
@@ -326,37 +331,29 @@ section {
   left: 30px; }
 
 .iam-nav--baiwang {
-  background: #E33244;
-  letter-spacing: 8px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 3px; }
+  background: #E33244; }
 
 .iam-nav--fed {
-  background: #2600FF;
-  font-family: 'Droid Sans Mono', monospace;
-  letter-spacing: 8px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 3px; }
+  background: #2600FF; }
 
 .iam-nav--design {
-  background: #343D60;
-  letter-spacing: 8px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 3px; }
+  background: #343D60; }
 
 .iam-nav--you {
-  background: linear-gradient(#8970FE, #E16EC1);
-  letter-spacing: 8px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 3px; }
+  background: linear-gradient(#8970FE, #E16EC1); }
+
+.chevron--right {
+  width: 13px; }
+
+.chevron--left {
+  width: 13px;
+  transform: rotate(180deg); }
+
+.iam-nav-indicator {
+  margin-top: 7px;
+  line-height: 20px;
+  color: white;
+  font-size: 20px; }
 
 .iam__hero {
   color: #fff;
@@ -1169,7 +1166,6 @@ section {
 .you__hero-heading {
   color: #fff;
   font-size: 60px;
-  width: 800px;
   position: relative;
   text-align: center;
   font-family: 'Hammersmith One', sans-serif; }
