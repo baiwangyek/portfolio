@@ -1,34 +1,49 @@
-.iam-nav--right.iam-nav--fed:hover {
-  transition: .4s;
-  width: 400px;
-  justify-content: space-between;
-  align-items: center;
-  flex-direction: row-reverse;
+@media(hover) {
+  .iam-nav:hover {
+    transition: .4s;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: row;
+  }
 
-}
+  .iam-nav--baiwang:hover {
+    width: 400px;
+  }
 
-.iam-nav--right.iam-nav--fed:hover .chevron--right{
-  width: 18px;
-  transition: .4s;
-}
+  .iam-nav--fed:hover {
+    width: 400px;
+  }
 
-.iam-nav--right.iam-nav--fed:hover .iam-nav-indicator{
-  display: none;
-}
+  .iam-nav--design:hover {
+    width: 400px;
+  }
 
-.iam-nav--fed:hover .iam-nav__expanded-text-container{
-  display: block;
-}
+  .iam-nav--you:hover {
+    width: 400px;
+  }
 
-.iam-nav--fed:hover .iam-nav__expanded-subheading--fed {
-  animation: appear .4s .4s forwards;
-}
+  .iam-nav:hover .chevron--right{
+    //width: 18px;
+    transform: scale(1.3);
+    transition: .4s;
+  }
 
-.iam-nav--fed:hover .iam-nav__expanded-heading--fed {
-  animation: appear .4s .4s forwards;
-}
+  .iam-nav:hover .chevron--left{
+    //width: 18px;
+    transform: scale(1.3) rotate(180deg);
+    transition: .4s;
+  }
 
-@keyframes appear {
-  0%{opacity: 0;}
-  100%{opacity: 1;}
+  .iam-nav:hover.iam-nav>div{
+    display: block;
+  }
+
+  .iam-nav:hover.iam-nav>div>h2{
+    animation: appear .4s .4s forwards;
+  }
+
+  @keyframes appear {
+    0%{opacity: 0;}
+    100%{opacity: 1;}
+  }
 }
