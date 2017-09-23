@@ -168,9 +168,9 @@ window.addEventListener('load', function(){
   function loadContent(href){
     var http = new XMLHttpRequest();
     var delay = 400;
-    var timeStart = Date.now(), timeEnd = 0;
 
     //start timer
+    var timeStart = Date.now(), timeEnd = 0;
 
     http.onreadystatechange = function(){
       if(http.readyState === XMLHttpRequest.DONE){
@@ -179,17 +179,15 @@ window.addEventListener('load', function(){
           //end timer
           timeEnd = Date.now();
 
+          //calculation of delay
           var timer = timeEnd - timeStart;
-
           if(timer >= 400){delay = 0;}
-          else {
-            delay = 400 - timer;
-          }
+          else {delay = 400 - timer;}
 
+          //set timeout to allow 400ms delay for next page animation to run, if page takes more than 400ms to load, skip the 400ms delay
           window.setTimeout(function(){
-            //console.log(href);
+            //shrink page animation, if you.html, skip this block
             if(!href.match('you.html')){
-              //shrink size
               if(document.querySelector('.you__body-container')){
                 document.querySelector('.you__body-container').style.background = '#fff';
               }
@@ -204,6 +202,7 @@ window.addEventListener('load', function(){
               }, 100);
             }
 
+            //allow delay for shrink animation
             window.setTimeout(function(){
               //getting the str version of the html page and converting it into a dom node
               var dom = http.responseText;
@@ -220,9 +219,16 @@ window.addEventListener('load', function(){
               //inserting the str version of the main element
               document.querySelector('#main').innerHTML = tempMain.innerHTML;
 
+              //to activate webGL emoji
               if(document.querySelector('.you__hero-wrapper')){
                 youInit();
               }
+
+              //refresh the calculation for end of page nav reveal - gotta wait until the images are fully loaded?
+                lengthOfPage = document.body.clientHeight;
+                console.log(lengthOfPage);
+              //heightOfBrowser = window.innerHeight;
+
             }, 400);
           }, delay);
         }
@@ -236,12 +242,42 @@ window.addEventListener('load', function(){
   //addEventListener popstate - for back and forwards
   window.addEventListener('popstate', function(){
      loadContent(location.pathname);
-
-    //console.log('in');
-    //fix video
   });
 
-  var iamNav;
+
+  /************************
+  SCROLL FUNCIONS
+  ***********************/
+  var lengthOfPage = document.body.clientHeight;
+  var heightOfBrowser = window.innerHeight;
+
+  window.addEventListener('scroll', function(){
+    //if end of page, activate the page
+    if(window.scrollY >= lengthOfPage - heightOfBrowser - 50){
+
+      if(window.innerWidth <=750 && document.querySelector('.you__hero')){
+        document.body.classList.add('end-of-page-left');
+      }
+      else if(window.innerWidth <=750){
+        document.body.classList.add('end-of-page-right');
+      }
+      else {
+        document.body.classList.add('end-of-page');
+      }
+      
+    }
+    else {
+      document.body.classList.remove('end-of-page');
+      document.body.classList.remove('end-of-page-right');
+      document.body.classList.remove('end-of-page-left');
+    }
+  });
+
+
+  /*************************
+  CLICK FUNCTIONS
+  **************************/
+  var iamNav; //for nav animation and next page animation
 
   document.body.addEventListener('click', function(){
 

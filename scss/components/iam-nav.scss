@@ -13,18 +13,27 @@
   z-index: 50;
   transition: .4s;
 
-  @media(max-width: 400px) {
+  @media(max-width: 400px), (max-height: 400px){
     height: 30px;
     width: 30px;
+    bottom: 20px;
   }
 }
 
 .iam-nav--right {
   right: 30px;
+
+  @media(max-width: 400px), (max-height: 400px) {
+    right: 20px;
+  }
 }
 
 .iam-nav--left {
   left: 30px;
+
+  @media(max-width: 400px), (max-height: 400px) {
+    left: 20px;
+  }
 }
 
 .iam-nav--baiwang {
@@ -50,7 +59,7 @@
   position: absolute;
   transition: .8s;
 
-  @media(max-width: 400px) {
+  @media(max-width: 400px), (max-height: 400px) {
     top: 14px;
     right: 16px;
   }
@@ -64,7 +73,7 @@
   transition: .8s;
   transform: rotate(180deg);
 
-  @media(max-width: 400px) {
+  @media(max-width: 400px), (max-height: 400px) {
     top: 14px;
     left: 16px;
   }
@@ -108,4 +117,8 @@
 
 .iam-nav__expanded-heading--fed {
   font-family: 'Playfair Display';
+
+  @media (max-width: 390px), (max-height: 400px) {
+    font-size: 18px;
+  }
 }
