@@ -225,8 +225,8 @@ window.addEventListener('load', function(){
               }
 
               //refresh the calculation for end of page nav reveal - gotta wait until the images are fully loaded?
-                lengthOfPage = document.body.clientHeight;
-                console.log(lengthOfPage);
+                // lengthOfPage = document.body.clientHeight;
+                // console.log(lengthOfPage);
               //heightOfBrowser = window.innerHeight;
 
             }, 400);
@@ -252,6 +252,12 @@ window.addEventListener('load', function(){
   var heightOfBrowser = window.innerHeight;
 
   window.addEventListener('scroll', function(){
+    // if(window.scrollY >= lengthOfPage - heightOfBrowser){
+    //   console.log('in');
+      lengthOfPage = document.body.clientHeight;
+  //  }
+    //console.log(lengthOfPage);
+
     //if end of page, activate the page
     if(window.scrollY >= lengthOfPage - heightOfBrowser - 50){
 
@@ -264,7 +270,7 @@ window.addEventListener('load', function(){
       else {
         document.body.classList.add('end-of-page');
       }
-      
+
     }
     else {
       document.body.classList.remove('end-of-page');
