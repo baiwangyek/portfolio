@@ -16,61 +16,61 @@ window.addEventListener('load', function(){
   //   svgFill.style.fillOpacity = 0;
   //   svgFill.style.transition = '0.8s';
   // }
-  function baiwangInit() {
-    var svgArr = document.getElementsByTagName('svg');
-    var svgJSON = [
-                  {longestLength: 382, dashOffset: 382},
-                  {longestLength: 448, dashOffset: 448},
-                  {longestLength: 534, dashOffset: 534},
-                  {longestLength: 764, dashOffset: 764},
-                  {longestLength: 504, dashOffset: 504},
-                  {longestLength: 380, dashOffset: 380},
-                  {longestLength: 715, dashOffset: 715},
-                  {longestLength: 501, dashOffset: 501},
-                  {longestLength: 303, dashOffset: 303},
-                  {longestLength: 736, dashOffset: 736}];
-    var longestIndex = 3;
-
-    for(var i=0; i<svgArr.length; i++){
-      svgArr[i].style.visibility = 'visible';
-      var svgGroup = svgArr[i].children[2];
-      svgJSON[i].element = svgGroup;
-      svgGroup.style.strokeDasharray = svgJSON[i].longestLength;
-    }
-
-    function drawSvg(){
-      if(svgJSON[longestIndex].dashOffset<=0){
-        for(var k=0; k<svgJSON.length; k++){
-          svgJSON[k].element.style.strokeDashoffset = 0; //make sure every svg is fully drawn
-          svgJSON[k].element.children[0].children[0].style.fillOpacity = 1; //show fill
-        }
-
-        document.querySelector('.baiwang__hero-text-container').style.opacity = '1';
-
-      }
-      else{
-        for(var j=0; j<svgJSON.length; j++){
-          if(svgJSON[j].dashOffset<=0){
-            svgJSON[j].element.style.strokeDashoffset = 0;
-          }
-          else{
-            svgJSON[j].element.style.strokeDashoffset = svgJSON[j].dashOffset;
-            svgJSON[j].dashOffset-=8;
-            if(svgJSON[j].dashOffset<0){
-              svgJSON[j].dashOffset=0;
-            }
-          }
-        }
-        requestAnimationFrame(drawSvg);
-      }
-    }
-
-    requestAnimationFrame(drawSvg);
-  }
-
-  if(document.querySelector('.baiwang__body-container')){
-    //baiwangInit();
-  }
+  // function baiwangInit() {
+  //   var svgArr = document.getElementsByTagName('svg');
+  //   var svgJSON = [
+  //                 {longestLength: 382, dashOffset: 382},
+  //                 {longestLength: 448, dashOffset: 448},
+  //                 {longestLength: 534, dashOffset: 534},
+  //                 {longestLength: 764, dashOffset: 764},
+  //                 {longestLength: 504, dashOffset: 504},
+  //                 {longestLength: 380, dashOffset: 380},
+  //                 {longestLength: 715, dashOffset: 715},
+  //                 {longestLength: 501, dashOffset: 501},
+  //                 {longestLength: 303, dashOffset: 303},
+  //                 {longestLength: 736, dashOffset: 736}];
+  //   var longestIndex = 3;
+  //
+  //   for(var i=0; i<svgArr.length; i++){
+  //     svgArr[i].style.visibility = 'visible';
+  //     var svgGroup = svgArr[i].children[2];
+  //     svgJSON[i].element = svgGroup;
+  //     svgGroup.style.strokeDasharray = svgJSON[i].longestLength;
+  //   }
+  //
+  //   function drawSvg(){
+  //     if(svgJSON[longestIndex].dashOffset<=0){
+  //       for(var k=0; k<svgJSON.length; k++){
+  //         svgJSON[k].element.style.strokeDashoffset = 0; //make sure every svg is fully drawn
+  //         svgJSON[k].element.children[0].children[0].style.fillOpacity = 1; //show fill
+  //       }
+  //
+  //       document.querySelector('.baiwang__hero-text-container').style.opacity = '1';
+  //
+  //     }
+  //     else{
+  //       for(var j=0; j<svgJSON.length; j++){
+  //         if(svgJSON[j].dashOffset<=0){
+  //           svgJSON[j].element.style.strokeDashoffset = 0;
+  //         }
+  //         else{
+  //           svgJSON[j].element.style.strokeDashoffset = svgJSON[j].dashOffset;
+  //           svgJSON[j].dashOffset-=8;
+  //           if(svgJSON[j].dashOffset<0){
+  //             svgJSON[j].dashOffset=0;
+  //           }
+  //         }
+  //       }
+  //       requestAnimationFrame(drawSvg);
+  //     }
+  //   }
+  //
+  //   requestAnimationFrame(drawSvg);
+  // }
+  //
+  // if(document.querySelector('.baiwang__body-container')){
+  //   //baiwangInit();
+  // }
 
   function youInit(){
     if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
@@ -167,24 +167,60 @@ window.addEventListener('load', function(){
   **************************/
   function loadContent(href){
     var http = new XMLHttpRequest();
+    var delay = 400;
+    var timeStart = Date.now(), timeEnd = 0;
+
+    //start timer
 
     http.onreadystatechange = function(){
       if(http.readyState === XMLHttpRequest.DONE){
         if(http.status === 200){
-          //getting the str version of the html page and converting it into a dom node
-          var dom = http.responseText;
-          var tempDom = document.createElement('div');
-          tempDom.innerHTML = dom;
 
-          //once it's a dom node, I can use .querySelector to get the content of the main tag
-          var main = tempDom.querySelector('#main').children[0];
+          //end timer
+          timeEnd = Date.now();
 
-          //converting the dom node of the content into str version
-          var tempMain = document.createElement('div');
-          tempMain.appendChild(main);
+          var timer = timeEnd - timeStart;
 
-          //inserting the str version of the main element
-          document.querySelector('#main').innerHTML = tempMain.innerHTML;
+          if(timer >= 400){delay = 0;}
+          else {
+            delay = 400 - timer;
+          }
+
+          window.setTimeout(function(){
+            console.log(href);
+            if(!href.match('you.html')){
+              //shrink size
+              if(document.querySelector('.you__body-container')){
+                document.querySelector('.you__body-container').style.background = '#fff';
+              }
+              iamNav.classList.add('iam-nav-top-reset');
+              window.setTimeout(function(){
+                if(window.innerWidth <= 500){
+                  iamNav.classList.add('iam-nav--shrink-mobile');
+                }
+                else{
+                  iamNav.classList.add('iam-nav--shrink');
+                }
+              }, 100);
+            }
+
+            window.setTimeout(function(){
+              //getting the str version of the html page and converting it into a dom node
+              var dom = http.responseText;
+              var tempDom = document.createElement('div');
+              tempDom.innerHTML = dom;
+
+              //once it's a dom node, I can use .querySelector to get the content of the main tag
+              var main = tempDom.querySelector('#main').children[0];
+
+              //converting the dom node of the content into str version
+              var tempMain = document.createElement('div');
+              tempMain.appendChild(main);
+
+              //inserting the str version of the main element
+              document.querySelector('#main').innerHTML = tempMain.innerHTML;
+            }, 400);
+          }, delay);
         }
       }
     }
@@ -201,6 +237,8 @@ window.addEventListener('load', function(){
     //fix video
   });
 
+  var iamNav;
+
   document.body.addEventListener('click', function(){
 
     if(event.target.className.match('right') || event.target.parentNode.className.match('right') || event.target.parentNode.parentNode.className.match('right')){
@@ -211,27 +249,27 @@ window.addEventListener('load', function(){
       event.preventDefault();
 
       //start transition
-      var iamNavRight;
-      if(event.target.parentNode.parentNode.className.match('right')){iamNavRight = event.target.parentNode.parentNode;}
-      else if(event.target.parentNode.className.match('right')){iamNavRight = event.target.parentNode;}
-      else{iamNavRight  = event.target;}
+      if(event.target.parentNode.parentNode.className.match('right')){iamNav = event.target.parentNode.parentNode;}
+      else if(event.target.parentNode.className.match('right')){iamNav = event.target.parentNode;}
+      else{iamNav  = event.target;}
 
-      iamNavRight.classList.add('iam-nav--active-right');
-      iamNavRight.children[0].style.display = 'none';
-      iamNavRight.children[1].style.display = 'none';
+      iamNav.classList.add('iam-nav--active-right');
+      iamNav.children[0].style.display = 'none';
+      iamNav.children[1].style.display = 'none';
 
       //window.scrollTo(0,0);
 
-      href = iamNavRight.href;
+      href = iamNav.href;
 
       //change url
       history.pushState(null, null, href);
 
-      //ajax-replace
       window.setTimeout(function(){
         window.scrollTo(0,0);
-        loadContent(href);
       }, 400);
+
+      //ajax-replace
+      loadContent(href);
     }
 
     else if(event.target.className.match('left') || event.target.parentNode.className.match('left') || event.target.parentNode.parentNode.className.match('left')){
@@ -242,26 +280,28 @@ window.addEventListener('load', function(){
       event.preventDefault();
 
       //start transition
-      var iamNavLeft;
-      if(event.target.parentNode.parentNode.className.match('left')){iamNavLeft = event.target.parentNode.parentNode;}
-      else if(event.target.parentNode.className.match('left')){iamNavLeft = event.target.parentNode;}
-      else{iamNavLeft  = event.target;}
+      //var iamNav;
+      if(event.target.parentNode.parentNode.className.match('left')){iamNav = event.target.parentNode.parentNode;}
+      else if(event.target.parentNode.className.match('left')){iamNav = event.target.parentNode;}
+      else{iamNav  = event.target;}
 
-      iamNavLeft.classList.add('iam-nav--active-left');
-      iamNavLeft.children[0].style.display = 'none';
-      iamNavLeft.children[1].style.display = 'none';
+      iamNav.classList.add('iam-nav--active-left');
+      iamNav.children[0].style.display = 'none';
+      iamNav.children[1].style.display = 'none';
 
 
-      href = iamNavLeft.href;
+      href = iamNav.href;
 
       //change url
       history.pushState(null, null, href);
 
-      //ajax-replace
       window.setTimeout(function(){
         window.scrollTo(0,0);
-        loadContent(href);
       }, 400);
+
+      //ajax-replace
+      loadContent(href);
+
     }
   });
 });

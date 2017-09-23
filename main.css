@@ -1525,4 +1525,24 @@ section {
   bottom: 0;
   z-index: 100; }
 
+.iam-nav-top-reset {
+  top: 0;
+  left: 0;
+  bottom: auto !important;
+  right: auto !important; }
+
+.iam-nav--shrink {
+  height: 100vh !important;
+  width: calc(100vw - 60px) !important;
+  left: 20px;
+  top: 20px;
+  z-index: 100; }
+
+.iam-nav--shrink-mobile {
+  height: 100vh !important;
+  width: calc(100vw - 40px) !important;
+  left: 10px;
+  top: 10px;
+  z-index: 100; }
+
 /*# sourceMappingURL=main.css.map */
