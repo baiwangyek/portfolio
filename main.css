@@ -89,6 +89,114 @@ section {
 .p--baiwang {
   max-width: 700px; }
 
+@keyframes svg-appear {
+  0% {
+    visibility: hidden;
+    opacity: 0; }
+  100% {
+    visibility: visible;
+    opacity: 1; } }
+.svg-fill {
+  animation: svg-fill-appear .5s linear forwards 2s; }
+
+@keyframes svg-fill-appear {
+  0% {
+    fill-opacity: 0; }
+  100% {
+    fill-opacity: 1; } }
+.svg--light-bulb {
+  stroke-dasharray: 383;
+  animation: svg-appear 1s linear forwards, light-bulb-draw 2s forwards; }
+
+@keyframes light-bulb-draw {
+  0% {
+    stroke-dashoffset: 383; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--heart {
+  stroke-dasharray: 448;
+  animation: svg-appear 1s linear forwards, heart-draw 2s forwards; }
+
+@keyframes heart-draw {
+  0% {
+    stroke-dashoffset: 448; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--tablet {
+  stroke-dasharray: 534;
+  animation: svg-appear 1s linear forwards, tablet-draw 2s forwards; }
+
+@keyframes tablet-draw {
+  0% {
+    stroke-dashoffset: 534; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--color {
+  stroke-dasharray: 764;
+  animation: svg-appear 1s linear forwards, color-draw 2s forwards; }
+
+@keyframes color-draw {
+  0% {
+    stroke-dashoffset: 746; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--phone {
+  stroke-dasharray: 504;
+  animation: svg-appear 1s linear forwards, phone-draw 2s forwards; }
+
+@keyframes phone-draw {
+  0% {
+    stroke-dashoffset: 504; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--coffee-plunger {
+  stroke-dasharray: 380;
+  animation: svg-appear 1s linear forwards, coffee-plunger-draw 2s forwards; }
+
+@keyframes coffee-plunger-draw {
+  0% {
+    stroke-dashoffset: 380; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--code {
+  stroke-dasharray: 715;
+  animation: svg-appear 1s linear forwards, code-draw 2s forwards; }
+
+@keyframes code-draw {
+  0% {
+    stroke-dashoffset: 715; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--shapes {
+  stroke-dasharray: 502;
+  animation: svg-appear 1s linear forwards, shapes-draw 2s forwards; }
+
+@keyframes shapes-draw {
+  0% {
+    stroke-dashoffset: 502; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--coffee {
+  stroke-dasharray: 303;
+  animation: svg-appear 1s linear forwards, coffee-draw 2s forwards; }
+
+@keyframes coffee-draw {
+  0% {
+    stroke-dashoffset: 303; }
+  100% {
+    stroke-dashoffset: 0; } }
+.svg--mac {
+  stroke-dasharray: 736;
+  animation: svg-appear 1s linear forwards, mac-draw 2s forwards; }
+
+@keyframes mac-draw {
+  0% {
+    stroke-dashoffset: 736; }
+  100% {
+    stroke-dashoffset: 0; } }
+.baiwang__hero-text-container {
+  animation: svg-appear 1s linear forwards 2s; }
+
 /* FED */
 .fed__hero-subheading-container {
   width: 140px;
@@ -519,6 +627,7 @@ section {
   justify-content: space-between; }
 
 .baiwang__svg-container > svg {
+  opacity: 0;
   transform: scale(0.6);
   visibility: hidden; }
 
@@ -1401,5 +1510,19 @@ section {
   overflow: hidden;
   width: 100%;
   position: fixed; }
+
+.iam-nav--active-right {
+  height: 100vh !important;
+  width: 100vw !important;
+  right: 0;
+  bottom: 0;
+  z-index: 100; }
+
+.iam-nav--active-left {
+  height: 100vh !important;
+  width: 100vw !important;
+  left: 0;
+  bottom: 0;
+  z-index: 100; }
 
 /*# sourceMappingURL=main.css.map */

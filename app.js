@@ -69,7 +69,7 @@ window.addEventListener('load', function(){
   }
 
   if(document.querySelector('.baiwang__body-container')){
-    baiwangInit();
+    //baiwangInit();
   }
 
   function youInit(){
@@ -161,4 +161,107 @@ window.addEventListener('load', function(){
   if(document.querySelector('.you__hero-wrapper')){
     youInit();
   }
+
+  /**************************
+  HISTORY API FUNCTIONS
+  **************************/
+  function loadContent(href){
+    var http = new XMLHttpRequest();
+
+    http.onreadystatechange = function(){
+      if(http.readyState === XMLHttpRequest.DONE){
+        if(http.status === 200){
+          //getting the str version of the html page and converting it into a dom node
+          var dom = http.responseText;
+          var tempDom = document.createElement('div');
+          tempDom.innerHTML = dom;
+
+          //once it's a dom node, I can use .querySelector to get the content of the main tag
+          var main = tempDom.querySelector('#main').children[0];
+
+          //converting the dom node of the content into str version
+          var tempMain = document.createElement('div');
+          tempMain.appendChild(main);
+
+          //inserting the str version of the main element
+          document.querySelector('#main').innerHTML = tempMain.innerHTML;
+        }
+      }
+    }
+
+    http.open('GET', href);
+    http.send();
+  }
+
+  //addEventListener popstate - for back and forwards
+  window.addEventListener('popstate', function(){
+     loadContent(location.pathname);
+
+    //console.log('in');
+    //fix video
+  });
+
+  document.body.addEventListener('click', function(){
+
+    if(event.target.className.match('right') || event.target.parentNode.className.match('right') || event.target.parentNode.parentNode.className.match('right')){
+
+      var href;
+
+      //prevent link
+      event.preventDefault();
+
+      //start transition
+      var iamNavRight;
+      if(event.target.parentNode.parentNode.className.match('right')){iamNavRight = event.target.parentNode.parentNode;}
+      else if(event.target.parentNode.className.match('right')){iamNavRight = event.target.parentNode;}
+      else{iamNavRight  = event.target;}
+
+      iamNavRight.classList.add('iam-nav--active-right');
+      iamNavRight.children[0].style.display = 'none';
+      iamNavRight.children[1].style.display = 'none';
+
+      //window.scrollTo(0,0);
+
+      href = iamNavRight.href;
+
+      //change url
+      history.pushState(null, null, href);
+
+      //ajax-replace
+      window.setTimeout(function(){
+        window.scrollTo(0,0);
+        loadContent(href);
+      }, 400);
+    }
+
+    else if(event.target.className.match('left') || event.target.parentNode.className.match('left') || event.target.parentNode.parentNode.className.match('left')){
+
+      var href;
+
+      //prevent link
+      event.preventDefault();
+
+      //start transition
+      var iamNavLeft;
+      if(event.target.parentNode.parentNode.className.match('left')){iamNavLeft = event.target.parentNode.parentNode;}
+      else if(event.target.parentNode.className.match('left')){iamNavLeft = event.target.parentNode;}
+      else{iamNavLeft  = event.target;}
+
+      iamNavLeft.classList.add('iam-nav--active-left');
+      iamNavLeft.children[0].style.display = 'none';
+      iamNavLeft.children[1].style.display = 'none';
+
+
+      href = iamNavLeft.href;
+
+      //change url
+      history.pushState(null, null, href);
+
+      //ajax-replace
+      window.setTimeout(function(){
+        window.scrollTo(0,0);
+        loadContent(href);
+      }, 400);
+    }
+  });
 });

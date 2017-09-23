@@ -1,0 +1,17 @@
+.iam-nav--active-right {
+  height: 100vh !important;
+  width: 100vw !important;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+  //transition: .6s cubic-bezier(.21,-0.22,.6,1.02) !important;
+  //transition: .5s ease-in !important;
+}
+
+.iam-nav--active-left {
+  height: 100vh !important;
+  width: 100vw !important;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
