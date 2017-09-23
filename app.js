@@ -1,5 +1,5 @@
 window.addEventListener('load', function(){
-  console.log('in');
+  //console.log('in');
   // function getLongestLength(svgGroup) {
   //   var svgLine = svgGroup.children[0].children[1];
   //   var longestLength = 0;
@@ -187,7 +187,7 @@ window.addEventListener('load', function(){
           }
 
           window.setTimeout(function(){
-            console.log(href);
+            //console.log(href);
             if(!href.match('you.html')){
               //shrink size
               if(document.querySelector('.you__body-container')){
@@ -219,6 +219,10 @@ window.addEventListener('load', function(){
 
               //inserting the str version of the main element
               document.querySelector('#main').innerHTML = tempMain.innerHTML;
+
+              if(document.querySelector('.you__hero-wrapper')){
+                youInit();
+              }
             }, 400);
           }, delay);
         }

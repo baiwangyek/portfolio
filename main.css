@@ -222,7 +222,7 @@ section {
     width: 0%;
     transform: translateX(140px); } }
 .fed__hero-subheading {
-  width: 140px;
+  width: 150px;
   visibility: hidden;
   animation: fed__hero-subheading-reveal steps(1) 0.4s forwards 1.2s; }
 
