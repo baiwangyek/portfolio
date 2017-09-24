@@ -263,9 +263,9 @@
 
 .design__introduction-text {
   color: #fff;
-  text-align: center;
-  margin: 0 auto;
-  width: 70%;
+  text-align: left;
+  margin: 60px auto 0;
+  width: 100%;
 
   @media(max-width: 700px) {
     width: 90%;
