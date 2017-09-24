@@ -758,7 +758,7 @@ section {
 .baiwang__image-left {
   width: 300px;
   position: absolute;
-  top: -120px;
+  top: -180px;
   z-index: 0;
   left: 0; }
   @media (max-width: 800px) {
@@ -772,6 +772,9 @@ section {
 
 .baiwang__introdution-text {
   margin-right: 40px; }
+  @media (max-width: 800px) {
+    .baiwang__introdution-text {
+      margin-right: 0; } }
 
 .baiwang__image-right {
   width: 430px;
