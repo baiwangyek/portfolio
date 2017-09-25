@@ -1,76 +1,4 @@
 window.addEventListener('load', function(){
-  //console.log('in');
-  // function getLongestLength(svgGroup) {
-  //   var svgLine = svgGroup.children[0].children[1];
-  //   var longestLength = 0;
-  //
-  //   for(var i=0; i<svgLine.children.length; i++){
-  //     var pathLength = svgLine.children[i].getTotalLength();
-  //     if(longestLength < pathLength){ longestLength = pathLength;}
-  //   }
-  //   return longestLength;
-  // }
-
-  // function hideSvgFill(svgGroup) {
-  //   var svgFill = svgGroup.children[0].children[0];
-  //   svgFill.style.fillOpacity = 0;
-  //   svgFill.style.transition = '0.8s';
-  // }
-  // function baiwangInit() {
-  //   var svgArr = document.getElementsByTagName('svg');
-  //   var svgJSON = [
-  //                 {longestLength: 382, dashOffset: 382},
-  //                 {longestLength: 448, dashOffset: 448},
-  //                 {longestLength: 534, dashOffset: 534},
-  //                 {longestLength: 764, dashOffset: 764},
-  //                 {longestLength: 504, dashOffset: 504},
-  //                 {longestLength: 380, dashOffset: 380},
-  //                 {longestLength: 715, dashOffset: 715},
-  //                 {longestLength: 501, dashOffset: 501},
-  //                 {longestLength: 303, dashOffset: 303},
-  //                 {longestLength: 736, dashOffset: 736}];
-  //   var longestIndex = 3;
-  //
-  //   for(var i=0; i<svgArr.length; i++){
-  //     svgArr[i].style.visibility = 'visible';
-  //     var svgGroup = svgArr[i].children[2];
-  //     svgJSON[i].element = svgGroup;
-  //     svgGroup.style.strokeDasharray = svgJSON[i].longestLength;
-  //   }
-  //
-  //   function drawSvg(){
-  //     if(svgJSON[longestIndex].dashOffset<=0){
-  //       for(var k=0; k<svgJSON.length; k++){
-  //         svgJSON[k].element.style.strokeDashoffset = 0; //make sure every svg is fully drawn
-  //         svgJSON[k].element.children[0].children[0].style.fillOpacity = 1; //show fill
-  //       }
-  //
-  //       document.querySelector('.baiwang__hero-text-container').style.opacity = '1';
-  //
-  //     }
-  //     else{
-  //       for(var j=0; j<svgJSON.length; j++){
-  //         if(svgJSON[j].dashOffset<=0){
-  //           svgJSON[j].element.style.strokeDashoffset = 0;
-  //         }
-  //         else{
-  //           svgJSON[j].element.style.strokeDashoffset = svgJSON[j].dashOffset;
-  //           svgJSON[j].dashOffset-=8;
-  //           if(svgJSON[j].dashOffset<0){
-  //             svgJSON[j].dashOffset=0;
-  //           }
-  //         }
-  //       }
-  //       requestAnimationFrame(drawSvg);
-  //     }
-  //   }
-  //
-  //   requestAnimationFrame(drawSvg);
-  // }
-  //
-  // if(document.querySelector('.baiwang__body-container')){
-  //   //baiwangInit();
-  // }
 
   function youInit(){
     if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
@@ -162,6 +90,32 @@ window.addEventListener('load', function(){
     youInit();
   }
 
+
+  //console.log(document.querySelector('.body-max-width').children[1].children);
+
+  var bodySectionChildenNum, bodySectionChilden, bodySectionChildenArr = [];
+
+  function updateBodySectionChildren() {
+    console.log('in');
+
+    bodySectionChildenNum = document.querySelector('.body-max-width').children[1].children.length;
+    bodySectionChilden = document.querySelector('.body-max-width').children[1].children;
+    bodySectionChildenArr = [];
+
+    if(window.innerWidth <=500){bodySectionChildrenTranslate = 20;}
+    else{bodySectionChildrenTranslate = 50;}
+
+    //hide all children
+    for(var i=0; i<bodySectionChildenNum; i++){
+      bodySectionChilden[i].style.opacity = '0';
+      bodySectionChilden[i].style.transition = '0.8s';
+      bodySectionChilden[i].style.transform = 'translate3d(0, '+bodySectionChildrenTranslate+'px, 0)';
+      var offsetTop = bodySectionChilden[i].offsetTop + bodySectionChilden[i].parentNode.offsetTop - (window.innerHeight/1.5);
+      bodySectionChildenArr.push(offsetTop);
+    }
+  }
+
+  updateBodySectionChildren();
   /**************************
   HISTORY API FUNCTIONS
   **************************/
@@ -224,13 +178,12 @@ window.addEventListener('load', function(){
                 youInit();
               }
 
-              //refresh the calculation for end of page nav reveal - gotta wait until the images are fully loaded?
-                // lengthOfPage = document.body.clientHeight;
-                // console.log(lengthOfPage);
-              //heightOfBrowser = window.innerHeight;
+              //recalculate scroll to reveal points
+              updateBodySectionChildren();
 
             }, 400);
           }, delay);
+
         }
       }
     }
@@ -252,11 +205,7 @@ window.addEventListener('load', function(){
   var heightOfBrowser = window.innerHeight;
 
   window.addEventListener('scroll', function(){
-    // if(window.scrollY >= lengthOfPage - heightOfBrowser){
-    //   console.log('in');
-      lengthOfPage = document.body.clientHeight;
-  //  }
-    //console.log(lengthOfPage);
+    lengthOfPage = document.body.clientHeight;
 
     //if end of page, activate the page
     if(window.scrollY >= lengthOfPage - heightOfBrowser - 50){
@@ -276,6 +225,13 @@ window.addEventListener('load', function(){
       document.body.classList.remove('end-of-page');
       document.body.classList.remove('end-of-page-right');
       document.body.classList.remove('end-of-page-left');
+    }
+
+    for(var j=0; j<bodySectionChildenNum; j++){
+      if(window.scrollY >= bodySectionChildenArr[j]){
+        bodySectionChilden[j].style.opacity = '1';
+        bodySectionChilden[j].style.transform = 'translate3d(0, 0, 0)';
+      }
     }
   });
 

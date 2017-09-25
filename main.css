@@ -60,6 +60,10 @@ section {
   padding-left: 6vw;
   padding-right: 6vw;
   padding-bottom: 120px; }
+  @media (max-width: 500px) {
+    .section--body {
+      padding-top: 100px;
+      padding-bottom: 100px; } }
 
 .h1 {
   font-size: 90px;
@@ -706,10 +710,16 @@ section {
 
 .baiwang__svg-container--middle {
   justify-content: space-around;
-  padding: 50px 0; }
+  padding: 30px 0; }
   @media (max-width: 1050px) {
     .baiwang__svg-container--middle {
       justify-content: center; } }
+  @media (max-width: 600px) {
+    .baiwang__svg-container--middle {
+      padding: 20px 0; } }
+  @media (max-width: 400px) {
+    .baiwang__svg-container--middle {
+      padding: 10px 0; } }
 
 @media (max-width: 1050px) {
   .svg--coffee-plunger,
@@ -846,10 +856,12 @@ section {
       width: 500px; } }
   @media (max-width: 750px) {
     .baiwang__testimonial {
-      width: auto; } }
+      width: auto;
+      margin: 150px auto; } }
   @media (max-width: 550px) {
     .baiwang__testimonial {
-      padding: 30px; } }
+      padding: 30px;
+      margin: 100px auto; } }
   @media (max-width: 400px) {
     .baiwang__testimonial {
       padding: 15px; } }
@@ -1095,7 +1107,7 @@ section {
       line-height: 12vw; } }
 
 .fed__introduction-text {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   margin-top: 60px;
   color: #fff; }
 
@@ -1171,26 +1183,26 @@ section {
   display: flex;
   padding-bottom: 60px; }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .fed-content__text-container--scrappie,
   .fed-content__text-container--to-do,
   .fed-content__text-container--rpg {
     display: block;
     padding-top: 0; } }
 
-@media (max-width: 800px) {
+@media (max-width: 1000px) {
   .fed-content__text-container--scrappie > p,
   .fed-content__text-container--to-do > p,
   .fed-content__text-container--rpg > p {
     margin-left: 0;
     margin-top: 30px; } }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .fed-content__text-container--tic-tac-toe {
     display: block;
     padding-top: 0; } }
 
-@media (max-width: 850px) {
+@media (max-width: 1000px) {
   .fed-content__text-container--tic-tac-toe > p {
     margin-left: 0;
     margin-top: 30px; } }

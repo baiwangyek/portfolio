@@ -201,7 +201,7 @@
 }
 
 .fed__introduction-text {
-  padding-bottom: 60px;
+  padding-bottom: 80px;
   margin-top: 60px;
   color: #fff;
 }
@@ -294,7 +294,7 @@
 .fed-content__text-container--scrappie,
 .fed-content__text-container--to-do,
 .fed-content__text-container--rpg {
-  @media(max-width: 800px) {
+  @media(max-width: 1000px) {
     display: block;
     padding-top: 0;
   }
@@ -303,21 +303,21 @@
 .fed-content__text-container--scrappie > p,
 .fed-content__text-container--to-do > p,
 .fed-content__text-container--rpg > p {
-  @media(max-width: 800px) {
+  @media(max-width: 1000px) {
     margin-left: 0;
     margin-top: 30px;
   }
 }
 
 .fed-content__text-container--tic-tac-toe {
-  @media(max-width: 850px) {
+  @media(max-width: 1000px) {
     display: block;
     padding-top: 0;
   }
 }
 
 .fed-content__text-container--tic-tac-toe > p{
-  @media(max-width: 850px) {
+  @media(max-width: 1000px) {
     margin-left: 0;
     margin-top: 30px;
   }
