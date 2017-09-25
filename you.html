@@ -6,16 +6,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Quicksand|Hammersmith+One|Karla|Playfair+Display:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <!-- <script src="http://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
+    <script src="http://threejsplaygnd.brangerbriz.net/js/Detector.js"></script> -->
+    <script src="threejsplaygnd/detector.js" charset="utf-8"></script>
+    <script src="threejsplaygnd/three.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
+
   </head>
   <body>
-    <div class="">
+    <div id="main">
       <div class="you__body-container">
         <div class="body-max-width">
           <!-- hero -->
           <section class="you__hero">
             <div class="you__hero-wrapper">
               <h1 class="you__hero-heading">I AM INTERESTED</h1>
-              <img class="you__emoji" style="" src="images/you/emoji.png" alt="">
+              <!-- <img class="you__emoji" style="" src="images/you/emoji.png" alt=""> -->
+              <div id="emojiContainer" class=""></div>
               <h1 class="you__hero-heading">IN YOU</h1>
             </div>
           </section>
@@ -59,10 +66,16 @@
 
           </section>
           <!-- nav -->
-          <a class="iam-nav iam-nav--left iam-nav--design" href="design.html">I<br>AM</a>
+          <!-- <a class="iam-nav iam-nav--left iam-nav--design" href="design.html">I<br>AM</a> -->
+          <a class="iam-nav iam-nav--left iam-nav--design" href="design.html">
+            <div class="iam-nav__expanded-text-container">
+              <h2 class="iam-nav__expanded-subheading iam-nav__expanded-subheading--left iam-nav__expanded-subheading--design" style="">I AM A</h2>
+              <h2 class="iam-nav__expanded-heading iam-nav__expanded-heading--left iam-nav__expanded-heading--design" style="">Designer</h2>
+            </div>
+            <img class="chevron--left" src="images/icons/chevron-white.svg" alt="">
+          </a>
         </div>
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="app.js"></script>
 </html>

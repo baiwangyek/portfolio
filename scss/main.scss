@@ -7,6 +7,12 @@
 @import "core/section.scss";
 @import "core/type.scss";
 
+@import "animations/animation-baiwang.scss";
+@import "animations/animation-fed.scss";
+@import "animations/animation-design.scss";
+@import "animations/hover-i-am.scss";
+@import "animations/scroll-reveal.scss";
+
 @import "components/iam-nav.scss";
 @import "components/hero.scss";
 @import "components/body-container.scss";
@@ -16,3 +22,5 @@
 @import "page/fed.scss";
 @import "page/design.scss";
 @import "page/you.scss";
+
+@import "animations/new-page.scss";

@@ -27,7 +27,7 @@
 .you__hero-heading {
   color: #fff;
   font-size: 60px;
-  width: 800px;
+  //width: 800px;
   position: relative;
   text-align: center;
   font-family: 'Hammersmith One', sans-serif;
@@ -199,4 +199,13 @@
   left: 50%;
   transform: translateX(-50%);
   mix-blend-mode: screen;
+}
+
+
+
+.lock-screen {
+    //height: 100%;
+    overflow: hidden;
+    width: 100%;
+    position: fixed;
 }

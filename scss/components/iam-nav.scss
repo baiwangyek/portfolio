@@ -3,53 +3,122 @@
   width: 50px;
   position: fixed;
   bottom: 30px;
-  font-family: 'Hammersmith One', sans-serif;
   color: #fff;
   text-decoration: none;
   font-size: 23px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  padding: 10px;
+  z-index: 50;
+  transition: .4s;
+
+  @media(max-width: 400px), (max-height: 400px){
+    height: 30px;
+    width: 30px;
+    bottom: 20px;
+  }
 }
 
 .iam-nav--right {
   right: 30px;
+
+  @media(max-width: 400px), (max-height: 400px) {
+    right: 20px;
+  }
 }
 
 .iam-nav--left {
   left: 30px;
+
+  @media(max-width: 400px), (max-height: 400px) {
+    left: 20px;
+  }
 }
 
 .iam-nav--baiwang {
   background: #E33244;
-  letter-spacing: 8px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 3px;
 }
 
 .iam-nav--fed {
   background: #2600FF;
-  font-family: 'Droid Sans Mono', monospace;
-  letter-spacing: 8px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 3px;
 }
 
 .iam-nav--design {
   background: #343D60;
-  letter-spacing: 8px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 3px;
 }
 
 .iam-nav--you {
   background: linear-gradient(#8970FE, #E16EC1);
-  letter-spacing: 8px;
-  padding-left: 14px;
-  padding-top: 10px;
-  padding-bottom: 8px;
-  padding-right: 3px;
+}
+
+.chevron--right {
+  width: 13px;
+  top: 25px;
+  right: 25px;
+  position: absolute;
+  transition: .8s;
+
+  @media(max-width: 400px), (max-height: 400px) {
+    top: 14px;
+    right: 16px;
+  }
+}
+
+.chevron--left {
+  position: absolute;
+  width: 13px;
+  top: 25px;
+  left: 25px;
+  transition: .8s;
+  transform: rotate(180deg);
+
+  @media(max-width: 400px), (max-height: 400px) {
+    top: 14px;
+    left: 16px;
+  }
+}
+
+.iam-nav-indicator {
+  margin-top: 7px;
+  line-height: 20px;
+  color: white;
+  font-size: 20px;
+}
+
+.iam-nav__expanded-text-container {
+  display: none;
+  width: 100%;
+}
+
+.iam-nav__expanded-subheading {
+  font-size: 14px;
+  opacity: 0;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.iam-nav__expanded-subheading--left {
+  text-align: right;
+}
+
+.iam-nav__expanded-subheading--fed {
+  font-family: 'Droid Sans Mono', monospace;
+}
+
+.iam-nav__expanded-heading {
+  margin-top: 5px;
+  opacity: 0;
+  font-family: 'Hammersmith One', sans-serif;
+}
+
+.iam-nav__expanded-heading--left {
+  text-align: right;
+}
+
+.iam-nav__expanded-heading--fed {
+  font-family: 'Playfair Display';
+
+  @media (max-width: 390px), (max-height: 400px) {
+    font-size: 18px;
+  }
 }

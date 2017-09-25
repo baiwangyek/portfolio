@@ -1,0 +1,45 @@
+.iam-nav--active-right {
+  height: 100vh !important;
+  width: 100vw !important;
+  right: 0;
+  bottom: 0;
+  //top: 0;
+  z-index: 100;
+  //transition: .6s cubic-bezier(.21,-0.22,.6,1.02) !important;
+  //transition: .5s ease-in !important;
+}
+
+.iam-nav--active-left {
+  height: 100vh !important;
+  width: 100vw !important;
+  left: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.iam-nav-top-reset {
+  top: 0;
+  left: 0;
+  bottom: auto !important;
+  right: auto !important;
+}
+
+.iam-nav--shrink {
+  height: 100vh !important;
+  width: calc(100vw - 60px) !important;
+  left: 20px;
+  top: 20px;
+  //top: 20px;
+  //left: 20px;
+  z-index: 100;
+}
+
+.iam-nav--shrink-mobile {
+  height: 100vh !important;
+  width: calc(100vw - 40px) !important;
+  left: 10px;
+  top: 10px;
+  //top: 20px;
+  //left: 20px;
+  z-index: 100;
+}

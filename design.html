@@ -6,22 +6,29 @@
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
     <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Quicksand|Hammersmith+One|Karla|Playfair+Display:400,400i" rel="stylesheet">
     <link rel="stylesheet" href="main.css">
+    <script src="threejsplaygnd/detector.js" charset="utf-8"></script>
+    <script src="threejsplaygnd/three.min.js" charset="utf-8"></script>
+    <script src="app.js" charset="utf-8"></script>
   </head>
   <body>
-    <div class="">
+    <div id="main" class="">
       <div class="iam__body-container design__body-container">
         <div class="body-max-width">
 
           <!-- hero -->
           <section class="iam__hero iam__hero--design">
             <!-- I AM BAI WANG-->
-            <div class="iam__text-container design__text-container">
+            <!-- <div class="iam__text-container design__text-container">
               <h2>I AM A</h1>
               <h1>DESIGNER</h1>
-            </div>
+            </div> -->
 
             <!-- SVG -->
-            <div class="hero__svg-container design__svg-container">
+            <!-- <div class="hero__svg-container design__svg-container">
+            </div> -->
+
+
+            <div class="design__svg-container design__svg-container--top" style="">
               <!-- big purple triangle -->
               <svg class="svg--bpt" width="296px" height="330px" viewBox="0 0 296 330" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
@@ -69,6 +76,26 @@
                       </g>
                   </g>
               </svg>
+            </div>
+
+            <div class="design__svg-container design__svg-container--middle" style="">
+              <!-- large orange rect -->
+              <svg class="svg--lor" width="177px" height="267px" viewBox="0 0 177 267" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+                  <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+                  <desc>Created with Sketch.</desc>
+                  <defs></defs>
+                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+                      <g id="I-AM-DESIGNER" transform="translate(-7.000000, -393.000000)" stroke="#FCD170" stroke-width="13">
+                          <rect id="Rectangle-5-Copy" transform="translate(95.500000, 526.500000) rotate(-30.000000) translate(-95.500000, -526.500000) " x="81.5" y="391.5" width="28" height="270"></rect>
+                      </g>
+                  </g>
+              </svg>
+
+              <!-- I AM BAI WANG-->
+              <div class="design__text-container">
+                <h2 style="text-shadow: none;" >I AM A</h2>
+                <h1>DESIGNER</h1>
+              </div>
 
               <!-- med red rect -->
               <svg class="svg--mrr" width="117px" height="153px" viewBox="0 0 117 153" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
@@ -81,15 +108,18 @@
                       </g>
                   </g>
               </svg>
+            </div>
 
-              <!-- large orange triangle-->
-              <svg class="svg--lot" width="286px" height="285px" viewBox="0 0 286 285" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+            <div class="design__svg-container design__svg-container--bottom" style="">
+
+              <!-- large green circle -->
+              <svg class="svg--lgc" width="283px" height="283px" viewBox="0 0 283 283" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
                   <desc>Created with Sketch.</desc>
                   <defs></defs>
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="I-AM-DESIGNER" transform="translate(-923.000000, -663.000000)" stroke-width="25" stroke="#FCD170">
-                          <polygon id="Triangle-Copy" transform="translate(1086.500000, 765.000000) rotate(70.000000) translate(-1086.500000, -765.000000) " points="1086.5 659 1215 871 958 871"></polygon>
+                      <g id="I-AM-DESIGNER" transform="translate(-131.000000, -780.000000)" stroke-width="25" stroke="#86F2CB">
+                          <circle id="Oval-2-Copy" cx="272.5" cy="921.5" r="128.5"></circle>
                       </g>
                   </g>
               </svg>
@@ -106,44 +136,37 @@
                   </g>
               </svg>
 
-              <!-- large green circle -->
-              <svg class="svg--lgc" width="283px" height="283px" viewBox="0 0 283 283" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+              <!-- large orange triangle-->
+              <svg class="svg--lot" width="286px" height="285px" viewBox="0 0 286 285" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
                   <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
                   <desc>Created with Sketch.</desc>
                   <defs></defs>
                   <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="I-AM-DESIGNER" transform="translate(-131.000000, -780.000000)" stroke-width="25" stroke="#86F2CB">
-                          <circle id="Oval-2-Copy" cx="272.5" cy="921.5" r="128.5"></circle>
-                      </g>
-                  </g>
-              </svg>
-
-              <!-- large orange rect -->
-              <svg class="svg--lor" width="177px" height="267px" viewBox="0 0 177 267" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
-                  <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
-                  <desc>Created with Sketch.</desc>
-                  <defs></defs>
-                  <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
-                      <g id="I-AM-DESIGNER" transform="translate(-7.000000, -393.000000)" stroke="#FCD170" stroke-width="13">
-                          <rect id="Rectangle-5-Copy" transform="translate(95.500000, 526.500000) rotate(-30.000000) translate(-95.500000, -526.500000) " x="81.5" y="391.5" width="28" height="270"></rect>
+                      <g id="I-AM-DESIGNER" transform="translate(-923.000000, -663.000000)" stroke-width="25" stroke="#FCD170">
+                          <polygon id="Triangle-Copy" transform="translate(1086.500000, 765.000000) rotate(70.000000) translate(-1086.500000, -765.000000) " points="1086.5 659 1215 871 958 871"></polygon>
                       </g>
                   </g>
               </svg>
             </div>
+
+
           </section>
 
           <!-- content -->
           <section class="section--body">
             <!-- introduction -->
             <h1 class="design__introduction-heading">CODE-DESIGN=UGLY MESS</h1>
-            <p class="p design__introduction-text">To me, being a successful front end web developer requires you to be desginer as well. The efficiency and usefullness of the lines of code that has been tirelessly typed will only be as good as how the user use them. </p>
+            <p class="p design__introduction-text">Design plays an equally important role for the success of a product. A codebase that can solve the world's problems is wasted if the users are not interested in using it and/ or don't know how to use it. Bad design can also lead to miscommunications and even the loss of millions of profit.
+
+            The main design tool that I use is Sketch. Sketch is amazing tool that makes wireframing and high level design easy and convenient, especially with the symbols feature. I also have experience with Axure, a prototyping software. It enables a quick way to produce a product for testing and presentations.
+            </p>
 
             <!-- work one -->
-            <section class="design__work-section">
+            <!-- <section class="design__work-section">
               <h1 class="design__work-title">WORK EXPERIENCE</h1>
               <div class="image-placeholder--design"></div>
               <p class="p design__work-text">I was contracted as a Junior Experience Designer by DAN Auckland to assist in the web refresh for Vodafone. We had to use a comprehensive style guide from Vodafone HQ to update the old Vodafone NZ website. We mainly used Sktechapp for the desgin and Invision to share the finished work with the clients.</p>
-            </section>
+            </section> -->
 
             <!-- work two -->
             <section class="design__work-section">
@@ -173,7 +196,7 @@
             </section>
 
             <section class="design__work-section">
-              <h1 class="design__work-title">ICONS AND LOGOS</h1>
+              <h1 class="design__work-title">ICONS</h1>
               <div class="design__work-img-container">
                 <img src="images/design/icon/backgroundChoose.svg" alt="">
                 <img src="images/design/icon/cal.svg" alt="">
@@ -197,11 +220,26 @@
           </section>
 
           <!-- nav -->
-          <a class="iam-nav iam-nav--left iam-nav--fed" href="fed.html">I<br>AM</a>
-          <a class="iam-nav iam-nav--right iam-nav--you" href="you.html">I<br>AM</a>
+          <!-- <a class="iam-nav iam-nav--left iam-nav--fed" href="fed.html">I<br>AM</a>
+          <a class="iam-nav iam-nav--right iam-nav--you" href="you.html">I<br>AM</a> -->
+
+          <a class="iam-nav iam-nav--left iam-nav--fed" href="fed.html">
+            <div class="iam-nav__expanded-text-container">
+              <h2 class="iam-nav__expanded-subheading iam-nav__expanded-subheading--left iam-nav__expanded-subheading--fed" style="">I AM A</h2>
+              <h2 class="iam-nav__expanded-heading iam-nav__expanded-heading--left iam-nav__expanded-heading--fed" style="">Front end web developer</h2>
+            </div>
+            <img class="chevron--left" src="images/icons/chevron-white.svg" alt="">
+          </a>
+
+          <a class="iam-nav iam-nav--right iam-nav--you" href="you.html">
+            <div class="iam-nav__expanded-text-container">
+              <h2 class="iam-nav__expanded-subheading iam-nav__expanded-subheading--you" style="">I AM</h2>
+              <h2 class="iam-nav__expanded-heading iam-nav__expanded-heading--you" style="">Interested in you</h2>
+            </div>
+            <img class="chevron--right" src="images/icons/chevron-white.svg" alt="">
+          </a>
         </div>
       </div>
     </div>
   </body>
-  <script type="text/javascript" src="app.js"></script>
 </html>
