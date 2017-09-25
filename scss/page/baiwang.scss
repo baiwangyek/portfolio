@@ -239,6 +239,10 @@
   margin: 160px auto;
   border-radius: 5px;
 
+  @media (max-width: 900px) {
+    width: 500px;
+  }
+
   @media (max-width: 750px) {
     width: auto;
   }

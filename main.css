@@ -837,6 +837,9 @@ section {
   position: relative;
   margin: 160px auto;
   border-radius: 5px; }
+  @media (max-width: 900px) {
+    .baiwang__testimonial {
+      width: 500px; } }
   @media (max-width: 750px) {
     .baiwang__testimonial {
       width: auto; } }
@@ -1197,7 +1200,52 @@ section {
     margin-top: 30px; } }
 
 .fed-content__img {
-  width: 100%; }
+  width: calc(100vw - 12vw - 40px);
+  height: calc(53 / 100 * (100vw - 12vw - 40px)); }
+  @media (min-width: 1440px) {
+    .fed-content__img {
+      width: 1190px;
+      height: 640px; } }
+  @media (max-width: 600px) {
+    .fed-content__img {
+      margin: 0 auto;
+      width: 73vw;
+      height: 107vw; } }
+
+.fed-content__img--scrappie {
+  background: url("videos/scrappie/scrappie-desktop.gif") center/cover no-repeat; }
+  @media (max-width: 600px) {
+    .fed-content__img--scrappie {
+      background: url("videos/scrappie/scrappie-mobile.gif") center/cover no-repeat; } }
+
+.fed-content__img--to-do {
+  background: url("videos/to-do/to-do-desktop.gif") center/cover no-repeat; }
+  @media (max-width: 600px) {
+    .fed-content__img--to-do {
+      background: url("videos/to-do/to-do-mobile.gif") center/cover no-repeat; } }
+
+.fed-content__img--tic-tac-toe {
+  background: url("videos/tic-tac-toe/tic-tac-toe-desktop.gif") center/cover no-repeat; }
+  @media (max-width: 600px) {
+    .fed-content__img--tic-tac-toe {
+      background: url("videos/tic-tac-toe/tic-tac-toe-mobile.gif") center/cover no-repeat; } }
+
+.fed-content__img--monet {
+  background: url("videos/monet/monet.gif") center/cover no-repeat; }
+  @media (max-width: 600px) {
+    .fed-content__img--monet {
+      width: calc(100vw - 12vw - 40px);
+      height: calc(53 / 100 * (100vw - 12vw - 40px)); } }
+
+.fed-content__img--rpg {
+  background: url("videos/rpg/rpg.gif") center/cover no-repeat;
+  width: 581px;
+  height: 450px;
+  margin: 0 auto; }
+  @media (max-width: 700px) {
+    .fed-content__img--rpg {
+      width: 81vw;
+      height: 64vw; } }
 
 .fed-content__link {
   padding-top: 40px;

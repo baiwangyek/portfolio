@@ -336,8 +336,74 @@
   }
 }
 
+// .fed-content__img {
+//   width: 100%;
+// }
+
 .fed-content__img {
-  width: 100%;
+  width: calc(100vw - 12vw - 40px);
+  height: calc(53 / 100 * (100vw - 12vw - 40px));
+  // background: url('videos/to-do/to-do-desktop.gif') center/cover no-repeat;
+
+  @media(min-width:  1440px) {
+    width: 1190px;
+    height: 640px;
+  }
+
+  @media(max-width: 600px) {
+    margin: 0 auto;
+    width: 73vw;
+    height: 107vw;
+    // background: url('videos/to-do/to-do-mobile.gif') center/cover no-repeat;
+  }
+}
+
+.fed-content__img--scrappie {
+  background: url('videos/scrappie/scrappie-desktop.gif') center/cover no-repeat;
+
+  @media(max-width: 600px) {
+    background: url('videos/scrappie/scrappie-mobile.gif') center/cover no-repeat;
+  }
+}
+
+
+.fed-content__img--to-do {
+  background: url('videos/to-do/to-do-desktop.gif') center/cover no-repeat;
+
+  @media(max-width: 600px) {
+    background: url('videos/to-do/to-do-mobile.gif') center/cover no-repeat;
+  }
+}
+
+.fed-content__img--tic-tac-toe {
+  background: url('videos/tic-tac-toe/tic-tac-toe-desktop.gif') center/cover no-repeat;
+
+  @media(max-width: 600px) {
+    background: url('videos/tic-tac-toe/tic-tac-toe-mobile.gif') center/cover no-repeat;
+  }
+}
+
+.fed-content__img--monet {
+  background: url('videos/monet/monet.gif') center/cover no-repeat;
+
+  @media(max-width: 600px) {
+    width: calc(100vw - 12vw - 40px);
+    height: calc(53 / 100 * (100vw - 12vw - 40px));
+    // background: url('videos/to-do/to-do-mobile.gif') center/cover no-repeat;
+  }
+}
+
+.fed-content__img--rpg{
+  background: url('videos/rpg/rpg.gif') center/cover no-repeat;
+  width: 581px;
+  height: 450px;
+  margin: 0 auto;
+
+  @media(max-width: 700px) {
+    width: 81vw;
+    height: 64vw;
+    // background: url('videos/to-do/to-do-mobile.gif') center/cover no-repeat;
+  }
 }
 
 .fed-content__link {
