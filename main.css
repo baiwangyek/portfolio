@@ -87,6 +87,9 @@ section {
       font-size: 20px;
       line-height: 30px; } }
 
+.baiwang__text-container .p {
+  letter-spacing: -0.5px; }
+
 .p--baiwang {
   max-width: 700px; }
 
@@ -702,7 +705,8 @@ section {
   visibility: hidden; }
 
 .baiwang__svg-container--middle {
-  justify-content: space-around; }
+  justify-content: space-around;
+  padding: 50px 0; }
   @media (max-width: 1050px) {
     .baiwang__svg-container--middle {
       justify-content: center; } }
@@ -835,7 +839,7 @@ section {
   padding: 60px;
   background: #fff;
   position: relative;
-  margin: 160px auto;
+  margin: 200px auto;
   border-radius: 5px; }
   @media (max-width: 900px) {
     .baiwang__testimonial {
@@ -869,7 +873,8 @@ section {
   text-align: center;
   margin: 0 auto;
   font-size: 27px;
-  line-height: 40px; }
+  line-height: 40px;
+  letter-spacing: -1.3px; }
   @media (max-width: 800px) {
     .baiwang__testimonial-quote {
       font-size: 23px;
@@ -1090,12 +1095,12 @@ section {
       line-height: 12vw; } }
 
 .fed__introduction-text {
-  padding-bottom: 70px;
-  margin-top: 40px;
+  padding-bottom: 60px;
+  margin-top: 60px;
   color: #fff; }
 
 .fed-content {
-  padding: 70px 0; }
+  padding: 60px 0; }
 
 .fed-content__image {
   background: #D8D8D8;
@@ -1116,7 +1121,8 @@ section {
   line-height: 30px;
   font-style: italic;
   position: relative;
-  z-index: 2; }
+  z-index: 2;
+  letter-spacing: 0.5px; }
 
 .fed-content__heading {
   color: #fff;
@@ -1161,9 +1167,9 @@ section {
   margin-left: 60px; }
 
 .fed-content__text-container {
-  padding-top: 30px;
+  padding-top: 20px;
   display: flex;
-  padding-bottom: 70px; }
+  padding-bottom: 60px; }
 
 @media (max-width: 800px) {
   .fed-content__text-container--scrappie,
@@ -1424,7 +1430,7 @@ section {
 .design__work-img-container {
   width: 100%;
   background: #fff;
-  margin-top: 50px;
+  margin-top: 60px;
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
@@ -1439,7 +1445,13 @@ section {
     width: 50%; } }
 
 .design__work-img-container--interaction > img {
-  width: 100%; }
+  width: 40%; }
+  @media (max-width: 1000px) {
+    .design__work-img-container--interaction > img {
+      width: 80%; } }
+  @media (max-width: 600px) {
+    .design__work-img-container--interaction > img {
+      width: 100%; } }
 
 @media (max-width: 680px) {
   .design__calender {

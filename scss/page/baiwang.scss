@@ -52,6 +52,7 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
+  //padding: 10px 0;
 }
 
 .baiwang__svg-container > svg {
@@ -63,6 +64,7 @@
 
 .baiwang__svg-container--middle {
   justify-content: space-around;
+  padding: 50px 0;
 
   @media (max-width: 1050px) {
     justify-content: center;
@@ -236,7 +238,7 @@
   padding: 60px;
   background: #fff;
   position: relative;
-  margin: 160px auto;
+  margin: 200px auto;
   border-radius: 5px;
 
   @media (max-width: 900px) {
@@ -280,6 +282,7 @@
   //padding-bottom: 120px;
   font-size: 27px;
   line-height: 40px;
+  letter-spacing: -1.3px;
 
   @media (max-width: 800px) {
     font-size: 23px;

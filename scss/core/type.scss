@@ -18,6 +18,7 @@
   font-size: 23px;
   font-family: 'Karla', sans-serif;
   letter-spacing: -1.3px;
+  //letter-spacing: -0.5px;
   //font-family: 'Hammersmith One', sans-serif;
 
   //font-family: 'Josefin Sans', sans-serif;
@@ -34,6 +35,10 @@
     font-size: 20px;
     line-height: 30px;
   }
+}
+
+.baiwang__text-container .p {
+  letter-spacing: -0.5px;
 }
 
 .p--baiwang {
