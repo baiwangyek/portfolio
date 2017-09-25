@@ -96,22 +96,33 @@ window.addEventListener('load', function(){
   var bodySectionChildenNum, bodySectionChilden, bodySectionChildenArr = [];
 
   function updateBodySectionChildren() {
-    console.log('in');
-
     bodySectionChildenNum = document.querySelector('.body-max-width').children[1].children.length;
     bodySectionChilden = document.querySelector('.body-max-width').children[1].children;
     bodySectionChildenArr = [];
 
+
+    var bodySectionChildrenTranslate, offsetTopHeadStart;
     if(window.innerWidth <=500){bodySectionChildrenTranslate = 20;}
     else{bodySectionChildrenTranslate = 50;}
+
+    if(window.innerHeight > 900 ){offsetTopHeadStart = window.innerHeight;}
+    else{offsetTopHeadStart = window.innerHeight/1.5;}
 
     //hide all children
     for(var i=0; i<bodySectionChildenNum; i++){
       bodySectionChilden[i].style.opacity = '0';
       bodySectionChilden[i].style.transition = '0.8s';
       bodySectionChilden[i].style.transform = 'translate3d(0, '+bodySectionChildrenTranslate+'px, 0)';
-      var offsetTop = bodySectionChilden[i].offsetTop + bodySectionChilden[i].parentNode.offsetTop - (window.innerHeight/1.5);
+      var offsetTop = bodySectionChilden[i].offsetTop + bodySectionChilden[i].parentNode.offsetTop - offsetTopHeadStart;
       bodySectionChildenArr.push(offsetTop);
+    }
+
+    //show
+    for(var j=0; j<bodySectionChildenNum; j++){
+      if(window.scrollY >= bodySectionChildenArr[j] + offsetTopHeadStart - window.innerHeight){
+        bodySectionChilden[j].style.opacity = '1';
+        bodySectionChilden[j].style.transform = 'translate3d(0, 0, 0)';
+      }
     }
   }
 
