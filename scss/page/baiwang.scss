@@ -30,7 +30,7 @@
   font-size: 60px;
   position: relative;
   top: -10px;
-  text-shadow: 0px 3px 0px #DBDADA;
+  //text-shadow: 0px 3px 0px #DBDADA;
 
   @media (max-width: 800px) {
     font-size: 7vw;
@@ -41,7 +41,7 @@
   font-family: 'Hammersmith One', sans-serif;
   font-size: 160px;
   display: inline-block;
-  text-shadow: 0px 5px 0px #DBDADA;
+  //text-shadow: 0px 5px 0px #DBDADA;
 
   @media (max-width: 800px) {
     font-size: 17vw;
@@ -103,7 +103,7 @@
 
   @media (max-width: 800px) {
     font-size: 14vw;
-    line-height: 16vw;
+    line-height: 14vw;
   }
 }
 
@@ -138,25 +138,38 @@
   white-space: pre-line;
 }
 
-.baiwang__image-container {
-  //width: 30%;
-  flex: 0 0 300px;
-  position: relative;
-}
+// .baiwang__image-container {
+//   //width: 30%;
+//   flex: 0 0 300px;
+//   position: relative;
+// }
 
-.baiwang__image-left {
+.baiwang__img {
   width: 300px;
-  //margin-left: 40px;
-  position: absolute;
-  top: -180px;
-  z-index: 0;
-  left: 0;
 
   @media (max-width: 800px) {
     position: static;
     margin-bottom: 60px;
   }
+
+  @media(max-width: 400px) {
+    width: 260px;
+  }
 }
+
+// .baiwang__image-left {
+//   width: 300px;
+//   //margin-left: 40px;
+//   position: absolute;
+//   top: -180px;
+//   z-index: 0;
+//   left: 0;
+//
+//   @media (max-width: 800px) {
+//     position: static;
+//     margin-bottom: 60px;
+//   }
+// }
 
 .baiwang__text-container--name {
 
@@ -175,10 +188,16 @@
 
 .baiwang__image-right {
   width: 430px;
-  position: absolute;
-  top: -120px;
+  position: relative;
+  //top: -120px;
   z-index: 0;
   left: 0;
+  align-self: flex-start;
+
+  @media(max-width: 1050px) {
+    top: 0;
+    width: 400px;
+  }
 
   @media (max-width: 900px) {
     width: 330px;
@@ -187,25 +206,35 @@
   @media (max-width: 800px) {
     position: static;
     margin-bottom: 60px;
-    margin-left: calc(100% - 330px);
+    //margin-left: calc(100% - 330px);
   }
 
   @media(max-width: 480px) {
-    margin-left: 0;
+    //margin-left: 0;
+    //width: 250px;
+    display: block;
+    margin: 0 auto 60px;
+  }
+
+  @media(max-width: 400px) {
+    //margin-left: 0;
+    width: 260px;
+    display: block;
+    margin: 0 auto 60px;
   }
 }
 
-.baiwang__image-container-name {
-  flex: 0 0 430px;
-  margin-right: 40px;
-  position: relative;
-
-  @media (max-width: 900px) {
-    // position: static;
-    // margin-bottom: 60px;
-    flex: 0 0 330px;
-  }
-}
+// .baiwang__image-container-name {
+//   flex: 0 0 430px;
+//   margin-right: 40px;
+//   position: relative;
+//
+//   @media (max-width: 900px) {
+//     // position: static;
+//     // margin-bottom: 60px;
+//     flex: 0 0 330px;
+//   }
+// }
 
 .baiwang__tools {
   margin-top: 30px;
@@ -250,7 +279,7 @@
   padding: 60px;
   background: #fff;
   position: relative;
-  margin: 200px auto;
+  margin: 160px auto;
   border-radius: 5px;
 
   @media (max-width: 900px) {
