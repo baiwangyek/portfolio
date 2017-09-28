@@ -9,10 +9,7 @@
 }
 
 .baiwang__hero-text-container {
-  //top: 50%;
-  //width: 734px;
   color: #fff;
-  //visibility: hidden;
   transition: .8s;
   opacity: 0;
 }
@@ -30,7 +27,6 @@
   font-size: 60px;
   position: relative;
   top: -10px;
-  //text-shadow: 0px 3px 0px #DBDADA;
 
   @media (max-width: 800px) {
     font-size: 7vw;
@@ -41,7 +37,6 @@
   font-family: 'Hammersmith One', sans-serif;
   font-size: 160px;
   display: inline-block;
-  //text-shadow: 0px 5px 0px #DBDADA;
 
   @media (max-width: 800px) {
     font-size: 17vw;
@@ -52,11 +47,9 @@
   align-items: center;
   display: flex;
   justify-content: space-between;
-  //padding: 10px 0;
 }
 
 .baiwang__svg-container > svg {
-  //position: absolute;
   opacity: 0;
   transform: scale(0.6);
   visibility: hidden;
@@ -69,10 +62,6 @@
   @media (max-width: 1050px) {
     justify-content: center;
   }
-
-  // @media(max-width: 800px) {
-  //   padding: 35px 0;
-  // }
 
   @media(max-width: 600px) {
     padding: 20px 0;
@@ -138,12 +127,6 @@
   white-space: pre-line;
 }
 
-// .baiwang__image-container {
-//   //width: 30%;
-//   flex: 0 0 300px;
-//   position: relative;
-// }
-
 .baiwang__img {
   width: 300px;
 
@@ -156,20 +139,6 @@
     width: 260px;
   }
 }
-
-// .baiwang__image-left {
-//   width: 300px;
-//   //margin-left: 40px;
-//   position: absolute;
-//   top: -180px;
-//   z-index: 0;
-//   left: 0;
-//
-//   @media (max-width: 800px) {
-//     position: static;
-//     margin-bottom: 60px;
-//   }
-// }
 
 .baiwang__text-container--name {
 
@@ -189,7 +158,6 @@
 .baiwang__image-right {
   width: 430px;
   position: relative;
-  //top: -120px;
   z-index: 0;
   left: 0;
   align-self: flex-start;
@@ -206,7 +174,6 @@
   @media (max-width: 800px) {
     position: static;
     margin-bottom: 60px;
-    //margin-left: calc(100% - 330px);
   }
 
   @media(max-width: 480px) {
