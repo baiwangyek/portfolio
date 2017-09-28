@@ -227,7 +227,7 @@ window.addEventListener('load', function(){
     lengthOfPage = document.body.clientHeight;
 
     //if end of page, activate the page
-    if(window.scrollY >= lengthOfPage - heightOfBrowser - 50){
+    if(window.scrollY >= lengthOfPage - heightOfBrowser - 100){
 
       if(window.innerWidth <=750 && document.querySelector('.you__hero')){
         document.body.classList.add('end-of-page-left');

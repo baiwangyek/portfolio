@@ -77,6 +77,12 @@
               <button id="formSubmit" class="you__contact-submit you__contact--again" type="button" name="button">SEND ANOTHER MESSAGE</button>
             </form>
 
+            <div style="visibility: hidden; position: absolute; left: -999px" class="">
+              <div class="emoji-loader"></div>
+              <div class="emoji-sent"></div>
+              <div class="form-validation"></div>
+            </div>
+
             <!-- init submit form -->
             <script type="text/javascript">var submitted=false;</script>
             <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
