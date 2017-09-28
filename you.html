@@ -20,10 +20,10 @@
           <!-- hero -->
           <section class="you__hero">
             <div class="you__hero-wrapper">
-              <h1 class="you__hero-heading">I AM INTERESTED</h1>
+              <h1 class="you__hero-heading you__hero-heading--top">I AM INTERESTED</h1>
               <!-- <img class="you__emoji" style="" src="images/you/emoji.png" alt=""> -->
               <div id="emojiContainer" class=""></div>
-              <h1 class="you__hero-heading">IN YOU</h1>
+              <h1 class="you__hero-heading you__hero-heading--bottom">IN YOU</h1>
             </div>
           </section>
 
@@ -31,38 +31,96 @@
           <section class="section--body">
 
             <!-- introduction -->
-            <h1 class="you__introduction-heading">ENOUGH ABOUT ME</h1>
-            <p class="p you__introduction-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
+            <h1 class="you__introduction-heading you__introduction-heading--top">ARE YOU INTERESTED IN ME?</h1>
+            <p class="p you__introduction-text">I am currently looking for a junior/ intermediate position as a front end web developer and/ or a UI/ UX designer. Feel free to contact me for my cover letter and CV. I don't bite.</p>
 
-            <!-- i am ?-->
-            <div class="you__question-container" style="">
-              <h2 class="you__question-label">I AM</h2>
-              <div class="you__question-menu" style=""></div>
+            <!-- <div class="you__details-container" style="">
+              <div class="you__details-contact-container" style="">
+                <h3 class="p you__details-title" style="">My contact details</h3>
+                <p class="p you__details-content" style="">Phone number : <span class="you__details-content-contact">022 158 2688</span></p>
+                <p class="p you__details-content you__details-content-email" style="">Email address : <span class="you__details-content-contact">baiwangyek@gmail.com</span></p>
+                <div class="you__details-icons">
+                  <a class="you__details-icons--linkedin" href="#"></a>
+                  <a class="you__details-icons--github" href="#"></a>
+                  <a class="you__details-icons--codepen" href="#"></a>
+                </div>
+              </div>
+              <div class="you__details-cv-container" style="">
+                <h3 class="you__details-title">My CV and cover letter</h3>
+                <a href="#" target="blank">Open my CV and cover letter in a new tab</a>
+              </div>
+            </div> -->
+
+            <div class="you__icon-container">
+              <a id="emailReveal" class="you__icon you__icon-email" target="blank" href=""></a>
+              <a class="you__icon you__icon-linkedin" target="blank" href="https://www.linkedin.com/in/bai-wang-yek-4b6710150/"></a>
+              <a class="you__icon you__icon-github" target="blank" href="https://github.com/baiwangyek"></a>
+              <a class="you__icon you__icon-codepen" target="blank" href="https://codepen.io/baiwang"></a>
+              <p class="p you__email-reveal">baiwangyek@gmail.com</p>
             </div>
 
+
+
+
+            <!-- https://docs.google.com/forms/d/e/1FAIpQLSeWylfPvBaHuXnnab7mWw4Rodu0I7zKB1Te8J-oI-obGQw8wQ/viewform?usp=pp_url&entry.1345338267=Bai+Wang&entry.1428414085=abc@abc.com&entry.791260553=Testing+message
+
+            https://docs.google.com/forms/d/e/1FAIpQLSeWylfPvBaHuXnnab7mWw4Rodu0I7zKB1Te8J-oI-obGQw8wQ/formResponse? -->
+
+            <!-- introduction -->
+            <h1 class="you__introduction-heading">ENOUGH ABOUT ME</h1>
+            <p class="p you__introduction-text">How about you? How's your day been? Tell me more about yourself and your cool projects that you are working on. Or you can just drop a line and say hello :) I am keen to hear from you.</p>
             <!-- contact form -->
-            <form class="you__contact" action="index.html" method="post">
-              <h1 class="you__contact-heading">EMAIL IS THE NEW SMOKE SIGNAL</h1>
-
+            <!-- <form class="you__contact" action="index.html" method="post"> -->
+            <form class="you__contact" name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeWylfPvBaHuXnnab7mWw4Rodu0I7zKB1Te8J-oI-obGQw8wQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
               <div class="you__contact-container" style="">
-                <label for="email" class="you__question-label">EMAIL </label>
-                <input id="email" type="text" name="" value="" class="you__contact-input" >
-              </div>
-
-              <div class="you__contact-container" style="">
-                <label for="subject" class="you__question-label">SUBJECT </label>
-                <input id="subject" type="text" name="" value="" class="you__contact-input" >
-              </div>
-
-              <div class="you__contact-container" style="">
-                <label for="mesage" class="you__question-label">MESSAGE </label>
+                <!-- <label for="mesage" class="you__question-label">MESSAGE </label> -->
                 <!-- <textarea id="message" name="name" rows="8" cols="80" class="you__contact-input"></textarea> -->
-                <input id="message" type="text" name="" value="" class="you__contact-input" >
+                <input id="entry.1345338267" type="text" name="entry.1345338267" class="you__contact-input you__contact-input-message" >
+                <p class="you__contact-input-placeholder">Name</p>
               </div>
 
-              <!-- <input type="submit" name="" value=""> -->
-              <a class="you__contact-submit" href="#">SUBMIT</a>
+              <div class="you__contact-container" style="">
+                <input id="entry.1428414085" type="email" name="entry.1428414085" value="" class="you__contact-input" >
+                <p class="you__contact-input-placeholder">Email</p>
+              </div>
+
+              <div class="you__contact-container" style="">
+                <input id="entry.791260553" type="text" name="entry.791260553" value="" class="you__contact-input" >
+                <p class="you__contact-input-placeholder">Message</p>
+              </div>
+
+              <p id="nameEmpty" class="p form-validation">You forgot to write your name down</p>
+              <p id="emailEmpty" class="p form-validation">You forgot to write your email down</p>
+              <p id="emailWrong" class="p form-validation">Your email is in the wrong format</p>
+              <p id="messageEmpty" class="p form-validation">You forgot to write your message down</p>
+
+              <!-- <a class="you__contact-submit" href="#">SUBMIT</a> -->
+              <!-- <input class="you__contact-submit" type="submit" value="SUBMIT"> -->
+              <button id="formSubmit" class="you__contact-submit you__contact--active" type="submit" name="button">SEND</button>
+              <button class="you__contact-submit you__contact--sending" type="button" name="button">SENDING...<span class="emoji-loader"></span></button>
+              <button class="you__contact-submit you__contact--sent" type="button" name="button">SUCCESS!<span class="emoji-sent"></span></button>
+              <button id="formSubmit" class="you__contact-submit you__contact--again" type="button" name="button">SEND ANOTHER MESSAGE</button>
+
             </form>
+
+            <script type="text/javascript">var submitted=false;</script>
+            <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+            <!-- <div class="">
+              <div class="">
+                Your message has been successfully sent.
+              </div>
+            </div> -->
+
+            <!-- <script src="assets/js/jquery.min.js"></script> -->
+            <!-- <script type="text/javascript">var submitted=false;</script> -->
+            <!-- <script type="text/javascript">
+            document.querySelector('#gform').addEventListener('submit', function(){
+
+            });on('submit', function(e) {
+              $('#gform *').fadeOut(2000);
+              $('#gform').prepend('Your submission has been processed...');
+              });
+            </script> -->
 
           </section>
           <!-- nav -->
