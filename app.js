@@ -102,7 +102,7 @@ window.addEventListener('load', function(){
     else{bodySectionChildrenTranslate = 50;}
 
     if(window.innerHeight > 900 ){offsetTopHeadStart = window.innerHeight;}
-    else{offsetTopHeadStart = window.innerHeight/1.5;}
+    else{offsetTopHeadStart = window.innerHeight/1.2;}
 
     //hide all children
     for(var i=0; i<bodySectionChildenNum; i++){
@@ -195,6 +195,11 @@ window.addEventListener('load', function(){
               //activate input focus
               inputs = document.getElementsByClassName('you__contact-input');
 
+              //re init bottom nav
+              if(window.scrollY < window.innerHeight){
+                document.querySelector('.iam-nav--bottom').classList.add('iam-nav--bottom-init');
+              }
+
               for(var a=0; a<inputs.length; a++){
                 inputs[a].addEventListener('focus', function(){
                   event.target.parentNode.children[1].classList.add('you__contact-input-placeholder--active');
@@ -218,13 +223,24 @@ window.addEventListener('load', function(){
   });
 
   /************************
-  SCROLL FUNCIONS
+  SCROLL FUNCTIONS
   ***********************/
   var lengthOfPage = document.body.clientHeight;
   var heightOfBrowser = window.innerHeight;
 
   window.addEventListener('scroll', function(){
     lengthOfPage = document.body.clientHeight;
+
+    if(window.scrollY >= 200){
+      document.querySelector('.iam-nav--bottom').classList.remove('iam-nav--bottom-init');
+      if(document.querySelector('.iam-nav--right')){
+        document.querySelector('.iam-nav--right').style.opacity = '1';
+      }
+
+      if(document.querySelector('.iam-nav--left')){
+        document.querySelector('.iam-nav--left').style.opacity = '1';
+      }
+    }
 
     //if end of page, activate the page
     if(window.scrollY >= lengthOfPage - heightOfBrowser - 100){
@@ -254,6 +270,12 @@ window.addEventListener('load', function(){
     }
   });
 
+
+
+  /***********************
+  INIT FUNCTIONS
+  *************************/
+
   var inputs = document.getElementsByClassName('you__contact-input');
 
   for(var a=0; a<inputs.length; a++){
@@ -262,12 +284,20 @@ window.addEventListener('load', function(){
     });
   }
 
+  if(window.scrollY < window.innerHeight){
+    document.querySelector('.iam-nav--bottom').classList.add('iam-nav--bottom-init');
+  }
+
+  document.body.classList.add('js-enabled');
+
   /*************************
   CLICK FUNCTIONS
   **************************/
   var iamNav; //for nav animation and next page animation
 
   document.body.addEventListener('click', function(){
+    //console.log(event.target.parentNode);
+
     if(event.target.className.match('iam-nav--right') || event.target.parentNode.className.match('iam-nav--right') || event.target.parentNode.parentNode.className.match('iam-nav--right')){
 
       var href;
@@ -328,6 +358,37 @@ window.addEventListener('load', function(){
       //ajax-replace
       loadContent(href);
 
+    }
+
+    else if(event.target.className.match('iam-nav--bottom') || event.target.parentNode.className.match('iam-nav--bottom')){
+      event.preventDefault();
+
+      var target = event.target;
+      if(event.target.parentNode.className.match('iam-nav--bottom')){target = event.target.parentNode;}
+      else{target = event.target;}
+      var scroll = 20;
+      function scrollDown(){
+        if(window.scrollY>= window.innerHeight){
+          // window.scroll({top:window.innerHeight, left: 0, behavior: 'smooth'});
+          target.classList.remove('iam-nav--bottom-init');
+
+          if(document.querySelector('.iam-nav--right')){
+            document.querySelector('.iam-nav--right').style.opacity = '1';
+          }
+
+          if(document.querySelector('.iam-nav--left')){
+            document.querySelector('.iam-nav--left').style.opacity = '1';
+          }
+          //if(){}
+        }
+        else{
+          scroll*= 1.1;
+          window.scrollTo(0, scroll);
+          requestAnimationFrame(scrollDown);
+        }
+      }
+
+      requestAnimationFrame(scrollDown);
     }
 
     else if(event.target.className.match('you__contact-input')){
