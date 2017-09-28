@@ -1294,7 +1294,7 @@ section {
       height: 107vw; } }
 
 .fed-content__img--scrappie {
-  background: url("videos/scrappie/scrappie-desktop.gif") center/cover no-repeat; }
+  background: url("videos/scrappie/scrappie-desktop1.gif") center/cover no-repeat; }
   @media (max-width: 600px) {
     .fed-content__img--scrappie {
       background: url("videos/scrappie/scrappie-mobile.gif") center/cover no-repeat; } }
@@ -1611,7 +1611,7 @@ section {
   color: #fff;
   text-align: center;
   margin: 60px auto 0;
-  max-width: 700px;
+  max-width: 800px;
   width: 80%; }
   @media (max-width: 770px) {
     .you__introduction-text {
