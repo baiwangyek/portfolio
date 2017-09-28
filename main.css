@@ -1026,6 +1026,12 @@ section {
   left: -32vw;
   width: 30vw;
   height: 30vw; }
+  @media (min-width: 1600px) {
+    .fed__circle {
+      left: -27vw; } }
+  @media (min-width: 1900px) {
+    .fed__circle {
+      left: -24vw; } }
   @media (max-width: 450px) {
     .fed__circle {
       left: -22vw; } }
@@ -1064,6 +1070,12 @@ section {
   height: 210px;
   left: -36vw;
   max-width: 1060px; }
+  @media (min-width: 1600px) {
+    .fed__horizontal-block {
+      left: -30vw; } }
+  @media (min-width: 1900px) {
+    .fed__horizontal-block {
+      left: -27vw; } }
   @media (max-width: 800px) {
     .fed__horizontal-block {
       height: 20vw;

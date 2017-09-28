@@ -99,6 +99,14 @@
   width: 30vw;
   height: 30vw;
 
+  @media(min-width: 1600px) {
+    left: -27vw;
+  }
+
+  @media(min-width: 1900px) {
+    left: -24vw;
+  }
+
   @media (max-width: 450px) {
     left: -22vw;
   }
@@ -150,6 +158,15 @@
   left: -36vw;
   //width: 83vw;
   max-width: 1060px;
+
+
+  @media(min-width: 1600px) {
+    left: -30vw;
+  }
+
+  @media(min-width: 1900px) {
+    left: -27vw;
+  }
 
   @media (max-width: 800px) {
     height: 20vw;
