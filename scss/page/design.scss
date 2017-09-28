@@ -316,12 +316,17 @@
   display: flex;
   justify-content: space-around;
   flex-wrap: wrap;
-  align-items: flex-start;
+  // align-items: flex-start;
+  align-items: center;
 }
 
 .design__work-img-container  > img {
   padding: 30px;
 }
+
+// .design__work-img-container--visual {
+//   align-items: center;
+// }
 
 .design__work-img-container--visual  > img {
 
