@@ -178,6 +178,7 @@ window.addEventListener('load', function(){
 
               //once it's a dom node, I can use .querySelector to get the content of the main tag
               var main = tempDom.querySelector('#main').children[0];
+              var title = tempDom.querySelector('title').textContent;
 
               //converting the dom node of the content into str version
               var tempMain = document.createElement('div');
@@ -185,6 +186,9 @@ window.addEventListener('load', function(){
 
               //inserting the str version of the main element
               document.querySelector('#main').innerHTML = tempMain.innerHTML;
+
+              //update the title
+              document.head.querySelector('title').textContent = title;
 
               //to activate webGL emoji
               if(document.querySelector('.you__hero-wrapper')){

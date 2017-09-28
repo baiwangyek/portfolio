@@ -62,11 +62,15 @@
   }
 }
 
+
 .you__introduction-heading {
   margin: 120px auto 0;
   text-align: center;
-  font-size: 60px;
-  line-height: 60px;
+  // font-size: 60px;
+  // line-height: 60px;
+  font-size: 80px;
+  line-height: 90px;
+
   color: #fff;
   font-family: 'Hammersmith One', sans-serif;
   //padding-top: 120px;
@@ -77,8 +81,10 @@
   // }
 
   @media (max-width: 630px){
-    font-size: 10vw;
-    line-height: 11vw;
+    // font-size: 10vw;
+    // line-height: 11vw;
+    font-size: 12vw;
+    line-height: 13vw;
   }
 }
 
