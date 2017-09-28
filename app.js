@@ -391,7 +391,7 @@ window.addEventListener('load', function(){
       }
 
       if(counter === 3){
-        //document.getElementById('gform').submit();
+        document.getElementById('gform').submit();
 
         event.target.classList.remove('you__contact--active');
         //event.target.style.display = 'none';
