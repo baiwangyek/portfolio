@@ -108,7 +108,13 @@ window.addEventListener('load', function(){
     for(var i=0; i<bodySectionChildenNum; i++){
       bodySectionChilden[i].style.opacity = '0';
       bodySectionChilden[i].style.transition = '0.8s';
+
       bodySectionChilden[i].style.transform = 'translate3d(0, '+bodySectionChildrenTranslate+'px, 0)';
+      bodySectionChilden[i].style.webkitTransform = 'translate3d(0, '+bodySectionChildrenTranslate+'px, 0)';
+      bodySectionChilden[i].style.MozTransform = 'translate3d(0, '+bodySectionChildrenTranslate+'px, 0)';
+      bodySectionChilden[i].msTransform = 'translate3d(0, '+bodySectionChildrenTranslate+'px, 0)';
+      bodySectionChilden[i].OTransform = 'translate3d(0, '+bodySectionChildrenTranslate+'px, 0)';
+
       var offsetTop = bodySectionChilden[i].offsetTop + bodySectionChilden[i].parentNode.offsetTop - offsetTopHeadStart;
       bodySectionChildenArr.push(offsetTop);
     }
@@ -117,7 +123,12 @@ window.addEventListener('load', function(){
     for(var j=0; j<bodySectionChildenNum; j++){
       if(window.scrollY >= bodySectionChildenArr[j] + offsetTopHeadStart - window.innerHeight){
         bodySectionChilden[j].style.opacity = '1';
+
         bodySectionChilden[j].style.transform = 'translate3d(0, 0, 0)';
+        bodySectionChilden[j].style.webkitTransform = 'translate3d(0, 0, 0)';
+        bodySectionChilden[j].style.MozTransform = 'translate3d(0, 0, 0)';
+        bodySectionChilden[j].msTransform = 'translate3d(0, 0, 0)';
+        bodySectionChilden[j].OTransform = 'translate3d(0, 0, 0)';
       }
     }
   }
@@ -265,7 +276,12 @@ window.addEventListener('load', function(){
     for(var j=0; j<bodySectionChildenNum; j++){
       if(window.scrollY >= bodySectionChildenArr[j]){
         bodySectionChilden[j].style.opacity = '1';
+
         bodySectionChilden[j].style.transform = 'translate3d(0, 0, 0)';
+        bodySectionChilden[j].style.webkitTransform = 'translate3d(0, 0, 0)';
+        bodySectionChilden[j].style.MozTransform = 'translate3d(0, 0, 0)';
+        bodySectionChilden[j].msTransform = 'translate3d(0, 0, 0)';
+        bodySectionChilden[j].OTransform = 'translate3d(0, 0, 0)';
       }
     }
   });
@@ -443,7 +459,14 @@ window.addEventListener('load', function(){
         window.setTimeout(function(){
           document.querySelector('.you__contact--sending').classList.remove('you__contact--active');
           document.querySelector('.you__contact--sent').classList.add('you__contact--active');
+
           document.querySelector('.emoji-sent').style.transform = 'scale(1)';
+          document.querySelector('.emoji-sent').style.webkitTransform = 'scale(1)';
+          document.querySelector('.emoji-sent').style.MozTransform = 'scale(1)';
+          document.querySelector('.emoji-sent').msTransform = 'scale(1)';
+          document.querySelector('.emoji-sent').OTransform = 'scale(1)';
+
+
         }, 2000);
 
         window.setTimeout(function(){
