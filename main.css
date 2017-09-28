@@ -1676,23 +1676,6 @@ section {
 .you__contact-input:hover .you__contact-input-placeholder {
   color: #F8E71C; }
 
-.you__contact-submit {
-  background: transparent;
-  padding: 11px 60px;
-  color: white;
-  font-family: 'Hammersmith One', sans-serif;
-  font-size: 19px;
-  text-decoration: none;
-  margin: 40px auto 0;
-  text-align: center;
-  display: inline-block;
-  position: relative;
-  left: 50%;
-  transform: translateX(-50%);
-  /* mix-blend-mode: screen; */
-  border: 2px solid white;
-  cursor: pointer; }
-
 .you__details-container {
   padding-top: 60px;
   display: flex;
@@ -1823,7 +1806,7 @@ section {
     transform: rotate(0deg); }
   100% {
     transform: rotate(360deg); } }
-.you__contact-submit {
+.you__contact-button {
   background: transparent;
   padding: 11px 60px;
   color: white;
@@ -1890,6 +1873,10 @@ section {
   width: 20px;
   height: 20px;
   background: url("images/you/icon-error.png") no-repeat center/cover; }
+
+.you__contact--submit:hover {
+  background: #8770FF;
+  border: 2px solid transparent; }
 
 .iam-nav--active-right {
   height: 100vh !important;
