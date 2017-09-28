@@ -11,8 +11,6 @@ window.addEventListener('load', function(){
     function setup() {
 
       var W = window.innerWidth;
-      // var H = window.innerHeight;
-      //var H = 500;
       if(window.innerWidth <= 650){
         var H = 300;
       }
@@ -21,7 +19,6 @@ window.addEventListener('load', function(){
       }
       renderer = new THREE.WebGLRenderer();
       renderer.setSize( W, H );
-      //document.body.appendChild( renderer.domElement );
       if(!document.querySelector('canvas')){
         document.getElementById('emojiContainer').appendChild( renderer.domElement );
       }
@@ -91,9 +88,6 @@ window.addEventListener('load', function(){
   if(document.querySelector('.you__hero-wrapper')){
     youInit();
   }
-
-
-  //console.log(document.querySelector('.body-max-width').children[1].children);
 
   var bodySectionChildenNum, bodySectionChilden, bodySectionChildenArr = [];
 
@@ -223,7 +217,6 @@ window.addEventListener('load', function(){
      loadContent(location.pathname);
   });
 
-
   /************************
   SCROLL FUNCIONS
   ***********************/
@@ -261,13 +254,6 @@ window.addEventListener('load', function(){
     }
   });
 
-  // document.body.addEventListener('focus', function(){
-  //   console.log('in');
-  //   if(event.target.className.match('you__contact-input')){
-  //     event.target.parentNode.children[1].classList.add('you__contact-input-placeholder--active');
-  //   }
-  // });
-
   var inputs = document.getElementsByClassName('you__contact-input');
 
   for(var a=0; a<inputs.length; a++){
@@ -282,11 +268,7 @@ window.addEventListener('load', function(){
   var iamNav; //for nav animation and next page animation
 
   document.body.addEventListener('click', function(){
-
-    //reset
-    //if(document.querySelector('.you__email-reveal')){document.querySelector('.you__email-reveal').classList.remove('you__email-reveal--active');}
-
-    if(event.target.className.match('right') || event.target.parentNode.className.match('right') || event.target.parentNode.parentNode.className.match('right')){
+    if(event.target.className.match('iam-nav--right') || event.target.parentNode.className.match('iam-nav--right') || event.target.parentNode.parentNode.className.match('iam-nav--right')){
 
       var href;
 
@@ -294,8 +276,8 @@ window.addEventListener('load', function(){
       event.preventDefault();
 
       //start transition
-      if(event.target.parentNode.parentNode.className.match('right')){iamNav = event.target.parentNode.parentNode;}
-      else if(event.target.parentNode.className.match('right')){iamNav = event.target.parentNode;}
+      if(event.target.parentNode.parentNode.className.match('iam-nav--right')){iamNav = event.target.parentNode.parentNode;}
+      else if(event.target.parentNode.className.match('iam-nav--right')){iamNav = event.target.parentNode;}
       else{iamNav  = event.target;}
 
       iamNav.classList.add('iam-nav--active-right');
@@ -317,7 +299,7 @@ window.addEventListener('load', function(){
       loadContent(href);
     }
 
-    else if(event.target.className.match('left') || event.target.parentNode.className.match('left') || event.target.parentNode.parentNode.className.match('left')){
+    else if(event.target.className.match('iam-nav--left') || event.target.parentNode.className.match('iam-nav--left') || event.target.parentNode.parentNode.className.match('iam-nav--left')){
 
       var href;
 
@@ -325,9 +307,8 @@ window.addEventListener('load', function(){
       event.preventDefault();
 
       //start transition
-      //var iamNav;
-      if(event.target.parentNode.parentNode.className.match('left')){iamNav = event.target.parentNode.parentNode;}
-      else if(event.target.parentNode.className.match('left')){iamNav = event.target.parentNode;}
+      if(event.target.parentNode.parentNode.className.match('iam-nav--left')){iamNav = event.target.parentNode.parentNode;}
+      else if(event.target.parentNode.className.match('iam-nav--left')){iamNav = event.target.parentNode;}
       else{iamNav  = event.target;}
 
       iamNav.classList.add('iam-nav--active-left');
@@ -364,9 +345,7 @@ window.addEventListener('load', function(){
       var counter = 0;
       //name
       if(document.getElementById('entry.1345338267').value === ''){
-        console.log('name empty');
         document.getElementById('nameEmpty').classList.add('form-validation--active');
-        //document.getElementById('entry.1345338267').classList.add('you__input-error');
       }
       else {
         counter++;
@@ -398,12 +377,10 @@ window.addEventListener('load', function(){
         document.getElementById('gform').submit();
 
         event.target.classList.remove('you__contact--active');
-        //event.target.style.display = 'none';
         document.querySelector('.you__contact--sending').classList.add('you__contact--active');
 
         window.setTimeout(function(){
           document.querySelector('.you__contact--sending').classList.remove('you__contact--active');
-          //document.querySelector('.you__contact--sending').style.display = 'none';
           document.querySelector('.you__contact--sent').classList.add('you__contact--active');
           document.querySelector('.emoji-sent').style.transform = 'scale(1)';
         }, 2000);
