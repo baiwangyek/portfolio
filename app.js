@@ -1,7 +1,9 @@
 window.addEventListener('load', function(){
 
+  //this is for the form at you.html
   var submitted=false;
 
+  //only run this block of code when is at you.html - webGL logic
   function youInit(){
     if ( ! Detector.webgl ) Detector.addGetWebGLMessage();
 
@@ -67,7 +69,6 @@ window.addEventListener('load', function(){
     setup();
     draw();
 
-    //alert(window.innerWidth/2);
     var mouseX = window.innerWidth/2, mouseY = window.innerHeight/2;
     function checkMobile() {
       var check = false;
@@ -85,10 +86,12 @@ window.addEventListener('load', function(){
     });
   }
 
+  //indicator for when it's you.html
   if(document.querySelector('.you__hero-wrapper')){
     youInit();
   }
 
+  //this is for the scroll to reveal init
   var bodySectionChildenNum, bodySectionChilden, bodySectionChildenArr = [];
 
   function updateBodySectionChildren() {
@@ -134,6 +137,7 @@ window.addEventListener('load', function(){
   }
 
   updateBodySectionChildren();
+
   /**************************
   HISTORY API FUNCTIONS
   **************************/
@@ -203,23 +207,21 @@ window.addEventListener('load', function(){
               //recalculate scroll to reveal points
               updateBodySectionChildren();
 
-              //activate input focus
-              inputs = document.getElementsByClassName('you__contact-input');
-
               //re init bottom nav
               if(window.scrollY < window.innerHeight){
                 document.querySelector('.iam-nav--bottom').classList.add('iam-nav--bottom-init');
               }
+
+              //activate input focus
+              inputs = document.getElementsByClassName('you__contact-input');
 
               for(var a=0; a<inputs.length; a++){
                 inputs[a].addEventListener('focus', function(){
                   event.target.parentNode.children[1].classList.add('you__contact-input-placeholder--active');
                 });
               }
-
             }, 400);
           }, delay);
-
         }
       }
     }
@@ -242,6 +244,7 @@ window.addEventListener('load', function(){
   window.addEventListener('scroll', function(){
     lengthOfPage = document.body.clientHeight;
 
+    //remove the nav bottom after scroll
     if(window.scrollY >= 200){
       document.querySelector('.iam-nav--bottom').classList.remove('iam-nav--bottom-init');
       if(document.querySelector('.iam-nav--right')){
@@ -253,7 +256,7 @@ window.addEventListener('load', function(){
       }
     }
 
-    //if end of page, activate the page
+    //if end of page, activate the nav open
     if(window.scrollY >= lengthOfPage - heightOfBrowser - 100){
 
       if(window.innerWidth <=750 && document.querySelector('.you__hero')){
@@ -273,6 +276,7 @@ window.addEventListener('load', function(){
       document.body.classList.remove('end-of-page-left');
     }
 
+    //page to reveal scroll
     for(var j=0; j<bodySectionChildenNum; j++){
       if(window.scrollY >= bodySectionChildenArr[j]){
         bodySectionChilden[j].style.opacity = '1';
@@ -285,8 +289,6 @@ window.addEventListener('load', function(){
       }
     }
   });
-
-
 
   /***********************
   INIT FUNCTIONS
@@ -312,10 +314,8 @@ window.addEventListener('load', function(){
   var iamNav; //for nav animation and next page animation
 
   document.body.addEventListener('click', function(){
-    //console.log(event.target.parentNode);
 
     if(event.target.className.match('iam-nav--right') || event.target.parentNode.className.match('iam-nav--right') || event.target.parentNode.parentNode.className.match('iam-nav--right')){
-
       var href;
 
       //prevent link
@@ -329,8 +329,6 @@ window.addEventListener('load', function(){
       iamNav.classList.add('iam-nav--active-right');
       iamNav.children[0].style.display = 'none';
       iamNav.children[1].style.display = 'none';
-
-      //window.scrollTo(0,0);
 
       href = iamNav.href;
 
@@ -346,7 +344,6 @@ window.addEventListener('load', function(){
     }
 
     else if(event.target.className.match('iam-nav--left') || event.target.parentNode.className.match('iam-nav--left') || event.target.parentNode.parentNode.className.match('iam-nav--left')){
-
       var href;
 
       //prevent link
@@ -373,7 +370,6 @@ window.addEventListener('load', function(){
 
       //ajax-replace
       loadContent(href);
-
     }
 
     else if(event.target.className.match('iam-nav--bottom') || event.target.parentNode.className.match('iam-nav--bottom')){
@@ -383,9 +379,9 @@ window.addEventListener('load', function(){
       if(event.target.parentNode.className.match('iam-nav--bottom')){target = event.target.parentNode;}
       else{target = event.target;}
       var scroll = 20;
+
       function scrollDown(){
         if(window.scrollY>= window.innerHeight){
-          // window.scroll({top:window.innerHeight, left: 0, behavior: 'smooth'});
           target.classList.remove('iam-nav--bottom-init');
 
           if(document.querySelector('.iam-nav--right')){
@@ -395,7 +391,6 @@ window.addEventListener('load', function(){
           if(document.querySelector('.iam-nav--left')){
             document.querySelector('.iam-nav--left').style.opacity = '1';
           }
-          //if(){}
         }
         else{
           scroll*= 1.1;
@@ -420,6 +415,8 @@ window.addEventListener('load', function(){
       event.preventDefault();
       var re = /^(([^<>()[\]\\.,;:\s@\"]+(\.[^<>()[\]\\.,;:\s@\"]+)*)|(\".+\"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
       var counter = 0;
+
+      //form validation
       //name
       if(document.getElementById('entry.1345338267').value === ''){
         document.getElementById('nameEmpty').classList.add('form-validation--active');
@@ -450,6 +447,7 @@ window.addEventListener('load', function(){
         document.getElementById('messageEmpty').classList.remove('form-validation--active');
       }
 
+      //if form validated
       if(counter === 3){
         document.getElementById('gform').submit();
 
@@ -465,8 +463,6 @@ window.addEventListener('load', function(){
           document.querySelector('.emoji-sent').style.MozTransform = 'scale(1)';
           document.querySelector('.emoji-sent').msTransform = 'scale(1)';
           document.querySelector('.emoji-sent').OTransform = 'scale(1)';
-
-
         }, 2000);
 
         window.setTimeout(function(){
