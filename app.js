@@ -381,7 +381,7 @@ window.addEventListener('load', function(){
       var scroll = 20;
 
       function scrollDown(){
-        if(window.scrollY>= window.innerHeight){
+        if(window.scrollY>= window.innerHeight || window.scrollY >= document.body.clientHeight - window.innerHeight - 100){
           target.classList.remove('iam-nav--bottom-init');
 
           if(document.querySelector('.iam-nav--right')){
