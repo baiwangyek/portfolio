@@ -250,13 +250,11 @@
   line-height: 90px;
   color: #fff;
   font-family: 'Hammersmith One', sans-serif;
-  text-shadow:  -5px 0px 0px rgb(176,91,250),
-                5px 0px 0px rgb(91,259,202);
+  text-shadow: 5px 0px 0px rgb(91,259,202), 10px 0px 0px rgb(176,91,250);
 
   @media(max-width: 630px) {
     font-size: 12vw;
-    text-shadow:  -0.8vw 0px 0px rgb(176,91,250),
-                  0.8vw 0px 0px rgb(91,259,202);
+    text-shadow: 0.8vw 0px 0px rgb(91,259,202), 1.6vw 0px 0px rgb(176,91,250);
     line-height: 13vw;
   }
 }
@@ -267,8 +265,14 @@
   margin: 60px auto 0;
   width: 100%;
 
-  @media(max-width: 700px) {
+  @media (max-width: 770px) {
+    margin: 50px auto 0;
     width: 90%;
+  }
+
+  @media (max-width: 450px) {
+    margin: 40px auto 0;
+    width: 100%;
   }
 }
 
@@ -282,21 +286,21 @@
   line-height: 90px;
   color: #fff;
   font-family: 'Hammersmith One', sans-serif;
-  text-shadow:  -5px 0px 0px rgb(250,91,117),
-                5px 0px 0px rgb(255,212,100);
+  text-shadow:  5px 0px 0px rgb(255,212,100), 10px 0px 0px rgb(250,91,117);
+
 
   @media(max-width: 600px) {
     font-size: 13vw;
-    text-shadow:  -0.8vw 0px 0px rgb(250,91,117),
-                  0.8vw 0px 0px rgb(255,212,100);
+    text-shadow: 0.8vw 0px 0px rgb(255,212,100),  1.6vw 0px 0px rgb(250,91,117);
+
     line-height: 14vw;
   }
 
   @media(max-width: 500px) {
-    font-size: 11vw;
-    text-shadow:  -0.8vw 0px 0px rgb(250,91,117),
-                  0.8vw 0px 0px rgb(255,212,100);
-    line-height: 14vw;
+    //font-size: 13vw;
+    // text-shadow:  -0.8vw 0px 0px rgb(250,91,117),
+    //               0.8vw 0px 0px rgb(255,212,100);
+    //line-height: 14vw;
   }
 
   // @media(max-width: 350px) {
@@ -366,4 +370,155 @@
   margin: 0 auto;
   width: 90%;
   margin-top: 50px;
+}
+
+.design__img-container-two {
+  margin-top: 60px;
+  justify-content: space-between;
+  display: flex;
+  align-items: center;
+
+  @media(max-width: 1000px) {
+    display: block;
+    margin-top: 45px;
+  }
+
+  @media(max-width: 700px) {
+    margin-top: 30px;
+  }
+
+  img {
+    width: 48%;
+
+    @media(max-width: 1000px) {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+    }
+
+    @media(max-width: 700px) {
+      width: 100%;
+    }
+  }
+}
+
+.design__img-container-two  > img:last-of-type {
+
+  @media(max-width: 1000px) {
+    margin: 45px auto 0;
+  }
+
+  @media(max-width: 700px) {
+    margin: 30px auto 0;
+  }
+}
+
+.design__img-container-one {
+  margin-top: 60px;
+  width: 100%;
+
+  @media(max-width: 1000px) {
+    width: 80%;
+    margin: 45px auto 0;
+    display: block;
+  }
+
+  @media(max-width: 700px) {
+    width: 100%;
+    margin: 30px auto 0;
+  }
+}
+
+.design__img-container-two-uneven {
+  display: flex;
+  margin-top: 60px;
+  align-items: self-start;
+  justify-content: space-between;
+
+  @media(max-width: 1000px) {
+    display: block;
+    margin-top: 45px;
+  }
+
+  @media(max-width: 700px) {
+    margin-top: 30px;
+  }
+}
+
+.design__img-container-two-uneven > div {
+  width: 48%;
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  align-items: center;
+
+  @media(max-width: 1000px) {
+    width: 80%;
+    margin: 0 auto;
+    //display: block;
+  }
+
+  @media(max-width: 700px) {
+    width: 100%;
+  }
+}
+
+.design__img-container-two-uneven  > div:last-of-type {
+
+  @media(max-width: 1000px) {
+    margin: 45px auto 0;
+  }
+
+  @media(max-width: 700px) {
+    margin: 30px auto 0;
+  }
+}
+
+.design__img-container-spread {
+  display: flex;
+  justify-content: space-around;
+  width: 100%;
+  background: white;
+  align-items: center;
+}
+
+.design__img-container-spread-bottom {
+  margin-top: 20px;
+
+  @media(max-width: 1000px) {
+    margin-top: 45px;
+  }
+
+  @media (max-width: 700px){
+    margin-top: 30px;
+  }
+}
+
+.design__img-banana {
+  width: 14%;
+}
+
+.design__img-donut{
+  width: 18%;
+}
+
+.design__img-can{
+  width: 11%;
+}
+
+.design__img-matcha,
+.design__img-pickle {
+  width: 15%;
+}
+
+.design__img-container-spread--to-do > img {
+  //width: 50px
+  padding: 10px;
+}
+
+.design__img-calendar {
+  width: 100%;
+  max-width: 400px;
+  margin: 0 auto;
+  display: block;
 }
