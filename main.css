@@ -2043,10 +2043,10 @@ section {
   height: 20px;
   background: url("images/you/icon-error.png") no-repeat center/cover; }
 
-.you__contact--submit:hover {
-  background: #8770FF;
-  border: 2px solid transparent; }
-
+@media (hover) {
+  .you__contact--submit:hover {
+    background: #8770FF;
+    border: 2px solid transparent; } }
 .iam-nav--active-right {
   height: 100vh !important;
   width: 100vw !important;
