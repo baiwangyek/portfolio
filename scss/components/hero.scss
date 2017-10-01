@@ -1,7 +1,6 @@
 .iam__hero {
   color: #fff;
   width: calc(100% - 40px);
-  //height: calc(100vh - 40px);
   margin: 0 20px;
 
   @media (min-width: 1300px) {
@@ -12,12 +11,10 @@
 
 .iam__text-container {
   position: relative;
-  //transform: translateY(-50%);
   margin: 0 auto;
 }
 
 .hero__svg-container {
-  //background: pink;
   height: 100px;
   width: 100px;
   position: absolute;
