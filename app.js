@@ -283,7 +283,7 @@ window.addEventListener('load', function(){
 
     //page to reveal scroll
     for(var j=0; j<bodySectionChildenNum; j++){
-      if(window.scrollY >= bodySectionChildenArr[j]){
+      if(window.scrollY >= bodySectionChildenArr[j] && bodySectionChilden[j].style.opacity !== '1'){
         bodySectionChilden[j].style.opacity = '1';
 
         bodySectionChilden[j].style.transform = 'translate3d(0, 0, 0)';
