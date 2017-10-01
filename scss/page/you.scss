@@ -25,6 +25,12 @@
   }
 }
 
+.you__emoji-static {
+  padding: 50px 0;
+  max-width: 300px;
+  width: 80%;
+}
+
 .you__hero-heading {
   color: #fff;
   font-size: 80px;
@@ -388,6 +394,15 @@
     height: 40px;
     width: 40px;
   }
+}
+
+.you__introduction-text-email {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.you__introduction-text-email::selection {
+  background: #333;
 }
 
 .you__icon-email {

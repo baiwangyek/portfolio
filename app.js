@@ -23,6 +23,7 @@ window.addEventListener('load', function(){
       renderer.setSize( W, H );
       if(!document.querySelector('canvas')){
         document.getElementById('emojiContainer').appendChild( renderer.domElement );
+        document.getElementById('emojiStatic').parentNode.removeChild(document.getElementById('emojiStatic'));
       }
 
       camera = new THREE.PerspectiveCamera( 50, W/H, 1, 10000 );
