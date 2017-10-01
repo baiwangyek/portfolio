@@ -218,6 +218,9 @@ window.addEventListener('load', function(){
               //re init navBottomHide;
               navBottomHide = false;
 
+              //re init bodySectionChildenNumMut
+              bodySectionChildenNumMut = bodySectionChildenNum;
+
               for(var a=0; a<inputs.length; a++){
                 inputs[a].addEventListener('focus', function(){
                   event.target.parentNode.children[1].classList.add('you__contact-input-placeholder--active');
