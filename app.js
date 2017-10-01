@@ -215,6 +215,9 @@ window.addEventListener('load', function(){
               //activate input focus
               inputs = document.getElementsByClassName('you__contact-input');
 
+              //re init navBottomHide;
+              navBottomHide = false;
+
               for(var a=0; a<inputs.length; a++){
                 inputs[a].addEventListener('focus', function(){
                   event.target.parentNode.children[1].classList.add('you__contact-input-placeholder--active');
@@ -240,12 +243,14 @@ window.addEventListener('load', function(){
   ***********************/
   var lengthOfPage = document.body.clientHeight;
   var heightOfBrowser = window.innerHeight;
+  var navBottomHide = false;
 
   window.addEventListener('scroll', function(){
     lengthOfPage = document.body.clientHeight;
 
     //remove the nav bottom after scroll
-    if(window.scrollY >= 200){
+    if(window.scrollY >= 200 && !navBottomHide){
+      navBottomHide = true;
       document.querySelector('.iam-nav--bottom').classList.remove('iam-nav--bottom-init');
       if(document.querySelector('.iam-nav--right')){
         document.querySelector('.iam-nav--right').style.opacity = '1';
@@ -277,17 +282,17 @@ window.addEventListener('load', function(){
     }
 
     //page to reveal scroll
-    for(var j=0; j<bodySectionChildenNum; j++){
-      if(window.scrollY >= bodySectionChildenArr[j]){
-        bodySectionChilden[j].style.opacity = '1';
-
-        bodySectionChilden[j].style.transform = 'translate3d(0, 0, 0)';
-        bodySectionChilden[j].style.webkitTransform = 'translate3d(0, 0, 0)';
-        bodySectionChilden[j].style.MozTransform = 'translate3d(0, 0, 0)';
-        bodySectionChilden[j].msTransform = 'translate3d(0, 0, 0)';
-        bodySectionChilden[j].OTransform = 'translate3d(0, 0, 0)';
-      }
-    }
+    // for(var j=0; j<bodySectionChildenNum; j++){
+    //   if(window.scrollY >= bodySectionChildenArr[j]){
+    //     bodySectionChilden[j].style.opacity = '1';
+    //
+    //     bodySectionChilden[j].style.transform = 'translate3d(0, 0, 0)';
+    //     bodySectionChilden[j].style.webkitTransform = 'translate3d(0, 0, 0)';
+    //     bodySectionChilden[j].style.MozTransform = 'translate3d(0, 0, 0)';
+    //     bodySectionChilden[j].msTransform = 'translate3d(0, 0, 0)';
+    //     bodySectionChilden[j].OTransform = 'translate3d(0, 0, 0)';
+    //   }
+    // }
   });
 
   /***********************
