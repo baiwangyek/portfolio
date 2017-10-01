@@ -718,7 +718,6 @@ section {
   max-width: 1440px;
   margin: 0 auto; }
 
-/* HERO */
 .baiwang__body-container {
   background: #E33244; }
 
@@ -785,7 +784,6 @@ section {
   fill-opacity: 0;
   transition: 0.8s; }
 
-/* CONTENT */
 .baiwang__heading {
   position: relative;
   z-index: 1;
@@ -1755,10 +1753,8 @@ section {
 
 .you__question-menu {
   border-bottom: 2px solid white;
-  /* background: white; */
   width: 70%;
   margin-left: 15%;
-  /* height: 100px; */
   padding-top: 10px; }
 
 .you__contact {
@@ -1811,8 +1807,6 @@ section {
   border: none;
   background: none;
   border-bottom: 2px solid white;
-  /* background: white; */
-  /* height: 100px; */
   border-radius: 0;
   padding: 0;
   padding-top: 10px;
@@ -2048,11 +2042,15 @@ section {
   display: inline-block;
   margin-right: 10px;
   position: relative;
-  /* position: absolute; */
   top: 3px;
-  /* left: -26px; */
   width: 20px;
   height: 20px;
+  background: url("images/you/icon-error.png") no-repeat center/cover; }
+
+.form-validastion-error-preload {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
   background: url("images/you/icon-error.png") no-repeat center/cover; }
 
 @media (hover) {
