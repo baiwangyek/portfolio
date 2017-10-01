@@ -244,8 +244,11 @@ window.addEventListener('load', function(){
   var lengthOfPage = document.body.clientHeight;
   var heightOfBrowser = window.innerHeight;
   var navBottomHide = false;
+  //var bodySectionChildenNumMut = parseInt(bodySectionChildenNum.toString().slice());
+  var bodySectionChildenNumMut = bodySectionChildenNum;
 
   window.addEventListener('scroll', function(){
+
     lengthOfPage = document.body.clientHeight;
 
     //remove the nav bottom after scroll
@@ -282,15 +285,21 @@ window.addEventListener('load', function(){
     }
 
     //page to reveal scroll
-    for(var j=0; j<bodySectionChildenNum; j++){
-      if(window.scrollY >= bodySectionChildenArr[j] && bodySectionChilden[j].style.opacity !== '1'){
-        bodySectionChilden[j].style.opacity = '1';
+    if(bodySectionChilden[bodySectionChildenNum-1].style.opacity !== '1'){
+      for(var j=0; j<bodySectionChildenNumMut; j++){
+        console.log(1);
+        if(window.scrollY >= bodySectionChildenArr[j + (bodySectionChildenNum - bodySectionChildenNumMut)] && bodySectionChilden[j + (bodySectionChildenNum - bodySectionChildenNumMut)].style.opacity !== '1'){
+          console.log(2);
+          bodySectionChilden[j + (bodySectionChildenNum - bodySectionChildenNumMut)].style.opacity = '1';
 
-        bodySectionChilden[j].style.transform = 'translate3d(0, 0, 0)';
-        bodySectionChilden[j].style.webkitTransform = 'translate3d(0, 0, 0)';
-        bodySectionChilden[j].style.MozTransform = 'translate3d(0, 0, 0)';
-        bodySectionChilden[j].msTransform = 'translate3d(0, 0, 0)';
-        bodySectionChilden[j].OTransform = 'translate3d(0, 0, 0)';
+          bodySectionChilden[j + (bodySectionChildenNum - bodySectionChildenNumMut)].style.transform = 'translate3d(0, 0, 0)';
+          bodySectionChilden[j + (bodySectionChildenNum - bodySectionChildenNumMut)].style.webkitTransform = 'translate3d(0, 0, 0)';
+          bodySectionChilden[j + (bodySectionChildenNum - bodySectionChildenNumMut)].style.MozTransform = 'translate3d(0, 0, 0)';
+          bodySectionChilden[j + (bodySectionChildenNum - bodySectionChildenNumMut)].msTransform = 'translate3d(0, 0, 0)';
+          bodySectionChilden[j + (bodySectionChildenNum - bodySectionChildenNumMut)].OTransform = 'translate3d(0, 0, 0)';
+
+          bodySectionChildenNumMut--;
+        }
       }
     }
   });
