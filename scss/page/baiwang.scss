@@ -223,16 +223,20 @@
 }
 
 .baiwang__testimonial {
-  width: 650px;
+  // width: 650px;
   padding: 60px;
   background: #fff;
   position: relative;
   margin: 160px auto;
   border-radius: 5px;
 
-  @media (max-width: 900px) {
-    width: 500px;
-  }
+  max-width: 500px;
+  width: 80%;
+  padding: 50px 40px;
+
+  // @media (max-width: 900px) {
+  //   width: 500px;
+  // }
 
   @media (max-width: 750px) {
     width: auto;
@@ -269,8 +273,10 @@
 .baiwang__testimonial-quote {
   text-align: center;
   margin: 0 auto;
-  font-size: 27px;
-  line-height: 40px;
+  // font-size: 27px;
+  // line-height: 40px;
+  font-size: 23px;
+  line-height: 36px;
   letter-spacing: -1.3px;
 
   @media (max-width: 800px) {
@@ -316,7 +322,7 @@
   font-family: 'karla';
   font-size: 20px;
   color: #2d2d2d;
-  margin-top: 10px;
+  margin-top: 5px;
   line-height: 24px;
 }
 

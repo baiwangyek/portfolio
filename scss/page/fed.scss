@@ -369,6 +369,21 @@
   }
 }
 
+.fed-content__img--outline {
+  background: url('videos/outline/outline-desktop.gif') center/cover no-repeat;
+
+  @media(max-width: 600px) {
+    background: url('videos/outline/outline-mobile.gif') center/cover no-repeat;
+  }
+}
+
+.fed-content__img--clothes {
+  background: url('videos/clothes/clothes-desktop.gif') center/cover no-repeat;
+
+  @media(max-width: 600px) {
+    background: url('videos/clothes/clothes-mobile.gif') center/cover no-repeat;
+  }
+}
 
 .fed-content__img--to-do {
   background: url('videos/to-do/to-do-desktop.gif') center/cover no-repeat;
