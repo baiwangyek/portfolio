@@ -1252,12 +1252,12 @@ section {
 
 .fed-content__heading {
   color: #fff;
-  font-size: 70px;
-  line-height: 110px;
   position: relative;
   z-index: 2;
   border-bottom: 3px solid white;
-  position: relative; }
+  position: relative;
+  font-size: 60px;
+  line-height: 90px; }
   @media (max-width: 530px) {
     .fed-content__heading {
       font-size: 13vw;
@@ -1558,7 +1558,8 @@ section {
   line-height: 90px;
   color: #fff;
   font-family: 'Hammersmith One', sans-serif;
-  text-shadow: 5px 0px 0px #ffd464, 10px 0px 0px #fa5b75; }
+  text-shadow: 5px 0px 0px #ffd464, 10px 0px 0px #fa5b75;
+  text-transform: uppercase; }
   @media (max-width: 600px) {
     .design__work-title {
       font-size: 13vw;

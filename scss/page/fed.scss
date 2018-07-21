@@ -246,12 +246,15 @@
 
 .fed-content__heading {
   color: #fff;
-  font-size: 70px;
-  line-height: 110px;
+  // font-size: 70px;
+  // line-height: 110px;
   position: relative;
   z-index: 2;
   border-bottom: 3px solid white;
   position: relative;
+
+  font-size: 60px;
+  line-height: 90px;
 
   @media(max-width: 530px) {
     font-size: 13vw;
