@@ -96,7 +96,9 @@ section {
   font-family: "Karla", sans-serif;
   letter-spacing: -1.3px;
   font-weight: 400;
-  color: #2d2d2d;
+  //color: #2d2d2d;
+  color: white;
+  text-shadow: 1px 1px 6px rgb(0,0,0 ,0.2);
   white-space: pre-line;
   font-size: 21px;
   line-height: 30px;
