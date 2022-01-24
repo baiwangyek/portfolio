@@ -1,0 +1,186 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="110px" height="110px" viewBox="0 0 110 110" version="1.1">
+    <!-- Generator: Sketch 46.2 (44496) - http://www.bohemiancoding.com/sketch -->
+    <title>emoji-heart-placeholder</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="50%" y1="100%" x2="50%" y2="0%" id="linearGradient-1">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"/>
+            <stop stop-color="#FFFFFF" offset="100%"/>
+        </linearGradient>
+        <path d="M57.000025,1.999987 C87.375668,1.999987 111.99995,26.624382 111.99995,57.000025 C111.99995,87.375668 87.375668,111.99995 57.000025,111.99995 C26.624269,111.99995 1.999987,87.375668 1.999987,57.000025 C1.999987,26.624382 26.624269,1.999987 57.000025,1.999987 Z" id="path-2"/>
+        <filter x="-37.6%" y="-37.6%" width="175.2%" height="175.2%" filterUnits="objectBoundingBox" id="filter-3">
+            <feGaussianBlur stdDeviation="30" in="SourceAlpha" result="shadowBlurInner1"/>
+            <feOffset dx="0" dy="-25" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 0.6039216   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"/>
+            <feMorphology radius="0.6" operator="erode" in="SourceAlpha" result="shadowSpreadInner2"/>
+            <feGaussianBlur stdDeviation="2.7" in="shadowSpreadInner2" result="shadowBlurInner2"/>
+            <feOffset dx="0" dy="2" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.4 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"/>
+            <feMorphology radius="3.9" operator="erode" in="SourceAlpha" result="shadowSpreadInner3"/>
+            <feGaussianBlur stdDeviation="4.55" in="shadowSpreadInner3" result="shadowBlurInner3"/>
+            <feOffset dx="0" dy="0" in="shadowBlurInner3" result="shadowOffsetInner3"/>
+            <feComposite in="shadowOffsetInner3" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner3"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.5 0" type="matrix" in="shadowInnerInner3" result="shadowMatrixInner3"/>
+            <feGaussianBlur stdDeviation="7.5" in="SourceAlpha" result="shadowBlurInner4"/>
+            <feOffset dx="0" dy="-8" in="shadowBlurInner4" result="shadowOffsetInner4"/>
+            <feComposite in="shadowOffsetInner4" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner4"/>
+            <feColorMatrix values="0 0 0 0 0.6509804   0 0 0 0 0.40392157   0 0 0 0 0.02745098  0 0 0 0.5 0" type="matrix" in="shadowInnerInner4" result="shadowMatrixInner4"/>
+            <feOffset dx="0" dy="-1" in="SourceAlpha" result="shadowOffsetInner5"/>
+            <feComposite in="shadowOffsetInner5" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner5"/>
+            <feColorMatrix values="0 0 0 0 0.70980394   0 0 0 0 0.3647059   0 0 0 0 0.019607844  0 0 0 1 0" type="matrix" in="shadowInnerInner5" result="shadowMatrixInner5"/>
+            <feGaussianBlur stdDeviation="0.5" in="SourceAlpha" result="shadowBlurInner6"/>
+            <feOffset dx="0" dy="1" in="shadowBlurInner6" result="shadowOffsetInner6"/>
+            <feComposite in="shadowOffsetInner6" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner6"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowInnerInner6" result="shadowMatrixInner6"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"/>
+                <feMergeNode in="shadowMatrixInner2"/>
+                <feMergeNode in="shadowMatrixInner3"/>
+                <feMergeNode in="shadowMatrixInner4"/>
+                <feMergeNode in="shadowMatrixInner5"/>
+                <feMergeNode in="shadowMatrixInner6"/>
+            </feMerge>
+        </filter>
+        <linearGradient x1="50%" y1="25.073014%" x2="50%" y2="-43.5966706%" id="linearGradient-4">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"/>
+            <stop stop-color="#FFFFFF" offset="100%"/>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="50%" id="linearGradient-5">
+            <stop stop-color="#FFFFFF" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="100%"/>
+        </linearGradient>
+        <path d="M56.999935,6.999937 C84.614235,6.999937 107.000049,30.281211 107.000049,59.000011 C107.000049,87.718811 84.614235,110.999978 56.999935,110.999978 C29.385841,110.999978 7.000027,87.718811 7.000027,59.000011 C7.000027,30.281211 29.385841,6.999937 56.999935,6.999937 Z" id="path-6"/>
+        <path d="M56.999975,100.5 C42.479898,100.5 29.00005,88.82455 29.00005,79.999925 C29.00005,78.239 29.999923,79.000025 29.999923,79.000025 C29.999923,79.000025 40.220021,83 56.999975,83 L56.999975,83.126975 C73.779929,83.126975 84.000027,79.1551 84.000027,79.1551 C84.000027,79.1551 85.000018,78.3995 85.000018,80.148125 C85.000018,88.9104 71.519993,100.5 56.999975,100.5 Z" id="path-7"/>
+        <filter x="-3.4%" y="-4.0%" width="106.8%" height="116.0%" filterUnits="objectBoundingBox" id="filter-8">
+            <feOffset dx="0" dy="1" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="0.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 1   0 0 0 0 1   0 0 0 0 1  0 0 0 1 0" type="matrix" in="shadowBlurOuter1"/>
+        </filter>
+        <filter x="-7.7%" y="-14.2%" width="115.4%" height="136.4%" filterUnits="objectBoundingBox" id="filter-9">
+            <feMorphology radius="0.5" operator="erode" in="SourceAlpha" result="shadowSpreadInner1"/>
+            <feGaussianBlur stdDeviation="2.3" in="shadowSpreadInner1" result="shadowBlurInner1"/>
+            <feOffset dx="0" dy="2" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"/>
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner2"/>
+            <feOffset dx="0" dy="0" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 0.75 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"/>
+                <feMergeNode in="shadowMatrixInner2"/>
+            </feMerge>
+        </filter>
+        <linearGradient x1="42.0966911%" y1="90.6741011%" x2="62.1189824%" y2="0%" id="linearGradient-10">
+            <stop stop-color="#FFFFFF" stop-opacity="0" offset="0%"/>
+            <stop stop-color="#FFFFFF" stop-opacity="0.5" offset="100%"/>
+        </linearGradient>
+        <path d="M19.2840416,7.49751761 C19.2840416,7.49751761 22.2520416,3.04251761 28.9190416,4.82351761 C35.5860416,6.60451761 36.7810416,12.8955176 35.6470416,17.1175176 C33.0930416,26.6175176 12.7050416,31.9805176 12.7050416,31.9805176 L19.2840416,7.49751761 Z M19.2840416,7.49751761 C19.2840416,7.49751761 18.9480416,2.15951761 12.2840416,0.378517606 C5.62004156,-1.40248239 1.42804156,3.44951761 0.293041563,7.67051761 C-2.25995844,17.1705176 12.7080416,31.9805176 12.7080416,31.9805176 L19.2840416,7.49751761 Z" id="path-11"/>
+        <filter x="-27.8%" y="-15.6%" width="155.5%" height="162.5%" filterUnits="objectBoundingBox" id="filter-13">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0.9843137   0 0 0 0 0.039215688   0 0 0 0 0.03137255  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"/>
+        </filter>
+        <filter x="-31.9%" y="-20.3%" width="163.8%" height="171.9%" filterUnits="objectBoundingBox" id="filter-14">
+            <feGaussianBlur stdDeviation="3.5" in="SourceAlpha" result="shadowBlurInner1"/>
+            <feOffset dx="0" dy="-6" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+            <feColorMatrix values="0 0 0 0 0.5176471   0 0 0 0 0.078431375   0 0 0 0 0.078431375  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"/>
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner2"/>
+            <feOffset dx="0" dy="-2" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"/>
+            <feColorMatrix values="0 0 0 0 0.5176471   0 0 0 0 0.078431375   0 0 0 0 0.078431375  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"/>
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner3"/>
+            <feOffset dx="0" dy="1" in="shadowBlurInner3" result="shadowOffsetInner3"/>
+            <feComposite in="shadowOffsetInner3" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner3"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowInnerInner3" result="shadowMatrixInner3"/>
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner4"/>
+            <feOffset dx="0" dy="2" in="shadowBlurInner4" result="shadowOffsetInner4"/>
+            <feComposite in="shadowOffsetInner4" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner4"/>
+            <feColorMatrix values="0 0 0 0 0.57254905   0 0 0 0 0.02745098   0 0 0 0 0.02745098  0 0 0 1 0" type="matrix" in="shadowInnerInner4" result="shadowMatrixInner4"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"/>
+                <feMergeNode in="shadowMatrixInner2"/>
+                <feMergeNode in="shadowMatrixInner3"/>
+                <feMergeNode in="shadowMatrixInner4"/>
+            </feMerge>
+        </filter>
+        <rect x="-5" y="-9" width="29" height="29" id="rect-15"/>
+        <rect x="12" y="-5" width="29" height="29" id="rect-16"/>
+        <path d="M19.2840416,7.49751761 C19.2840416,7.49751761 22.2520416,3.04251761 28.9190416,4.82351761 C35.5860416,6.60451761 36.7810416,12.8955176 35.6470416,17.1175176 C33.0930416,26.6175176 12.7050416,31.9805176 12.7050416,31.9805176 L19.2840416,7.49751761 Z M19.2840416,7.49751761 C19.2840416,7.49751761 18.9480416,2.15951761 12.2840416,0.378517606 C5.62004156,-1.40248239 1.42804156,3.44951761 0.293041563,7.67051761 C-2.25995844,17.1705176 12.7080416,31.9805176 12.7080416,31.9805176 L19.2840416,7.49751761 Z" id="path-17"/>
+        <filter x="-27.8%" y="-15.6%" width="155.5%" height="162.5%" filterUnits="objectBoundingBox" id="filter-19">
+            <feOffset dx="0" dy="5" in="SourceAlpha" result="shadowOffsetOuter1"/>
+            <feGaussianBlur stdDeviation="2.5" in="shadowOffsetOuter1" result="shadowBlurOuter1"/>
+            <feColorMatrix values="0 0 0 0 0.9843137   0 0 0 0 0.039215688   0 0 0 0 0.03137255  0 0 0 0.3 0" type="matrix" in="shadowBlurOuter1"/>
+        </filter>
+        <filter x="-31.9%" y="-20.3%" width="163.8%" height="171.9%" filterUnits="objectBoundingBox" id="filter-20">
+            <feGaussianBlur stdDeviation="3.5" in="SourceAlpha" result="shadowBlurInner1"/>
+            <feOffset dx="0" dy="-6" in="shadowBlurInner1" result="shadowOffsetInner1"/>
+            <feComposite in="shadowOffsetInner1" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner1"/>
+            <feColorMatrix values="0 0 0 0 0.5176471   0 0 0 0 0.078431375   0 0 0 0 0.078431375  0 0 0 0.5 0" type="matrix" in="shadowInnerInner1" result="shadowMatrixInner1"/>
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner2"/>
+            <feOffset dx="0" dy="-2" in="shadowBlurInner2" result="shadowOffsetInner2"/>
+            <feComposite in="shadowOffsetInner2" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner2"/>
+            <feColorMatrix values="0 0 0 0 0.5176471   0 0 0 0 0.078431375   0 0 0 0 0.078431375  0 0 0 1 0" type="matrix" in="shadowInnerInner2" result="shadowMatrixInner2"/>
+            <feGaussianBlur stdDeviation="1.5" in="SourceAlpha" result="shadowBlurInner3"/>
+            <feOffset dx="0" dy="1" in="shadowBlurInner3" result="shadowOffsetInner3"/>
+            <feComposite in="shadowOffsetInner3" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner3"/>
+            <feColorMatrix values="0 0 0 0 0   0 0 0 0 0   0 0 0 0 0  0 0 0 1 0" type="matrix" in="shadowInnerInner3" result="shadowMatrixInner3"/>
+            <feGaussianBlur stdDeviation="1" in="SourceAlpha" result="shadowBlurInner4"/>
+            <feOffset dx="0" dy="2" in="shadowBlurInner4" result="shadowOffsetInner4"/>
+            <feComposite in="shadowOffsetInner4" in2="SourceAlpha" operator="arithmetic" k2="-1" k3="1" result="shadowInnerInner4"/>
+            <feColorMatrix values="0 0 0 0 0.57254905   0 0 0 0 0.02745098   0 0 0 0 0.02745098  0 0 0 1 0" type="matrix" in="shadowInnerInner4" result="shadowMatrixInner4"/>
+            <feMerge>
+                <feMergeNode in="shadowMatrixInner1"/>
+                <feMergeNode in="shadowMatrixInner2"/>
+                <feMergeNode in="shadowMatrixInner3"/>
+                <feMergeNode in="shadowMatrixInner4"/>
+            </feMerge>
+        </filter>
+        <rect x="-5" y="-9" width="29" height="29" id="rect-21"/>
+        <rect x="12" y="-5" width="29" height="29" id="rect-22"/>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="emoji-heart-placeholder" transform="translate(-2.000000, -2.000000)">
+            <g id="base-copy">
+                <use fill="#FFEE40" fill-rule="evenodd" xlink:href="#path-2"/>
+
+
+            </g>
+
+            <g id="mouth-copy">
+
+                <use fill="#A66707" fill-rule="evenodd" xlink:href="#path-7"/>
+
+            </g>
+            <g id="heart-copy" transform="translate(35.021470, 49.106406) rotate(-30.000000) translate(-35.021470, -49.106406) translate(16.521470, 33.106406)">
+                <mask id="mask-12" fill="white">
+                    <use xlink:href="#path-11"/>
+                </mask>
+                <g id="Mask">
+
+                    <use fill="#FF0300" fill-rule="evenodd" xlink:href="#path-11"/>
+
+
+                </g>
+
+
+            </g>
+            <g id="heart-copy-2" transform="translate(64.000000, 34.000000)">
+                <mask id="mask-18" fill="white">
+                    <use xlink:href="#path-17"/>
+                </mask>
+                <g id="Mask">
+
+                    <use fill="#FF0300" fill-rule="evenodd" xlink:href="#path-17"/>
+
+
+                </g>
+
+
+            </g>
+        </g>
+    </g>
+</svg>

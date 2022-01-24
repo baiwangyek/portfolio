@@ -1,15 +1,13 @@
 .you__body-container {
-  background: linear-gradient(#8770FF, #FF6CAC, #FFD26C, #70EAFC, #77E8F5, #8970FD);
+  background: linear-gradient(#8770FF, #FF6CAC);
 }
 
 .you__hero {
-  //height: 100vh;
-  //width: 100vw;
   display: flex;
   flex-direction: column;
   justify-content: space-around;
   align-items: center;
-  padding-top: 120px;
+  padding-top: 100px;
 }
 
 .you__hero-wrapper {
@@ -24,16 +22,37 @@
   }
 }
 
+.you__emoji-static {
+  padding: 50px 0;
+  max-width: 300px;
+  width: 80%;
+}
+
 .you__hero-heading {
   color: #fff;
-  font-size: 60px;
-  //width: 800px;
+  font-size: 80px;
   position: relative;
   text-align: center;
   font-family: 'Hammersmith One', sans-serif;
 
-  @media(max-width: 550px) {
+  @media(max-width: 650px) {
     font-size: 11vw;
+  }
+}
+
+.you__hero-heading--top {
+  top: 20px;
+
+  @media (max-width: 650px){
+    top: 0;
+  }
+}
+
+.you__hero-heading--bottom {
+  top: -20px;
+
+  @media (max-width: 650px){
+    top: 0;
   }
 }
 
@@ -45,34 +64,41 @@
   }
 }
 
+
 .you__introduction-heading {
-  margin: 0 auto;
+  margin: 120px auto 0;
   text-align: center;
   font-size: 80px;
   line-height: 90px;
   color: #fff;
   font-family: 'Hammersmith One', sans-serif;
 
-  @media(max-width: 770px) {
-    font-size: 70px;
-    line-height: 75px;
+  @media (max-width: 630px){
+    font-size: 12vw;
+    line-height: 13vw;
+  }
+}
+
+.you__introduction-heading--top {
+  @media(max-width: 650px) {
+    margin: 30px auto 0;
   }
 }
 
 .you__introduction-text {
   color: #fff;
   text-align: center;
-  margin: 0 auto;
-  width: 70%;
-  padding-top: 60px;
+  margin: 60px auto 0;
+  max-width: 800px;
+  width: 80%;
 
   @media(max-width: 770px) {
-    padding-top: 45px;
+    margin: 50px auto 0;
     width: 90%;
   }
 
   @media(max-width: 450px) {
-    padding-top: 30px;
+    margin: 40px auto 0;
     width: 100%;
   }
 }
@@ -92,11 +118,13 @@
 
 .you__question-menu {
   border-bottom: 2px solid white;
-  /* background: white; */
   width: 70%;
   margin-left: 15%;
-  /* height: 100px; */
   padding-top: 10px;
+}
+
+.you__contact {
+  padding-top: 40px;
 }
 
 .you__contact-heading {
@@ -142,38 +170,32 @@
 }
 
 .you__contact-container {
-  display: flex;
-  width: 100%;
+  max-width: 700px;
   padding-top: 20px;
   padding-bottom: 20px;
-
-  @media(max-width: 1000px) {
-    display: block;
-    max-width: 700px;
-    width: 90%;
-    margin: 0 auto;
-  }
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
 }
 
 .you__contact-input {
   border: none;
   background: none;
   border-bottom: 2px solid white;
-  /* background: white; */
-  width: 80%;
-  margin-left: 15%;
-  /* height: 100px; */
+  border-radius: 0;
+  padding: 0;
   padding-top: 10px;
   padding-bottom: 10px;
   font-size: 20px;
   font-family: 'Karla', sans-serif;
   outline: none;
   color: #fff;
+  margin: 0 auto;
+  position: relative;
+  width: 100%;
 
   @media(max-width: 1000px) {
     margin-left: 0;
-    width: 100%;
-    margin-top: 10px;
   }
 
   @media(max-width: 650px) {
@@ -181,31 +203,279 @@
   }
 }
 
+.you__contact-input-placeholder {
+  color: white;
+  font-size: 20px;
+  font-family: 'Karla', sans-serif;
+  position: absolute;
+  top: 30px;
+  left: 0;
+  transition: 0.4s;
+}
+
+.you__contact-input-placeholder--active {
+  font-size: 15px;
+  top: 12px;
+}
+
 .you__contact-input:focus {
   border-bottom: 2px solid #F8E71C;
 }
 
-.you__contact-submit {
-  background: white;
-  padding: 15px 60px;
-  color: #2d2d2d;
+.you__contact-input:hover .you__contact-input-placeholder {
+  color: #F8E71C;
+}
+
+.you__details-container {
+  padding-top: 60px;
+  display: flex;
+  max-width: 800px;
+  margin: 0 auto;
+  width: 90%;/* align-items: flex-start; */
+
+  @media(max-width: 770px) {
+    padding-top: 50px;
+  }
+
+  @media(max-width: 650px) {
+    display: block;
+  }
+
+  @media(max-width: 450px) {
+    padding-top: 40px;
+    width: 100%;
+  }
+}
+
+.you__details-content-contact {
+  @media(max-width: 950px) {
+    display: block;
+  }
+
+  @media(max-width: 650px){
+    display: inline-block;
+  }
+
+  @media(max-width: 400px){
+    display: block;
+  }
+}
+
+.you__details-content-email {
+  @media(max-width: 950px) {
+    padding-top: 10px;
+  }
+}
+
+.you__details-contact-container {
+  flex: 0 0 50%;
+}
+
+.you__details-title {
+  padding-bottom: 10px;
+  font-size: 30px;
+  color: #fff;
+  font-family: 'Karla', sans-serif;
+  letter-spacing: -1.3px;
+  font-weight: 400;
+  line-height: 35px;
+
+  @media(max-width: 550px) {
+    font-size: 25px;
+  }
+}
+
+.you__details-content {
+  color: #fff;
+}
+
+.you__details-cv-container {
+  padding-top: 0;
+  padding-left: 50px;
+  border-left: 2px solid white;
+
+  @media(max-width: 650px) {
+    border-left: none;
+    padding-left: 0;
+    padding-top: 20px;
+  }
+}
+
+.you__icon-container {
+  display: flex;
+  align-items: flex-start;
+  max-width: 500px;
+  width: 100%;
+  justify-content: space-around;
+  margin: 0 auto;
+  padding-top: 60px;
+}
+
+.you__icon {
+  height: 50px;
+  width: 50px;
+
+  @media(max-width: 400px) {
+    height: 40px;
+    width: 40px;
+  }
+}
+
+.you__introduction-text-email {
+  margin-top: 20px;
+  font-weight: bold;
+}
+
+.you__introduction-text-email::selection {
+  background: #333;
+}
+
+.you__icon-email {
+  background: url('images/you/email.jpg') no-repeat center/cover;
+}
+
+.you__icon-linkedin {
+  background: url('images/you/linkedin.svg') no-repeat center/cover;
+}
+
+.you__icon-github {
+  background: url('images/you/github.jpg') no-repeat center/cover;
+}
+
+.you__icon-codepen {
+  background: url('images/you/codepen.jpg') no-repeat center/cover;
+}
+
+.you__email-reveal {
+  position: absolute;
+  bottom: -50px;
+  left: 0;
+  background: #fff;
+  padding: 0px 10px;
+  border: 3px solid black;
+  transition: .4s;
+  opacity: 0;
+  transform: translate3d(0, 30px, 0);
+}
+
+.you__email-reveal--active {
+  opacity: 1;
+  transform: translate3d(0, 0, 0);
+}
+
+.emoji-loader {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('images/you/emoji-loader.svg') center/cover no-repeat;
+  position: absolute;
+  right: 20px;
+  top: 7px;
+  animation: emoji-rotate 1s infinite linear;
+}
+
+.emoji-sent {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('images/you/emoji-sent.svg') center/cover no-repeat;
+  position: absolute;
+  right: 20px;
+  top: 7px;
+  transition: .2s cubic-bezier(.68,.15,.68,1.5);
+  transform: scale(.2);
+}
+
+@keyframes emoji-rotate {
+  0%{transform: rotate(0deg);}
+  100%{transform: rotate(360deg);}
+}
+
+.you__contact-button {
+  background: transparent;
+  padding: 11px 60px;
+  color: white;
   font-family: 'Hammersmith One', sans-serif;
-  font-size: 25px;
+  font-size: 19px;
   text-decoration: none;
-  margin: 60px auto 0;
+  margin: 40px auto 0;
   text-align: center;
   display: inline-block;
   position: relative;
   left: 50%;
   transform: translateX(-50%);
-  mix-blend-mode: screen;
+  border: 2px solid white;
+  cursor: pointer;
+  display: none;
+  opacity: 0;
+  transition: .4s;
 }
 
+.you__contact--sending {
+  background: #8770FF;
+  border: 2px solid transparent;
+}
 
+.you__contact--sent {
+  background: #f8e71c;
+  color: #2d2d2d;
+  border: 2px solid transparent;
+  cursor: auto;
+}
 
-.lock-screen {
-    //height: 100%;
-    overflow: hidden;
-    width: 100%;
-    position: fixed;
+.you__contact--active {
+  display: inline-block;
+  animation: you-input-appear .4s forwards;
+}
+
+@keyframes you-input-appear {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.you__input-error {
+  border-bottom: 2px solid red;
+}
+
+.form-validation {
+  max-width: 700px;
+  width: 100%;
+  margin: 0 auto;
+  font-size: 19px;
+  color: white;
+  position: relative;
+  display: none;
+
+  @media(max-width: 370px) {
+    font-size: 16px;
+  }
+}
+
+.form-validation--active {
+  display: block;
+}
+
+.form-validation:before{
+  content: '';
+  display: inline-block;
+  margin-right: 10px;
+  position: relative;
+  top: 3px;
+  width: 20px;
+  height: 20px;
+  background: url('images/you/icon-error.png') no-repeat center/cover;
+}
+
+.form-validastion-error-preload {
+  display: inline-block;
+  width: 30px;
+  height: 30px;
+  background: url('images/you/icon-error.png') no-repeat center/cover;
+}
+
+@media(hover) {
+  .you__contact--submit:hover {
+    background: #8770FF;
+    border: 2px solid transparent;
+  }
 }

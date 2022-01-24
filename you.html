@@ -1,17 +1,17 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   <head>
     <meta charset="utf-8">
-    <title></title>
+    <title>I AM INTERESTED IN YOU</title>
+    <link rel="apple-touch-icon" sizes="180x180" href="favicons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="favicons/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="favicons/favicon-16x16.png">
+    <link rel="manifest" href="favicons/manifest.json">
+    <link rel="mask-icon" href="favicons/safari-pinned-tab.svg" color="#2400ff">
+    <meta name="theme-color" content="#ffffff">
     <meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1, user-scalable=yes">
-    <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Quicksand|Hammersmith+One|Karla|Playfair+Display:400,400i" rel="stylesheet">
+    <!-- <link href="https://fonts.googleapis.com/css?family=Droid+Sans+Mono|Quicksand|Hammersmith+One|Karla|Playfair+Display:400,400i" rel="stylesheet"> -->
     <link rel="stylesheet" href="main.css">
-    <!-- <script src="http://threejsplaygnd.brangerbriz.net/js/three.min.js"></script>
-    <script src="http://threejsplaygnd.brangerbriz.net/js/Detector.js"></script> -->
-    <script src="threejsplaygnd/detector.js" charset="utf-8"></script>
-    <script src="threejsplaygnd/three.min.js" charset="utf-8"></script>
-    <script src="app.js" charset="utf-8"></script>
-
   </head>
   <body>
     <div id="main">
@@ -20,10 +20,10 @@
           <!-- hero -->
           <section class="you__hero">
             <div class="you__hero-wrapper">
-              <h1 class="you__hero-heading">I AM INTERESTED</h1>
-              <!-- <img class="you__emoji" style="" src="images/you/emoji.png" alt=""> -->
+              <h1 class="you__hero-heading you__hero-heading--top">I AM INTERESTED</h1>
               <div id="emojiContainer" class=""></div>
-              <h1 class="you__hero-heading">IN YOU</h1>
+              <img id="emojiStatic" class="you__emoji-static" style="" src="images/you/emoji-heart-placeholder.svg" alt="A giant heart eyes emoji">
+              <h1 class="you__hero-heading you__hero-heading--bottom">IN YOU</h1>
             </div>
           </section>
 
@@ -31,51 +31,89 @@
           <section class="section--body">
 
             <!-- introduction -->
-            <h1 class="you__introduction-heading">ENOUGH ABOUT ME</h1>
-            <p class="p you__introduction-text">Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, </p>
-
-            <!-- i am ?-->
-            <div class="you__question-container" style="">
-              <h2 class="you__question-label">I AM</h2>
-              <div class="you__question-menu" style=""></div>
+            <h1 class="you__introduction-heading you__introduction-heading--top">ARE YOU INTERESTED IN ME?</h1>
+            <p class="p you__introduction-text">Feel free to contact me via my email.</p>
+            <p style="" class="p you__introduction-text you__introduction-text-email">Email : baiwangyek@gmail.com</p>
+            <!-- icon lists -->
+            <div class="you__icon-container">
+              <!-- <a id="emailReveal" class="you__icon you__icon-email" target="blank" href=""></a> -->
+              <a class="you__icon you__icon-linkedin" target="blank" href="https://www.linkedin.com/in/bai-wang-yek-4b6710150/"></a>
+              <a class="you__icon you__icon-github" target="blank" href="https://github.com/baiwangyek"></a>
+              <a class="you__icon you__icon-codepen" target="blank" href="https://codepen.io/baiwang"></a>
+              <!-- <p class="p you__email-reveal">baiwangyek@gmail.com</p> -->
             </div>
+
+            <!-- <a style="display: block;" class="p you__introduction-text" target="_blank" href="CV-short-version.pdf">View my CV (full version available via email)</a> -->
+
+
+            <!-- enugh about me -->
+            <h1 class="you__introduction-heading">ENOUGH ABOUT ME</h1>
+            <p class="p you__introduction-text">How about you? How's your day been? Tell me more about yourself or you can just drop a line and say hello. I am keen to hear from you.</p>
 
             <!-- contact form -->
-            <form class="you__contact" action="index.html" method="post">
-              <h1 class="you__contact-heading">EMAIL IS THE NEW SMOKE SIGNAL</h1>
-
+            <form class="you__contact" name="gform" id="gform" enctype="text/plain" action="https://docs.google.com/forms/d/e/1FAIpQLSeWylfPvBaHuXnnab7mWw4Rodu0I7zKB1Te8J-oI-obGQw8wQ/formResponse?" target="hidden_iframe" onsubmit="submitted=true;">
               <div class="you__contact-container" style="">
-                <label for="email" class="you__question-label">EMAIL </label>
-                <input id="email" type="text" name="" value="" class="you__contact-input" >
+                <input id="entry.1345338267" type="text" name="entry.1345338267" class="you__contact-input">
+                <p class="you__contact-input-placeholder">Name</p>
+              </div>
+              <div class="you__contact-container" style="">
+                <input id="entry.1428414085" type="email" name="entry.1428414085" value="" class="you__contact-input" >
+                <p class="you__contact-input-placeholder">Email</p>
+              </div>
+              <div class="you__contact-container" style="">
+                <input id="entry.791260553" type="text" name="entry.791260553" value="" class="you__contact-input" >
+                <p class="you__contact-input-placeholder">Message</p>
               </div>
 
-              <div class="you__contact-container" style="">
-                <label for="subject" class="you__question-label">SUBJECT </label>
-                <input id="subject" type="text" name="" value="" class="you__contact-input" >
-              </div>
+              <!-- hidden validation errors -->
+              <p id="nameEmpty" class="p form-validation">You forgot to write your name down</p>
+              <p id="emailEmpty" class="p form-validation">You forgot to write your email down</p>
+              <p id="emailWrong" class="p form-validation">Your email is in the wrong format</p>
+              <p id="messageEmpty" class="p form-validation">You forgot to write your message down</p>
 
-              <div class="you__contact-container" style="">
-                <label for="mesage" class="you__question-label">MESSAGE </label>
-                <!-- <textarea id="message" name="name" rows="8" cols="80" class="you__contact-input"></textarea> -->
-                <input id="message" type="text" name="" value="" class="you__contact-input" >
-              </div>
-
-              <!-- <input type="submit" name="" value=""> -->
-              <a class="you__contact-submit" href="#">SUBMIT</a>
+              <!-- submit button stages -->
+              <button id="formSubmit" class="you__contact-button you__contact--submit you__contact--active" type="submit" name="button">SEND</button>
+              <button class="you__contact-button you__contact--sending" type="button" name="button">SENDING...<span class="emoji-loader"></span></button>
+              <button class="you__contact-button you__contact--sent" type="button" name="button">SUCCESS!<span class="emoji-sent"></span></button>
+              <button id="formSubmit" class="you__contact-button you__contact--submit you__contact--again" type="button" name="button">SEND ANOTHER MESSAGE</button>
             </form>
 
+            <div style="visibility: hidden; position: absolute; left: -999px" class="">
+              <div class="emoji-loader"></div>
+              <div class="emoji-sent"></div>
+              <div class="form-validastion-error-preload"></div>
+            </div>
           </section>
+
+          <!-- init submit form -->
+          <script type="text/javascript">var submitted=false;</script>
+          <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) {}"></iframe>
+
           <!-- nav -->
-          <!-- <a class="iam-nav iam-nav--left iam-nav--design" href="design.html">I<br>AM</a> -->
+          <div class="iam-nav iam-nav--bottom" href="">
+            <img class="chevron--bottom" src="images/icons/chevron-white.svg" alt="White arrow pointer downwards">
+          </div>
+
           <a class="iam-nav iam-nav--left iam-nav--design" href="design.html">
             <div class="iam-nav__expanded-text-container">
-              <h2 class="iam-nav__expanded-subheading iam-nav__expanded-subheading--left iam-nav__expanded-subheading--design" style="">I AM A</h2>
-              <h2 class="iam-nav__expanded-heading iam-nav__expanded-heading--left iam-nav__expanded-heading--design" style="">Designer</h2>
+              <h2 class="iam-nav__expanded-subheading iam-nav__expanded-subheading--left iam-nav__expanded-subheading--design" style="">MY RECENT</h2>
+              <h2 class="iam-nav__expanded-heading iam-nav__expanded-heading--left iam-nav__expanded-heading--design" style="">DESIGNS</h2>
             </div>
-            <img class="chevron--left" src="images/icons/chevron-white.svg" alt="">
+            <img class="chevron--left" src="images/icons/chevron-white.svg" alt="White arrow pointer left to the next page">
           </a>
         </div>
       </div>
     </div>
   </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/webfont/1.6.26/webfont.js"></script>
+  <script>
+   WebFont.load({
+      google: {
+        families: ['Droid Sans Mono', 'Hammersmith One', 'Karla:400,700', 'Playfair+Display:400,400i']
+      }
+    });
+  </script>
+  <script src="threejsplaygnd/detector.js" charset="utf-8"></script>
+  <script src="threejsplaygnd/three.min.js" charset="utf-8"></script>
+  <script src="app.js" charset="utf-8"></script>
 </html>

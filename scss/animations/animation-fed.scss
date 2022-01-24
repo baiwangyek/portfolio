@@ -1,40 +1,5 @@
 /* FED */
 
-// .fed__text-container > h2{
-//   font-size: 20px;
-//   display: block;
-//   letter-spacing: 10px;
-//   position: relative;
-//   font-family: 'Droid Sans Mono', monospace;
-//
-//   @media (max-width: 830px) {
-//     font-size: 3vw;
-//   }
-// }
-
-// .fed__text-container > h2:before{
-//   content: '';
-//   background: white;
-//   height: 100%;
-//   width: 130px;
-//   opacity: .5;
-//   display: inline-block;
-//   position: absolute;
-// }
-//
-// .fed__text-container > h1{
-//   font-size: 90px;
-//   line-height: 120px;
-//   display: block;
-//   font-family: 'Playfair Display', serif;
-//   text-align: right;
-//
-//   @media (max-width: 830px) {
-//     font-size: 11vw;
-//     line-height: 14.5vw;
-//   }
-// }
-
 .fed__hero-subheading-container {
   width: 140px;
   overflow: hidden;
@@ -47,7 +12,6 @@
   display: inline-block;
   background: white;
   display: inline-block;
-  //width: 140px;
   height: 20px;
   animation: fed__hero-subheading-container-reveal 0.8s forwards 1.2s;
 }
@@ -92,7 +56,6 @@
 }
 
 .fed__hero-heading {
-  //width: 140px;
   visibility: hidden;
   animation: fed__hero-heading-reveal steps(1) 0.4s forwards 1.4s;
 }
@@ -111,8 +74,6 @@
   0%{width: 0%;}
   100%{width: 70%;}
 }
-
-
 
 .fed__circle {
   animation: fed__circle-grow .8s forwards;

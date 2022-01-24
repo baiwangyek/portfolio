@@ -20,20 +20,69 @@
   }
 }
 
+.iam-nav--bottom {
+  background: #2d2d2d;
+  transform: rotate(90deg) translateY(-50%);
+  left: calc(50% - 75px);
+  cursor: pointer;
+  transition: .4s;
+  opacity: 0;
+  visibility: hidden;
+
+  @media(max-width: 400px), (max-height: 400px){
+    height: 30px;
+    width: 30px;
+    bottom: 20px;
+    left: calc(50% - 45px);
+  }
+}
+
+.iam-nav--bottom-init {
+  opacity: 1;
+  visibility: visible;
+}
+
+.iam-nav--bottom-active {
+  visibility: hidden;
+  opacity: 0;
+}
+
 .iam-nav--right {
   right: 30px;
+  transition: .4s;
+  opacity: 0;
+  animation: nav-appear .4s forwards 1s;
 
   @media(max-width: 400px), (max-height: 400px) {
     right: 20px;
   }
 }
 
+@keyframes nav-appear {
+  0%{opacity: 0;}
+  100%{opacity: 1;}
+}
+
+.js-enabled .iam-nav--right {
+  opacity: 0;
+  animation: none;
+}
+
 .iam-nav--left {
   left: 30px;
+  transition: .4s;
+  opacity: 0;
+  opacity: 0;
+  animation: nav-appear .4s forwards 1s;
 
   @media(max-width: 400px), (max-height: 400px) {
     left: 20px;
   }
+}
+
+.js-enabled .iam-nav--left {
+  opacity: 0;
+  animation: none;
 }
 
 .iam-nav--baiwang {
@@ -50,6 +99,19 @@
 
 .iam-nav--you {
   background: linear-gradient(#8970FE, #E16EC1);
+}
+
+.chevron--bottom {
+  width: 13px;
+  top: 25px;
+  right: 25px;
+  position: absolute;
+  transition: .8s;
+
+  @media(max-width: 400px), (max-height: 400px) {
+    top: 14px;
+    right: 16px;
+  }
 }
 
 .chevron--right {
@@ -69,7 +131,7 @@
   position: absolute;
   width: 13px;
   top: 25px;
-  left: 25px;
+  left: 27px;
   transition: .8s;
   transform: rotate(180deg);
 
